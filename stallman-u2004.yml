@@ -24,5 +24,12 @@
       notify:
         - restart sshd
 
-    # Tareas particulares de las aulas de informática
+    # Apagado a las 14:55
     - include: apagado-1455/apagado-1455.yml
+    
+    #
+    # Tareas generales de informática (DPT y Aulas)
+    #
+
+    # Borrado de usuarios por defecto (mati y tarda)
+    - include: del-default-users.yml
