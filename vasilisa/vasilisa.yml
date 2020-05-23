@@ -1,0 +1,29 @@
+# Instala Vasilisa para borrar el directorio descargas si hay poco espacio.
+- name: Copia el script vasilisa en /opt/vasilisa
+  copy:
+    src: scripts/vasilisa
+    dest: /opt/vasilisa
+    owner: root
+    group: root
+    mode: u=rwx,g=r,o=r
+
+- name: Copia la unidad de Vasilisa en /etc/systemd/system
+  copy:
+    src: scripts/vasilisa.service
+    dest: /etc/systemd/system/vasilisa.service
+    owner: root
+    group: root
+    mode: u=rw,g=r,o=r
+
+- name: Activa la unidad de Vasilisa
+  file:
+    src: /etc/systemd/system/vasilisa.service
+    dest: /etc/systemd/system/default.target.wants/vasilisa.service
+    state: link
+
+# Ansible 2.2 soporta el módulo systemd
+#- name: Activa Vasilisa
+#  systemd:
+#    daemon_reload: yes
+#    name: vasilisa
+#    enabled: True

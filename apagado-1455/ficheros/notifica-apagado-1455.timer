@@ -1,0 +1,9 @@
+[Unit]
+Description=Notifica al usuario el apagado a las 14:55
+
+[Timer]
+OnCalendar=14:50
+OnCalendar=14:54
+
+[Install]
+WantedBy=notifica-apagado-1455.target

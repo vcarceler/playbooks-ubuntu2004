@@ -1,0 +1,80 @@
+#!/bin/bash
+#
+# This script checks the disk usage percent of the root filesystem. When the
+# disk usage percent exceeds THRESHOLD, then deletes files in the 
+# DOWNLOAD_DIR for every user.
+#
+
+
+THRESHOLD=50
+DOWNLOAD_DIR='Baixades'
+
+SCRIPT=`basename $0`
+
+function log () {
+        logger -t $SCRIPT $1
+}
+
+# We need to wait for lxd containers
+sleep 60
+
+log "There is something to do?"
+
+DISK_USAGE=`df -h | grep -E \/$ | sed "s/  */ /g" | cut -f5 -d' ' | cut -f1 -d'%'`
+log "Disk usage: $DISK_USAGE% Threshold: $THRESHOLD%"
+
+if [ $DISK_USAGE -ge $THRESHOLD ]
+then
+	log "Disk usage exceeds threshold. Deleting files in $DOWNLOAD_DIR & empty trash for every user."	
+
+	for user in `ls /home`
+	do
+		# Empty $DOWNLOAD_DIR
+		download_dir="/home/$user/$DOWNLOAD_DIR"
+		if [ -d $download_dir ]
+		then
+			size=`du -hs $download_dir 2>/dev/null`
+			log "removing $size"
+			rm -rf $download_dir/*
+			log "removed"
+		fi
+
+		# Delete Trash
+		trash_dir="/home/$user/.local/share/Trash"
+		if [ -d $trash_dir ]
+		then
+			size=`du -hs $trash_dir 2>/dev/null`
+			log "removing $size"
+			rm -rf $trash_dir
+			log "removed"
+		fi
+	done
+
+	log "No more users"
+	DISK_USAGE=`df -h | grep -E \/$ | sed "s/  */ /g" | cut -f5 -d' ' | cut -f1 -d'%'`
+
+	# Clean apt cache
+	log "apt-get clean"
+	apt-get clean
+
+	log "Final disk usage: $DISK_USAGE%"
+fi
+
+#
+# Checks for LXD RUNNING containers to stop
+#
+LXC="/usr/bin/lxc"
+if [ -f $LXC ]
+then
+	log "There are LXD running containers?"
+
+	for container in `$LXC list -c n,s --format csv | grep RUNNING | cut -f1 -d','`
+	do
+		# Stop container
+		log "Stop container $container"
+		$LXC stop $container && log "stopped $container"
+	done
+
+fi
+
+log "There is nothing to do."

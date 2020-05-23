@@ -1,0 +1,13 @@
+---
+  #vars:
+  #  hostname: "{{ base_hostname }}-{{ ansible_default_ipv4.address.split('.')[3] }}"
+  - name: Configura hostname a partir de la variable base_hostname y la IP
+      # ejemplo: torvalds-233
+      #hostname: name={{ clase }}-{{ ansible_default_ipv4.address.split('.')[3] }}
+      #debug: msg={{ clase }}-{{ ansible_default_ipv4.address.split('.')[3] }}
+    hostname: name={{ base_hostname }}-{{ ansible_default_ipv4.address.split('.')[3] }}
+  - name: Actualiza /etc/hosts con el nuevo hostname
+    replace:
+      dest: /etc/hosts
+      regexp: '^127\.0\.1\.1.+$'
+      replace: "127.0.1.1\t{{ base_hostname }}-{{ ansible_default_ipv4.address.split('.')[3] }}"

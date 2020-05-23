@@ -1,0 +1,20 @@
+# Tareas que se deben hacer en todos los ordenadores
+
+# Desactivar la actualización automática de seguridad (núcleo)
+#- include: /home/vcarceler/playbooks/deactivate-unattended-upgrades.yml
+
+# Configura la actualización automática con unattended-upgrades
+- include: activate-unattended-upgrades.yml
+
+# Configura swappiness = 0
+- include: swappiness.yml
+
+# Instala Vasilisa para mantener libre espacio en disco
+- include: vasilisa/vasilisa.yml
+
+# Instala y configura Telegraf
+# ¿buscar otro agente?
+#- include: telegraf.yml
+
+# Apagado a las 21:30
+- include: apagado-2130.yml

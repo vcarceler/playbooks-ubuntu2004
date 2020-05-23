@@ -1,0 +1,28 @@
+---
+- hosts: stallman
+  user: root
+
+  handlers:
+    - name: restart sshd
+      service:
+        name: sshd
+        state: restarted
+
+  tasks:
+    # Tareas por defecto
+    - include: default.yml
+
+    # Cambio de hostname
+    - include: cambia-hostname.yml base_hostname=stallman
+
+    # Cambio en la configuración de sshd para bloquear la autenticación con password
+    - name: Bloquea la autenticación con password en /etc/ssh/sshd_config
+      replace:
+        dest: /etc/ssh/sshd_config
+        regexp: '^#PasswordAuthentication yes'
+        replace: 'PasswordAuthentication no'
+      notify:
+        - restart sshd
+
+    # Tareas particulares de las aulas de informática
+    - include: apagado-1455/apagado-1455.yml

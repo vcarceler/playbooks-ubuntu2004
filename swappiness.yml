@@ -1,0 +1,8 @@
+- name: Añade vm.swappiness = 0 en /etc/sysctl.conf
+  blockinfile:
+          dest: /etc/sysctl.conf
+          block: |
+            #
+            # No queremos utilizar swap si no es necesario.
+            #
+            vm.swappiness = 0
