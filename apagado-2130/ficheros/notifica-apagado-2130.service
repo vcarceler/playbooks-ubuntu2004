@@ -1,0 +1,6 @@
+[Unit]
+Description=Notifica al usuario el apagado a las 21:30
+
+[Service]
+Type=oneshot
+ExecStart=/usr/bin/notify-send -u critical "Apagat programat a les 21:30" "L'ordinador està programat per apagar-se a les 21:30. Guardi tot el seu treball y tanqui les aplicacions obertes."

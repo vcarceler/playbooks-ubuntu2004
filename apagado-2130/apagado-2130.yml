@@ -1,0 +1,29 @@
+---
+# Apaga las máquinas a las 21:30
+- name: Apaga las máquinas a las 21:30
+  action: cron name="apagado 21:30" minute="30" hour="21" job="/sbin/init 0"
+
+# Copia el timer para las notificaciones
+- name: Copia /usr/lib/systemd/user/notifica-apagado-2130.timer
+  copy:
+    src: ficheros/notifica-apagado-2130.timer
+    dest: /usr/lib/systemd/user
+    owner: root
+    group: root
+    mode: u=rw,g=r,o=r
+
+# Copia el service para las notificaciones
+- name: Copia /usr/lib/systemd/user/notifica-apagado-2130.service
+  copy:
+    src: ficheros/notifica-apagado-2130.service
+    dest: /usr/lib/systemd/user
+    owner: root
+    group: root
+    mode: u=rw,g=r,o=r
+
+- name: Activa la notificación del apagado a las 21:30
+  file:
+    src: /usr/lib/systemd/user/notifica-apagado-2130.timer
+    dest: /etc/systemd/user/timers.target.wants/notifica-apagado-2130.timer
+    state: link
+

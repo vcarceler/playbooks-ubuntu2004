@@ -17,4 +17,4 @@
 #- include: telegraf.yml
 
 # Apagado a las 21:30
-- include: apagado-2130.yml
+- include: apagado-2130/apagado-2130.yml

@@ -10,7 +10,7 @@
     dest: /usr/lib/systemd/user
     owner: root
     group: root
-    mode: u=rwx,g=r,o=r
+    mode: u=rw,g=r,o=r
 
 # Copia el service para las notificaciones
 - name: Copia /usr/lib/systemd/user/notifica-apagado-1455.service
@@ -19,7 +19,7 @@
     dest: /usr/lib/systemd/user
     owner: root
     group: root
-    mode: u=rwx,g=r,o=r
+    mode: u=rw,g=r,o=r
 
 - name: Activa la notificación del apagado a las 14:55
   file:
