@@ -1,0 +1,43 @@
+---
+- name: Alta de convidat
+  action: user name=convidat create_home=no groups=cdrom,dialout append=yes shell=/bin/bash password=""
+
+- name: Edición de /etc/gdm3/PostLogin/Default
+  blockinfile:
+    dest: /etc/gdm3/PostLogin/Default
+    create: yes
+    owner: root
+    group: root
+    mode: 755
+    block: |
+      # Usuari convidat
+      guestuser='convidat'
+
+      if [ $USER = $guestuser ]
+      then
+        # Se borra el directorio por si ha quedado desde la última sesión
+        [ -d /home/$guestuser ] && rm -rf /home/$guestuser
+        # Se recrea el directorio
+        mkdir /home/$guestuser
+        cp /etc/skel/.bash_logout /home/$guestuser
+        cp /etc/skel/.bashrc /home/$guestuser
+        cp /etc/skel/.profile /home/$guestuser
+        mkdir /home/$guestuser/.config
+        echo 'yes' > /home/$guestuser/.config/gnome-initial-setup-done
+        chown -R $guestuser:$guestuser /home/$guestuser
+      fi
+
+- name: Edición de /etc/gdm3/PostSession/Default
+  blockinfile:
+    dest: /etc/gdm3/PostSession/Default
+    owner: root
+    group: root
+    mode: 755
+    insertafter: '^#!/bin/sh$'
+    block: |
+      guestuser='convidat'
+
+      if [ $USER = $guestuser ]
+      then
+        rm -rf /home/$guestuser
+      fi
