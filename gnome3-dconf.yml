@@ -1,0 +1,60 @@
+---
+- name: Creación del perfil user
+  blockinfile:
+    dest: /etc/dconf/profile/user
+    create: yes
+    owner: root
+    group: root
+    mode: 644
+    block: |
+      user-db:user
+      system-db:local
+
+- name: Crea el directorio /etc/dconf/db/local.d/locks
+  file:
+    path: /etc/dconf/db/local.d/locks
+    state: directory
+  notify:
+    - dconf update
+
+- name: Definición del fondo de pantalla y de salvapantalla
+  blockinfile:
+    dest: /etc/dconf/db/local.d/00-wallpaper
+    create: yes
+    owner: root
+    group: root
+    mode: 644
+    block: |
+      [org/gnome/shell]
+      favorite-apps = ['nautilus.desktop', 'firefox.desktop', 'chromium-browser.desktop', 'gnome-terminal.desktop']
+
+      [org/gnome/desktop/background]
+      picture-uri='file:///usr/share/backgrounds/warty-final-ubuntu.png'
+      picture-options='zoom'
+      primary-color='#2c001e'
+      secondary-color='#2c001e'
+       
+      [org/gnome/desktop/screensaver]
+      picture-uri='file:///usr/share/backgrounds/warty-final-ubuntu.png'
+      picture-options='zoom'
+      primary-color='#2c001e'
+      secondary-color='#2c001e'
+
+- name: Bloqueo del fondo de pantalla y de salvapantalla
+  blockinfile:
+    dest: /etc/dconf/db/local.d/locks/00-wallpaper_lock
+    create: yes
+    owner: root
+    group: root
+    mode: 644
+    block: |
+      # Prevent users from changing values for the following keys:
+      /org/gnome/desktop/background/picture-uri
+      /org/gnome/desktop/background/picture-options
+      /org/gnome/desktop/background/primary-color
+      /org/gnome/desktop/background/secondary-color 
+      /org/gnome/desktop/screensaver/picture-uri
+      /org/gnome/desktop/screensaver/picture-options
+      /org/gnome/desktop/screensaver/primary-color
+      /org/gnome/desktop/screensaver/secondary-color
+

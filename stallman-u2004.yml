@@ -8,6 +8,9 @@
         name: sshd
         state: restarted
 
+    - name: dconf update
+      command: dconf update
+
   tasks:
     # Tareas por defecto
     - include: default.yml
@@ -36,3 +39,6 @@
 
     # Usuario invitado
     - include: convidat.yml
+
+    # Gnome3 dconf
+    - include: gnome3-dconf.yml
