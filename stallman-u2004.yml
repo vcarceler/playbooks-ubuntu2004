@@ -33,3 +33,6 @@
 
     # Borrado de usuarios por defecto (mati y tarda)
     - include: del-default-users.yml
+
+    # Usuario invitado
+    - include: convidat.yml
