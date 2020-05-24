@@ -1,9 +1,8 @@
 ---
-# Apaga las máquinas a las 14:55
+
 - name: Apaga las máquinas a las 14:55
   action: cron name="apagado 14:55" minute="55" hour="14" job="/sbin/init 0"
 
-# Copia el timer para las notificaciones
 - name: Copia /usr/lib/systemd/user/notifica-apagado-1455.timer
   copy:
     src: ficheros/notifica-apagado-1455.timer
@@ -12,7 +11,6 @@
     group: root
     mode: u=rw,g=r,o=r
 
-# Copia el service para las notificaciones
 - name: Copia /usr/lib/systemd/user/notifica-apagado-1455.service
   copy:
     src: ficheros/notifica-apagado-1455.service
@@ -22,8 +20,14 @@
     mode: u=rw,g=r,o=r
 
 - name: Activa la notificación del apagado a las 14:55
-  file:
-    src: /usr/lib/systemd/user/notifica-apagado-1455.timer
-    dest: /etc/systemd/user/timers.target.wants/notifica-apagado-1455.timer
-    state: link
+  systemd:
+    enabled: yes
+    state: started
+    scope: global
+    name: notifica-apagado-1455.timer
 
+# - name: Activa la notificación del apagado a las 14:55
+#   file:
+#     src: /usr/lib/systemd/user/notifica-apagado-1455.timer
+#     dest: /etc/systemd/user/timers.target.wants/notifica-apagado-1455.timer
+#     state: link

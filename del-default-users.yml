@@ -5,7 +5,7 @@
 #- name: Borrado del usuario tarda 
 #  action: user name=tarda state=absent remove=yes
 - name: Borrado del usuario usuariinstall
-  action: user name=usuariinstall state=absent remove=yes
+  action: user name=usuariinstall state=absent remove=no
 
 #- name: Borrado del usuario prueba
 #  action: user name=prueba state=absent remove=yes
