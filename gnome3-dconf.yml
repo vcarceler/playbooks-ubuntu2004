@@ -17,6 +17,7 @@
   notify:
     - dconf update
 
+# Se pueden ver las claves originales con dconf-editor
 - name: Definición del fondo de pantalla y de salvapantalla
   blockinfile:
     dest: /etc/dconf/db/local.d/00-wallpaper
@@ -31,14 +32,14 @@
       [org/gnome/desktop/background]
       picture-uri='file:///usr/share/backgrounds/warty-final-ubuntu.png'
       picture-options='zoom'
-      primary-color='#2c001e'
-      secondary-color='#2c001e'
+      primary-color='#023c88'
+      secondary-color='#5789ca'
        
       [org/gnome/desktop/screensaver]
       picture-uri='file:///usr/share/backgrounds/warty-final-ubuntu.png'
       picture-options='zoom'
-      primary-color='#2c001e'
-      secondary-color='#2c001e'
+      primary-color='#023c88'
+      secondary-color='#5789ca'
 
 - name: Bloqueo del fondo de pantalla y de salvapantalla
   blockinfile:
