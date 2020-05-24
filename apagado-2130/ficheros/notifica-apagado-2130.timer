@@ -6,4 +6,4 @@ OnCalendar=21:25
 OnCalendar=21:29
 
 [Install]
-WantedBy=notifica-apagado-2130.target
+WantedBy=timers.target
