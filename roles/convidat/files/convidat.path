@@ -1,0 +1,9 @@
+[Unit]
+Description=Deletes /var/lib/AccountsService/icons/convidat
+
+[Path]
+PathExists=/var/lib/AccountsService/icons/convidat
+
+[Install]
+WantedBy=paths.target
+

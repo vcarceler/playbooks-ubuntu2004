@@ -1,0 +1,7 @@
+[Unit]
+Description=Deletes /var/lib/AccountsService/icons/convidat
+
+[Service]
+ExecStart=rm /var/lib/AccountsService/icons/convidat
+RestartSec=5s
+Restart=on-success
