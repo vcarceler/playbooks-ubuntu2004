@@ -1,19 +1,19 @@
 ---
-# Cambia la configuración de unattended-upgrades para que esté activado
+# Cambia la configuración de unattended-upgrades para que esté activo
 
-- name: Activa apt update en 20auto-upgrades
+- name: Activa apt update en /etc/apt/apt.conf.d/20auto-upgrades
   replace:
     dest: /etc/apt/apt.conf.d/20auto-upgrades
     regexp: '^APT::Periodic::Update-Package-Lists "0";'
     replace: 'APT::Periodic::Update-Package-Lists "1";'
 
-- name: Activa apt upgrade en 20auto-upgrades
+- name: Activa apt upgrade en /etc/apt/apt.conf.d/20auto-upgrades
   replace:
     dest: /etc/apt/apt.conf.d/20auto-upgrades
     regexp: '^APT::Periodic::Unattended-Upgrade "0";'
     replace: 'APT::Periodic::Unattended-Upgrade "1";'
 
-- name: Divide la actualización en pasos pequeños para que pueda interrumpirse. 50unattended-upgrades
+- name: Divide la actualización en pasos pequeños para que pueda interrumpirse en /etc/apt/apt.conf.d/50unattended-upgrades
   replace:
     dest: /etc/apt/apt.conf.d/50unattended-upgrades
     regexp: '^//Unattended-Upgrade::MinimalSteps "true";'

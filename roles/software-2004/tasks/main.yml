@@ -1,0 +1,201 @@
+#
+# Instalación general de paquetes
+#
+# Ubuntu 20.04LTS
+#
+
+# - name: Desinstala paquetes que han sido substituidos por snaps
+#   apt:
+#     state: absent
+#     pkg:
+#       - chromium-browser
+#       - chromium-browser-l10n
+#       - arduino
+#       - arduino-core
+#       - krita
+#       - krita-l10n
+
+
+- name: Instala snap atom
+  snap:
+        name: atom
+        classic: yes
+
+- name: Instala snap blender
+  snap:
+        name: blender
+        classic: yes
+
+- name: Instala snap brackets
+  snap:
+        name: brackets
+        classic: yes
+
+- name: Instala snap darktable
+  snap:
+        name: darktable
+
+- name: Instala snap gimp
+  snap:
+        name: gimp
+
+- name: Instala snap inkscape
+  snap:
+        name: inkscape
+
+- name: Instala snap vscode
+  snap:
+        name: code
+        classic: yes
+
+- name: Instala Intelli J Educational
+  snap:
+        name: intellij-idea-educational
+        classic: yes
+
+- name: Instala snap de Chromium
+  snap:
+        name: chromium
+
+- name: Instala Godot Engine
+  snap:
+        name: godot-3-1
+        channel: edge
+
+- name: Instala snap de krita
+  snap:
+        name: krita
+
+- name: Instala snap de ktouch
+  snap:
+        name: ktouch
+
+- name: Instala pdfmixtool
+  snap:
+        name: pdfmixtool
+
+- name: Instala sweethome3d-homedesign
+  snap:
+        name: sweethome3d-homedesign
+
+- name: Instala syncthing
+  snap:
+        name: syncthing
+
+- name: Instala MuseScore (editor de partituras)
+  snap:
+        name: musescore
+
+- name: Instala shotcut (editor de vídeo)
+  snap:
+        name: shotcut
+        classic: yes
+
+- name: Instala pdftk
+  snap:
+        name: pdftk
+
+- name: Instala vlc
+  snap:
+        name: vlc       
+
+
+# Instala Apache con el módulo userdir
+#- include: apache-userdir/apache-userdir.yml
+
+# Instala wireshark
+#- include: wireshark.yml
+
+# Actualiza a la última versión
+- name: Actualiza a la última versión
+  apt:
+    state: latest
+    update_cache: yes
+    pkg: 
+      - firefox
+      - firefox-locale-ca
+      - flashplugin-installer
+      # - gns3-gui
+      # - gns3-server
+      # - libnss3
+      - net-tools
+      - vim
+  ignore_errors: True
+  register: result
+
+- name: Si es necesario ejecuta 'dpkg --configure -a'
+  shell: dpkg --configure -a
+  when: result is failed
+
+# - name: Añade respositorio de GNS3 (para instalar gns3-gui)
+#   action: apt_repository repo='ppa:gns3/ppa' state=present
+
+# Instalación de paquetes
+- name: Instalación de paquetes
+  apt:
+    update_cache: yes
+    pkg:
+    - audacity
+    - ncdu
+    - freecad
+    - fritzing
+    - gnome-boxes
+    - golang-go
+    - httpie
+    - korganizer
+    - kicad
+    - kicad-doc-es
+    - libguestfs-tools
+    # - libwebkitgtk-1.0-0
+    # - libwebkitgtk-3.0-0
+    - libreoffice-base
+    - libreoffice-report-builder
+    - lyx
+    - texlive-lang-spanish
+    - ipcalc
+    - librecad
+    - default-jdk
+    - slic3r
+    - openshot
+    - ovmf
+    - planner
+    - pylint
+    - pylint3
+    - python3-pylint-django
+    - python3-pip
+    - relational
+    - scratch
+    - ttf-mscorefonts-installer
+    - virt-top
+    - pgadmin3
+    - dialog
+    - vpcs
+    - recordmydesktop
+    - git
+    - virtualbox
+    - virtualenv
+    - python3-docutils
+    - docutils-doc
+    - filezilla
+    - unrar
+    - dia
+    - dia2code
+    - dia-rib-network
+    - dia-shapes
+    - rst2pdf
+    - python3-pypdf2
+    - tshark
+    # KVM
+    - qemu-kvm
+    - xorriso
+    - virt-manager
+
+# Activa la virtualización anidada para KVM
+- name: Activa la virtualización anidada para KVM
+  lineinfile:
+          path: /etc/modprobe.d/kvm.conf
+          create: yes
+          state: present
+          line: 'options kvm_intel nested=1'
+
+# - include: dotnet/dotnet-sdk.yml

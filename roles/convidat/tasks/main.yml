@@ -1,4 +1,3 @@
----
 - name: Alta de convidat
   action: user name=convidat create_home=no groups=cdrom,dialout append=yes shell=/bin/bash comment="Usuari convidat" password=""
 
@@ -25,6 +24,8 @@
         mkdir /home/$guestuser/.config
         echo 'yes' > /home/$guestuser/.config/gnome-initial-setup-done
         chown -R $guestuser:$guestuser /home/$guestuser
+        # Icono para el usuario convidat
+        rm /var/lib/AccountsService/icons/convidat
       fi
 
 - name: Edición de /etc/gdm3/PostSession/Default
@@ -40,4 +41,6 @@
       if [ $USER = $guestuser ]
       then
         rm -rf /home/$guestuser
+        # Icono para el usuario convidat
+        rm /var/lib/AccountsService/icons/convidat
       fi

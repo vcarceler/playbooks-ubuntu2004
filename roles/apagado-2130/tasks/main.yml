@@ -1,11 +1,9 @@
----
-
 - name: Apaga las máquinas a las 21:30
   action: cron name="apagado 21:30" minute="30" hour="21" job="/sbin/init 0"
 
 - name: Copia /usr/lib/systemd/user/notifica-apagado-2130.timer
   copy:
-    src: ficheros/notifica-apagado-2130.timer
+    src: files/notifica-apagado-2130.timer
     dest: /usr/lib/systemd/user
     owner: root
     group: root
@@ -13,7 +11,7 @@
 
 - name: Copia /usr/lib/systemd/user/notifica-apagado-2130.service
   copy:
-    src: ficheros/notifica-apagado-2130.service
+    src: files/notifica-apagado-2130.service
     dest: /usr/lib/systemd/user
     owner: root
     group: root
@@ -31,4 +29,3 @@
 #     src: /usr/lib/systemd/user/notifica-apagado-2130.timer
 #     dest: /etc/systemd/user/timers.target.wants/notifica-apagado-2130.timer
 #     state: link
-

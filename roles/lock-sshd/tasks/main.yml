@@ -1,0 +1,7 @@
+- name: Bloquea la autenticación con password en /etc/ssh/sshd_config
+  replace:
+    dest: /etc/ssh/sshd_config
+    regexp: '^#PasswordAuthentication yes'
+    replace: 'PasswordAuthentication no'
+  notify:
+    - restart sshd

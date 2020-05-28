@@ -1,44 +1,17 @@
 ---
 - hosts: stallman
   user: root
-
-  handlers:
-    - name: restart sshd
-      service:
-        name: sshd
-        state: restarted
-
-    - name: dconf update
-      command: dconf update
-
-  tasks:
-    # Tareas por defecto
-    - include: default.yml
-
-    # Cambio de hostname
-    - include: cambia-hostname.yml base_hostname=stallman
-
-    # Cambio en la configuración de sshd para bloquear la autenticación con password
-    - name: Bloquea la autenticación con password en /etc/ssh/sshd_config
-      replace:
-        dest: /etc/ssh/sshd_config
-        regexp: '^#PasswordAuthentication yes'
-        replace: 'PasswordAuthentication no'
-      notify:
-        - restart sshd
-
-    # Apagado a las 14:55
-    - include: apagado-1455/apagado-1455.yml
-    
-    #
-    # Tareas generales de informática (DPT y Aulas)
-    #
-
-    # Borrado de usuarios por defecto (mati y tarda)
-    - include: del-default-users.yml
-
-    # Usuario invitado
-    - include: convidat.yml
-
-    # Gnome3 dconf
-    - include: gnome3-dconf.yml
+  roles:
+    - activate-unattended-upgrades
+    - swappiness-0
+    - vasilisa
+    - apagado-1455
+    - apagado-2130
+    - role: cambia-hostname
+      vars:
+        base_hostname: "stallman"
+    - lock-sshd
+    - delete-users
+    - convidat
+    - gnome3-dconf
+    - software-2004

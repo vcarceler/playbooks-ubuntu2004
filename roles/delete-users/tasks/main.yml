@@ -1,0 +1,2 @@
+- name: Borrado del usuario usuariinstall
+  action: user name=usuariinstall state=absent remove=no

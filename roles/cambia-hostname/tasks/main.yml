@@ -1,4 +1,3 @@
----
   #vars:
   #  hostname: "{{ base_hostname }}-{{ ansible_default_ipv4.address.split('.')[3] }}"
   - name: Configura hostname a partir de la variable base_hostname y la IP
