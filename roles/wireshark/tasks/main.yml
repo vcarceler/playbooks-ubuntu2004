@@ -1,0 +1,10 @@
+- name: Crea el grupo wireshark
+  group:
+    name: wireshark
+    state: present
+    system: yes
+
+- name: Instala Wireshark
+  apt:
+    pkg:
+    - wireshark

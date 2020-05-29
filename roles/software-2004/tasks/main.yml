@@ -1,8 +1,7 @@
 #
-# Instalación general de paquetes
+# Instalación general de software para Ubuntu 20.04 LTS
 #
-# Ubuntu 20.04LTS
-#
+
 
 # - name: Desinstala paquetes que han sido substituidos por snaps
 #   apt:

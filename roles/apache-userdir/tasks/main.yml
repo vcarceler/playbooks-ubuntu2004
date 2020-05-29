@@ -1,0 +1,23 @@
+- name: Instala Apache y PHP
+
+  apt:
+    update_cache: yes
+    pkg:
+    - apache2
+    - apache2-utils
+    - libapache2-mod-php
+    - php
+    - php-mysql
+
+# Activa el módulo userdir de Apache
+- apache2_module:
+    state: present
+    name: userdir
+
+# Permite PHP en mod_userdir
+- name: Permitir PHP en public_html
+  copy:
+    src: files/php7.4.conf
+    dest: /etc/apache2/mods-available/php7.4.conf
+    owner: root
+    group: root
