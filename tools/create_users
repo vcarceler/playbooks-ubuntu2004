@@ -13,10 +13,10 @@ do
 
 	echo Creando usuario $usuario en fichero $fichero con password $password
 
-	echo '---' >>$fichero
-	echo '# Alta de usuarios (mkpasswd --method=sha-512)' >>$fichero
-	echo '# Ubuntu 20.04' >>$fichero
+    echo '---' >>$fichero
+    echo '# Alta de usuarios (mkpasswd --method=sha-512)' >>$fichero
+    echo '# Ubuntu 20.04' >>$fichero
     echo "# Password: $password" >>$fichero
-	echo '- name: Usuario' >>$fichero
-	echo "  action: user name=$usuario groups={{ grupos }} comment=\"${usuario^^}\" append=yes shell=/bin/bash password=$passwordhash" >>$fichero
+    echo "- name: Usuario $usuario" >>$fichero
+    echo "  action: user name=$usuario groups={{ grupos }} comment=\"${usuario^^}\" append=yes shell=/bin/bash password=$passwordhash" >>$fichero
 done
