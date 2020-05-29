@@ -159,6 +159,7 @@
     - openshot
     - ovmf
     - planner
+    - prometheus-node-exporter
     - pylint
     - pylint3
     - python3-pylint-django
