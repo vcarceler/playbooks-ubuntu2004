@@ -1,0 +1,4 @@
+- name: Crea rpool/lxd para utilizar con lxd
+  zfs:
+    name: rpool/lxd
+    state: present

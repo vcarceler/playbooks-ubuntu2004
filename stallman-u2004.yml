@@ -24,6 +24,7 @@
     - gns3
     - dotnet
     - kvm
+    - lxd-zfs
 
   tasks:
     # Usuarios
