@@ -99,12 +99,6 @@
         name: vlc       
 
 
-# Instala Apache con el módulo userdir
-#- include: apache-userdir/apache-userdir.yml
-
-# Instala wireshark
-#- include: wireshark.yml
-
 # Actualiza a la última versión
 - name: Actualiza a la última versión
   apt:

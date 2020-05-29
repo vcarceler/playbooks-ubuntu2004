@@ -1,0 +1,12 @@
+- name: Añade respositorio de GNS3 (para instalar gns3-gui)
+  apt_repository:
+    repo: ppa:gns3/ppa
+
+- name: Actualiza a la última versión (si no existe lo instala)
+  apt:
+    state: latest
+    update_cache: yes
+    pkg: 
+      - gns3-gui
+      - gns3-server
+      - libnss3
