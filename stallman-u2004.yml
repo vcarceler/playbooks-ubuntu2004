@@ -1,6 +1,10 @@
 ---
 - hosts: stallman
   user: root
+
+  vars:
+    grupos: adm,cdrom,dialout,kvm,libvirt,lpadmin,lxd,plugdev,sambashare,ubridge,vboxusers
+
   roles:
     - activate-unattended-upgrades
     - swappiness-0
@@ -18,3 +22,9 @@
     - apache-userdir
     - wireshark
     - gns3
+    - dotnet
+    - kvm
+
+  tasks:
+    # Usuarios
+    - include: users/informatica/smx1c.yml

@@ -1,0 +1,11 @@
+- name: Instala snap dotnet-sdk
+  snap:
+        name: dotnet-sdk
+        classic: yes
+
+- name: Permitir que vscode utilice el snap de dotnet para compilar
+  copy:
+    src: files/04-fix-dotnet.sh
+    dest: /etc/profile.d/04-fix-dotnet.sh
+    owner: root
+    group: root
