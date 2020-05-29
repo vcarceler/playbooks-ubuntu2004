@@ -1,0 +1,22 @@
+#!/bin/bash
+
+# create_users usuario1 usuario2 ...
+#
+# Crea los ficheros usuario1.yml usuario2.yml ...
+# Lista los usuarios creados con su password.
+
+for usuario in $*
+do
+	fichero=${usuario}.yml
+	password=`expr $RANDOM + 1000 | cut -c1-4`
+	passwordhash=`echo $password | mkpasswd --method=sha-512 -s`
+
+	echo Creando usuario $usuario en fichero $fichero con password $password
+
+	echo '---' >>$fichero
+	echo '# Alta de usuarios (mkpasswd --method=sha-512)' >>$fichero
+	echo '# Ubuntu 20.04' >>$fichero
+    echo "# Password: $password" >>$fichero
+	echo '- name: Usuario' >>$fichero
+	echo "  action: user name=$usuario groups={{ grupos }} comment=\"${usuario^^}\" append=yes shell=/bin/bash password=$passwordhash" >>$fichero
+done
