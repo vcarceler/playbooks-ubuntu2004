@@ -1,12 +1,20 @@
 #!/bin/bash
 #
-# This script checks the disk usage percent of the root filesystem. When the
-# disk usage percent exceeds THRESHOLD, then deletes files in the 
-# DOWNLOAD_DIR for every user.
+# /etc/systemd/system/vasilisa.service lanza Vasilisa en cada arranque.
+#
+# El script es responsable de algunas tareas de mantenimiento:
+#
+# - Si el espacio disponible está por debajo del umbral borra los ficheros
+#   en el directorio descargas y en la papelera de cada usuario.
+#
+# - Si LXD está instalado detiene cada uno de los contenedores encendidos.
+#
+# - Si hay iconos de usuario personalizados en /var/lib/AccountsService/icons
+#   los borra.
 #
 
 
-THRESHOLD=50
+THRESHOLD=209715200 # 200GiB
 DOWNLOAD_DIR='Baixades'
 
 SCRIPT=`basename $0`
@@ -15,17 +23,14 @@ function log () {
         logger -t $SCRIPT $1
 }
 
-# We need to wait for lxd containers
-sleep 60
-
 log "There is something to do?"
 
-DISK_USAGE=`df -h | grep -E \/$ | sed "s/  */ /g" | cut -f5 -d' ' | cut -f1 -d'%'`
-log "Disk usage: $DISK_USAGE% Threshold: $THRESHOLD%"
+DISK_FREE=`df | grep -E \/$ | sed "s/  */ /g" | cut -f4 -d' ' | cut -f1 -d'%'`
+log "Disk free: $DISK_FREE Threshold: $THRESHOLD"
 
-if [ $DISK_USAGE -ge $THRESHOLD ]
+if [ $DISK_FREE -le $THRESHOLD ]
 then
-	log "Disk usage exceeds threshold. Deleting files in $DOWNLOAD_DIR & empty trash for every user."	
+	log "Disk free under threshold. Deleting files in $DOWNLOAD_DIR & empty trash for every user."	
 
 	for user in `ls /home`
 	do
@@ -51,13 +56,13 @@ then
 	done
 
 	log "No more users"
-	DISK_USAGE=`df -h | grep -E \/$ | sed "s/  */ /g" | cut -f5 -d' ' | cut -f1 -d'%'`
+	DISK_FREE=`df -h | grep -E \/$ | sed "s/  */ /g" | cut -f5 -d' ' | cut -f1 -d'%'`
 
 	# Clean apt cache
 	log "apt-get clean"
 	apt-get clean
 
-	log "Final disk usage: $DISK_USAGE%"
+	log "Final disk usage: $DISK_FREE%"
 fi
 
 #
@@ -68,6 +73,9 @@ if [ -f $LXC ]
 then
 	log "There are LXD running containers?"
 
+	# We need to wait for lxd containers
+	sleep 60
+
 	for container in `$LXC list -c n,s --format csv | grep RUNNING | cut -f1 -d','`
 	do
 		# Stop container
@@ -77,5 +85,14 @@ then
 
 fi
 
+#
+# Delete user icons
+#
+ICONSDIR="/var/lib/AccountsService/icons"
+for x in `ls $ICONSDIR`
+do
+	log "Deleting $ICONSDIR/$x"
+	rm $ICONSDIR/$x
+done
 
 log "There is nothing to do."

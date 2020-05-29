@@ -41,25 +41,25 @@
         rm -rf /home/$guestuser
       fi
 
-- name: Copia /etc/systemd/system/convidat.path
-  copy:
-    src: files/convidat.path
-    dest: /usr/lib/systemd/system
-    owner: root
-    group: root
-    mode: u=rw,g=r,o=r
+# - name: Copia /etc/systemd/system/convidat.path
+#   copy:
+#     src: files/convidat.path
+#     dest: /usr/lib/systemd/system
+#     owner: root
+#     group: root
+#     mode: u=rw,g=r,o=r
 
-- name: Copia /etc/systemd/system/convidat.service
-  copy:
-    src: files/convidat.service
-    dest: /usr/lib/systemd/system
-    owner: root
-    group: root
-    mode: u=rw,g=r,o=r
+# - name: Copia /etc/systemd/system/convidat.service
+#   copy:
+#     src: files/convidat.service
+#     dest: /usr/lib/systemd/system
+#     owner: root
+#     group: root
+#     mode: u=rw,g=r,o=r
 
-- name: Activa /etc/systemd/system/convidat.path
-  systemd:
-    enabled: yes
-    state: started
-    #scope: global
-    name: convidat.path
+# - name: Activa /etc/systemd/system/convidat.path
+#   systemd:
+#     enabled: yes
+#     state: started
+#     #scope: global
+#     name: convidat.path
