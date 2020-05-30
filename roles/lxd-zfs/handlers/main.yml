@@ -1,0 +1,10 @@
+- name: copy lxd-preseed
+  copy:
+    src: files/lxd-preseed.yml
+    dest: /root/lxd-preseed.yml
+    owner: root
+    group: root
+    mode: u=rw,g=r,o=r
+
+- name: config lxd
+  shell: cat /root/lxd-preseed.yml | /snap/bin/lxd init --preseed

@@ -1,4 +1,6 @@
-- name: Crea rpool/lxd para utilizar con lxd
-  zfs:
-    name: rpool/lxd
-    state: present
+- name: Instala lxd
+  snap:
+        name: lxd
+  notify:
+    - copy lxd-preseed
+    - config lxd
