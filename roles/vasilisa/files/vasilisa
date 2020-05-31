@@ -104,10 +104,10 @@ if [ -f /usr/sbin/zfs ]
 then
 	zfs list -r rpool/USERDATA | grep /home | while read -r line
 	do
-		DATASET=$(echo $line |  cut -d' ' -f1)
-		USER=$(echo $line | cut -d/ -f5)
+		DATASET=$(echo "$line" |  cut -d' ' -f1)
+		USER=$(echo "$line" | cut -d/ -f5)
 		
-		if ! cat /etc/passwd | grep -E "^$USER:" >/dev/null
+		if ! < /etc/passwd grep -E "^$USER:" >/dev/null
 		then
 			log "El usuario $USER no existe, eliminando el dataset: $DATASET"
 			zfs destroy -r "$DATASET" && log "Eliminado el dataset: $DATASET"
