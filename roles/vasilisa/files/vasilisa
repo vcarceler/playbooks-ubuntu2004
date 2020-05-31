@@ -70,7 +70,7 @@ fi
 #
 # Checks for LXD RUNNING containers to stop
 #
-LXC="/usr/bin/lxc"
+LXC="/snap/bin/lxc"
 if [ -f $LXC ]
 then
 	log "There are LXD running containers?"
@@ -82,7 +82,7 @@ then
 	do
 		# Stop container
 		log "Stop container $container"
-		$LXC stop $container && log "stopped $container"
+		$LXC stop $container && log "Stopped $container"
 	done
 
 fi
