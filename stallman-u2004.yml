@@ -6,17 +6,14 @@
     grupos: adm,cdrom,dialout,kvm,libvirt,lpadmin,lxd,plugdev,sambashare,ubridge,vboxusers
 
   roles:
-    - activate-unattended-upgrades
+    - delete-users
+    - lock-sshd
     - swappiness-0
     - vasilisa
-    - apagado-1455
-    - apagado-2130
+    - activate-unattended-upgrades
     - role: cambia-hostname
       vars:
         base_hostname: "stallman"
-    - lock-sshd
-    - delete-users
-    - convidat
     - gnome3-dconf
     - software-2004
     - apache-userdir
@@ -25,6 +22,9 @@
     - dotnet
     - kvm
     - lxd-zfs
+    - convidat
+    - apagado-1455
+    - apagado-2130
 
   tasks:
     # Usuarios
