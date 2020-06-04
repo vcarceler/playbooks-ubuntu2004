@@ -30,6 +30,10 @@
         name: brackets
         classic: yes
 
+- name: Instala snap chromium
+  snap:
+        name: chromium
+
 - name: Instala snap darktable
   snap:
         name: darktable
@@ -42,62 +46,61 @@
   snap:
         name: inkscape
 
-- name: Instala snap vscode
-  snap:
-        name: code
-        classic: yes
-
-- name: Instala Intelli J Educational
+- name: Instala snap intellij-idea-educational
   snap:
         name: intellij-idea-educational
         classic: yes
 
-- name: Instala snap de Chromium
-  snap:
-        name: chromium
-
-- name: Instala Godot Engine
+- name: Instala godot-3-1
   snap:
         name: godot-3-1
         channel: edge
 
-- name: Instala snap de krita
+- name: Instala snap krita
   snap:
         name: krita
 
-- name: Instala snap de ktouch
+- name: Instala snap ktouch
   snap:
         name: ktouch
 
-- name: Instala pdfmixtool
-  snap:
-        name: pdfmixtool
-
-- name: Instala sweethome3d-homedesign
-  snap:
-        name: sweethome3d-homedesign
-
-- name: Instala syncthing
-  snap:
-        name: syncthing
-
-- name: Instala MuseScore (editor de partituras)
+- name: Instala snap musescore
   snap:
         name: musescore
 
-- name: Instala shotcut (editor de vídeo)
+- name: Instala snap obs-studio
+  snap:
+        name: obs-studio
+
+- name: Instala snap pdfmixtool
+  snap:
+        name: pdfmixtool
+
+- name: Instala snap pdftk
+  snap:
+        name: pdftk
+
+- name: Instala snap shotcut
   snap:
         name: shotcut
         classic: yes
 
-- name: Instala pdftk
+- name: Instala snap sweethome3d-homedesign
   snap:
-        name: pdftk
+        name: sweethome3d-homedesign
 
-- name: Instala vlc
+- name: Instala snap syncthing
+  snap:
+        name: syncthing
+
+- name: Instala snap vlc
   snap:
         name: vlc       
 
+- name: Instala snap vscode
+  snap:
+        name: code
+        classic: yes
 
 # Actualiza a la última versión
 - name: Actualiza a la última versión
@@ -133,8 +136,6 @@
     - kicad
     - kicad-doc-es
     - libguestfs-tools
-    # - libwebkitgtk-1.0-0
-    # - libwebkitgtk-3.0-0
     - libreoffice-base
     - libreoffice-report-builder
     - lyx
@@ -173,7 +174,6 @@
     - rst2pdf
     - python3-pypdf2
     - tshark
-    # KVM
     - xorriso
 
 
