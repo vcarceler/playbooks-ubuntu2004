@@ -2,7 +2,7 @@
   apt_repository:
     repo: ppa:gns3/ppa
 
-- name: Actualiza a la última versión (si no existe lo instala)
+- name: Actualiza a la última versión (si no existe lo instala) gns3
   apt:
     state: latest
     update_cache: yes
