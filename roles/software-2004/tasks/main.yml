@@ -51,6 +51,10 @@
         name: intellij-idea-educational
         classic: yes
 
+- name: Instala snap librepcb
+  snap:
+        name: librepcb
+
 - name: Instala godot-3-1
   snap:
         name: godot-3-1
