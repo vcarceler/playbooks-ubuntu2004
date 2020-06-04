@@ -42,6 +42,11 @@
   snap:
         name: gimp
 
+- name: Instala godot-3-1
+  snap:
+        name: godot-3-1
+        channel: edge
+
 - name: Instala snap inkscape
   snap:
         name: inkscape
@@ -51,14 +56,33 @@
         name: intellij-idea-educational
         classic: yes
 
-- name: Instala snap librepcb
+- name: Instala snap jupyter
   snap:
-        name: librepcb
+        name: jupyter
 
-- name: Instala godot-3-1
+- name: Instala snap kalgebra
   snap:
-        name: godot-3-1
-        channel: edge
+        name: kalgebra
+
+- name: Instala snap kbruch
+  snap:
+        name: kbruch
+
+- name: Instala snap kcalc
+  snap:
+        name: kcalc
+
+- name: Instala snap kdenlive
+  snap:
+        name: kdenlive
+
+- name: Instala snap kig
+  snap:
+        name: kig   
+
+- name: Instala snap kmplot
+  snap:
+        name: kmplot
 
 - name: Instala snap krita
   snap:
@@ -68,6 +92,10 @@
   snap:
         name: ktouch
 
+- name: Instala snap librepcb
+  snap:
+        name: librepcb
+
 - name: Instala snap musescore
   snap:
         name: musescore
@@ -76,6 +104,10 @@
   snap:
         name: obs-studio
 
+- name: Instala snap octave
+  snap:
+        name: octave
+
 - name: Instala snap pdfmixtool
   snap:
         name: pdfmixtool
@@ -83,6 +115,10 @@
 - name: Instala snap pdftk
   snap:
         name: pdftk
+
+- name: Instala snap qalculate
+  snap:
+        name: qalculate
 
 - name: Instala snap shotcut
   snap:
