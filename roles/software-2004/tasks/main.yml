@@ -25,6 +25,10 @@
         name: blender
         classic: yes
 
+- name: Instala snap bluej
+  snap:
+        name: bluej
+
 - name: Instala snap brackets
   snap:
         name: brackets
@@ -88,6 +92,11 @@
 - name: Instala snap kmplot
   snap:
         name: kmplot
+
+- name: Instala snap kotlin
+  snap:
+        name: kotlin
+        classic: yes
 
 - name: Instala snap krita
   snap:
