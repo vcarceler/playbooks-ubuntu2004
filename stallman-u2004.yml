@@ -8,6 +8,7 @@
   roles:
     - delete-users
     - lock-sshd
+    - zsys-gc
     - swappiness-0
     - vasilisa
     - activate-unattended-upgrades

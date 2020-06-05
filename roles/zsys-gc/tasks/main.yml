@@ -1,0 +1,7 @@
+- name: Copia la configuración /etc/zsys.conf
+  copy:
+    src: files/zsys.conf
+    dest: /etc/zsys.conf
+    owner: root
+    group: root
+    mode: u=rwx,g=r,o=r
