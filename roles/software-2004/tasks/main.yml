@@ -211,6 +211,7 @@
     - scratch
     - slic3r
     - texlive-lang-spanish
+    - tree
     - tshark
     - ttf-mscorefonts-installer
     - unrar
