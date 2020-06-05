@@ -2,6 +2,8 @@
   apt:
     update_cache: yes
     pkg:
+    - libguestfs-tools
+    - ovmf
     - qemu-kvm
     - virt-manager
 

@@ -172,52 +172,50 @@
     update_cache: yes
     pkg:
     - audacity
-    - ncdu
+    - default-jdk
+    - dia
+    - dia-rib-network
+    - dia-shapes
+    - dia2code
+    - dialog
+    - docutils-doc
+    - filezilla
     - freecad
     - fritzing
+    - git
     - gnome-boxes
     - golang-go
     - httpie
-    - korganizer
+    - ipcalc
     - kicad
     - kicad-doc-es
-    - libguestfs-tools
+    - korganizer
+    - librecad
     - libreoffice-base
     - libreoffice-report-builder
     - lyx
-    - texlive-lang-spanish
-    - ipcalc
-    - librecad
-    - default-jdk
-    - slic3r
+    - ncdu
     - openshot
-    - ovmf
+    - pgadmin3
     - planner
     - prometheus-node-exporter
     - pylint
-    - pylint3
-    - python3-pylint-django
+    - pylint3    
+    - python3-docutils
     - python3-pip
-    - relational
-    - scratch
-    - ttf-mscorefonts-installer
-    - virt-top
-    - pgadmin3
-    - dialog
-    - vpcs
+    - python3-pylint-django
+    - python3-pypdf2
     - recordmydesktop
-    - git
+    - relational
+    - rst2pdf
+    - scratch
+    - slic3r
+    - texlive-lang-spanish
+    - tshark
+    - ttf-mscorefonts-installer
+    - unrar
+    - virt-top
     - virtualbox
     - virtualenv
-    - python3-docutils
-    - docutils-doc
-    - filezilla
-    - unrar
-    - dia
-    - dia2code
-    - dia-rib-network
-    - dia-shapes
-    - rst2pdf
-    - python3-pypdf2
-    - tshark
+    - vpcs
     - xorriso
