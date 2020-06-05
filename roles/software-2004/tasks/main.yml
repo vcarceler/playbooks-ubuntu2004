@@ -38,6 +38,11 @@
   snap:
         name: darktable
 
+- name: Instala snap eclipse
+  snap:
+        name: eclipse
+        classic: yes
+
 - name: Instala snap gimp
   snap:
         name: gimp
@@ -100,11 +105,20 @@
   snap:
         name: musescore
 
+- name: Instala snap netbeans
+  snap:
+        name: netbeans
+        classic: yes
+
 - name: Instala snap node
   snap:
         name: node
         classic: yes
         channel: edge
+
+- name: Instala snap node-red
+  snap:
+        name: node-red
 
 - name: Instala snap obs-studio
   snap:
@@ -125,6 +139,11 @@
 - name: Instala snap qalculate
   snap:
         name: qalculate
+
+- name: Instala snap ruby
+  snap:
+        name: ruby
+        classic: yes
 
 - name: Instala snap shotcut
   snap:
