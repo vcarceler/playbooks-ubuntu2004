@@ -143,7 +143,7 @@
   snap:
         name: vlc       
 
-- name: Instala snap vscode
+- name: Instala snap code
   snap:
         name: code
         classic: yes
