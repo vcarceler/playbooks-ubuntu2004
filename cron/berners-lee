@@ -1,0 +1,11 @@
+#!/bin/bash
+
+#
+# Tareas periódicas en el Aula Berners Lee
+#
+
+playbooks="/home/vcarceler/playbooks-ubuntu2004"
+
+export ANSIBLE_CALLBACK_PLUGINS="$(python3 -m ara.setup.callback_plugins)"
+
+ansible-playbook -i $playbooks/hosts $playbooks/berners-lee-u2004.yml

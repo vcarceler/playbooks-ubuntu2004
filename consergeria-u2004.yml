@@ -1,0 +1,34 @@
+---
+- hosts: consergeria
+  user: root
+
+  vars:
+    grupos: adm,cdrom,dialout,kvm,libvirt,lpadmin,lxd,plugdev,sambashare,ubridge,vboxusers
+
+  roles:
+    - delete-users
+    - lock-sshd
+    - zsys-gc
+    - swappiness-0
+    - vasilisa
+    - activate-unattended-upgrades
+    - role: cambia-hostname
+      vars:
+        base_hostname: "consergeria"
+    - gnome3-dconf
+    - software-2004
+    - apache-userdir
+    - wireshark
+    - gns3
+    - dotnet
+    - kvm
+    - lxd-zfs
+    - convidat
+    - apagado-1455
+    - apagado-2130
+
+  tasks:
+    # Usuarios
+    #- include: users/informatica/smx2a.yml
+    #- include: users/informatica/smx2b.yml
+    #- include: users/informatica/smx2c.yml
