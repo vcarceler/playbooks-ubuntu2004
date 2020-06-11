@@ -1,0 +1,11 @@
+#!/bin/bash
+
+#
+# Tareas periódicas en el Aula Stallman
+#
+
+playbooks="/home/vcarceler/playbooks-ubuntu2004"
+
+#source <(python -m ara.setup.env)
+
+ansible-playbook -i $playbooks/hosts $playbooks/stallman-u2004.yml
