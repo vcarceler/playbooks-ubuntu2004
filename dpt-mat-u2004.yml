@@ -24,7 +24,7 @@
     - kvm
     - lxd-zfs
     - convidat
-    - apagado-1455
+    #- apagado-1455
     - apagado-2130
 
   tasks:
