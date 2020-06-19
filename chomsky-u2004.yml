@@ -23,6 +23,7 @@
     - dotnet
     - kvm
     - lxd-zfs
+    - broadcom-sta # Los equipos del aula Chomsky necesitan un driver para la wifi
     - convidat
     - apagado-1455
     - apagado-2130

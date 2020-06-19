@@ -1,0 +1,6 @@
+- name: Instala el driver para la wifi de los portátiles del aula Chomsky
+  apt:
+    state: latest
+    update_cache: yes
+    pkg: 
+      - broadcom-sta-dkms
