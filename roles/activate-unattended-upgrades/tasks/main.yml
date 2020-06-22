@@ -19,8 +19,14 @@
     regexp: '^//Unattended-Upgrade::MinimalSteps "true";'
     replace: 'Unattended-Upgrade::MinimalSteps "true";'
 
-- name: Activa la actualización de -updates en /etc/apt/apt.conf.d/50unattended-upgrades
+- name: Activa AutoFixInterruptedDpkg en  /etc/apt/apt.conf.d/50unattended-upgrades
   replace:
     dest: /etc/apt/apt.conf.d/50unattended-upgrades
-    regexp: '^//      "${distro_id}:${distro_codename}-updates";'
-    replace: '        "${distro_id}:${distro_codename}-updates";'
+    regexp: '^//Unattended-Upgrade::AutoFixInterruptedDpkg "true";'
+    replace: 'Unattended-Upgrade::AutoFixInterruptedDpkg "true";'
+
+    #- name: Activa las actualizaciónes de -updaites en /etc/apt/apt.conf.d/50unattended-upgrades
+    #replace:
+    #path: /etc/apt/apt.conf.d/50unattended-upgrades
+    #regexp: '^\/\/\ \ \ \ \ \ \"\$\{distro_id\}\:\$\{distro_codename\}\-updates"\;$'
+    #replace: '        "${distro_id}:${distro_codename}-updates";'
