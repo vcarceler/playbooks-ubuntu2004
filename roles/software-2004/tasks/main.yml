@@ -213,8 +213,10 @@
     - git
     - gnome-boxes
     - golang-go
+    - htop
     - httpie
     - ipcalc
+    - jq
     - kicad
     - kicad-doc-es
     - korganizer
