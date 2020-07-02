@@ -91,10 +91,15 @@
 192.168.15.[100:121]
 
 [esobatx]
-192.168.16.[100:105]
-192.168.16.[111:114]
+192.168.16.[101:105]
 # Aula 202
 192.168.17.52
+192.168.240.[170:188]
+# Aula 15bis, antiguo departamento de filosofia
+192.168.17.32
+# Aula de acollida
+192.168.240.243
+
 
 [departaments]
 192.168.17.[20:22]
@@ -118,8 +123,8 @@ Lenovo-V510
 [chomsky]
 192.168.23.[100:118]
 
-[berners-lee]
-192.168.16.105
+#[berners-lee]
+#192.168.16.105
 # Portátiles HP250 en préstamos Berners-Lee
 #192.168.16.106
 #192.168.16.107
