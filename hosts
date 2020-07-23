@@ -300,6 +300,9 @@ dpt-inf
 [carret12]
 192.168.241.[1:30]
 
+[carret13]
+192.168.241.[31:37]
+
 # Aulas ESO/BAT con WiFi y cable
 [aulas-esobat]
 192.168.240.[170:188]
