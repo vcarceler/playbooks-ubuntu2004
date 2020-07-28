@@ -1,5 +1,5 @@
 ---
-- hosts: stallman
+- hosts: dpt-dibuix
   user: root
 
   vars:
@@ -14,7 +14,7 @@
     - activate-unattended-upgrades
     - role: cambia-hostname
       vars:
-        base_hostname: "stallman"
+        base_hostname: "dpt-dibuix"
     - gnome3-dconf
     - software-2004
     - apache-userdir
