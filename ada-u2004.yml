@@ -29,6 +29,5 @@
 
   tasks:
     # Usuarios
-    #- include: users/informatica/smx2a.yml
-    #- include: users/informatica/smx2b.yml
-    #- include: users/informatica/smx2c.yml
+    - include: users/informatica/alumnos/smx1a.yml
+    - include: users/informatica/alumnos/smx1c.yml
