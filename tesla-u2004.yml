@@ -30,5 +30,17 @@
   tasks:
     # Usuarios
     - include: users/informatica/alumnos/dam2a.yml
-    #- include: users/informatica/alumnos/smx2b.yml
-    #- include: users/informatica/smx2c.yml
+    - include: users/esobat/grupos/tec3a-g1.yml
+    - include: users/esobat/grupos/tec3a-g2.yml
+    - include: users/esobat/grupos/tec3b-g1.yml
+    - include: users/esobat/grupos/tec3b-g2.yml
+    - include: users/esobat/grupos/tec3c-g1.yml
+    - include: users/esobat/grupos/tec3c-g2.yml
+    - include: users/esobat/grupos/tec3d-g1.yml
+    - include: users/esobat/grupos/tec3d-g2.yml
+    - include: users/esobat/grupos/tec3e-g1.yml
+    - include: users/esobat/grupos/tec3e-g2.yml
+    - include: users/esobat/grupos/robo2.yml
+    - include: users/esobat/grupos/inf-fiii.yml
+    - include: users/esobat/grupos/inf-fiv.yml
+    - include: users/esobat/grupos/tec2-fi.yml

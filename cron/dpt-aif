@@ -9,3 +9,4 @@ playbooks="/home/vcarceler/playbooks-ubuntu2004"
 export ANSIBLE_CALLBACK_PLUGINS="$(python3 -m ara.setup.callback_plugins)"
 
 ansible-playbook -i $playbooks/hosts $playbooks/dpt-aif-u2004.yml
+ansible-playbook -i $playbooks/hosts $playbooks/users/aig/profesaig.yml
