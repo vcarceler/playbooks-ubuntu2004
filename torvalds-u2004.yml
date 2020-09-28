@@ -29,5 +29,5 @@
 
   tasks:
     # Usuarios
-    - include: users/informatica/alumnes/smx2a.yml
-    - include: users/informatica/alumnes/asixdam1b.yml
+    - include: users/informatica/alumnos/smx2a.yml
+    - include: users/informatica/alumnos/asixdam1b.yml

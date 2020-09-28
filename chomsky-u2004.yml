@@ -32,4 +32,5 @@
     # Usuarios
     - include: users/aig/alumnos/afcat.yml
     - include: users/aig/alumnos/afeng.yml
+    - include: users/idiomes/idiomes.yml
     #- include: users/informatica/smx2c.yml

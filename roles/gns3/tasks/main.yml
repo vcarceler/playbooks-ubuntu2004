@@ -10,3 +10,4 @@
       - gns3-gui
       - gns3-server
       - libnss3
+      - vpcs
