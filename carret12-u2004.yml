@@ -15,6 +15,7 @@
     - role: cambia-hostname
       vars:
         base_hostname: "carret12"
+    - superxeill-connections # El carret12 necesita las conexiones preestablecidas de NetworkManager
     - gnome3-dconf
     - software-2004
     - apache-userdir

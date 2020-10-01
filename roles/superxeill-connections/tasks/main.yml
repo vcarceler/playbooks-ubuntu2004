@@ -1,0 +1,11 @@
+- name: Copiar las conexiones de NetworkManager
+  copy:
+    src: "files/{{ item }}"
+    dest: "/etc/NetworkManager/system-connections/{{  item  }}"
+    owner: root
+    group: root
+    mode: 0400
+  loop:
+    - SuperXEiLL-Aula9.nmconnection
+    - SuperXEiLL-PasilloTorvalds.nmconnection
+    - SuperXEiLL-Servidores.nmconnection
