@@ -1,5 +1,5 @@
 - name: Alta de convidat
-  action: user name=convidat create_home=no groups=cdrom,dialout append=yes shell=/bin/bash comment="Usuari convidat" password=""
+  action: user name=convidat create_home=no groups=cdrom,dialout,netdev append=yes shell=/bin/bash comment="Usuari convidat" password=""
 
 - name: Edición de /etc/gdm3/PostLogin/Default
   blockinfile:
