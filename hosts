@@ -299,8 +299,6 @@ dpt-inf
 # Portátiles HP 250 G7 Gris oscuro. No FullHD
 [carret12]
 192.168.241.[1:30]
-# Temporales con cable
-192.168.19.175
 
 [carret13]
 192.168.241.[31:37]
