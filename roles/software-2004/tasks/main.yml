@@ -114,6 +114,10 @@
   snap:
         name: musescore
 
+- name: Instala snap mysql-workbench-community
+  snap:
+        name: mysql-workbench-community
+
 - name: Instala snap netbeans
   snap:
         name: netbeans
