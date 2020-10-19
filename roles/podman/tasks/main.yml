@@ -1,8 +1,15 @@
-- name: Añade el repositorio de podman
-  apt_repository:
-    repo: deb https://download.opensuse.org/repositories/devel:/kubic:/libcontainers:/stable/xUbuntu_20.04/ /
-    state: present
-    filename: devel:kubic:libcontainers:stable.list
+#- name: Añade el repositorio de podman
+#  apt_repository:
+#    repo: deb https://download.opensuse.org/repositories/devel:/kubic:/libcontainers:/stable/xUbuntu_20.04/ /
+#    state: present
+#    filename: devel:kubic:libcontainers:stable.list
+
+- name: Copia podman.list en /etc/apt/sources.list.d
+  copy:
+    src: files/podman.list
+    dest: /etc/apt/sources.list.d/podman.list
+    owner: root
+    group: root
 
 - name: Añade la clave del repositorio de podman
   apt_key:
