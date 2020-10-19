@@ -1,0 +1,18 @@
+- name: Añade el repositorio de podman
+  apt_repository:
+    repo: deb https://download.opensuse.org/repositories/devel:/kubic:/libcontainers:/stable/xUbuntu_20.04/ /
+    state: present
+    filename: devel:kubic:libcontainers:stable.list
+
+- name: Añade la clave del repositorio de podman
+  apt_key:
+    url: https://download.opensuse.org/repositories/devel:/kubic:/libcontainers:/stable/xUbuntu_20.04/Release.key
+    id: 2472D6D0D2F66AF87ABA8DA34D64390375060AA4
+    keyring: /etc/apt/trusted.gpg
+    state: present
+
+- name: Instalación de podman
+  apt:
+    update_cache: yes
+    pkg:
+      - podman

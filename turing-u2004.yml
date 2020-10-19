@@ -17,6 +17,7 @@
         base_hostname: "turing"
     - gnome3-dconf
     - software-2004
+    - podman
     - apache-userdir
     - wireshark
     - gns3
