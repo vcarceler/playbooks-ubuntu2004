@@ -28,6 +28,7 @@
     - apagado-2130
 
   tasks:
+    - include: users/aig/ga.yml
     # Usuarios
     #- include: users/informatica/smx2a.yml
     #- include: users/informatica/smx2b.yml
