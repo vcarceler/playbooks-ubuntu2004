@@ -20,6 +20,10 @@
         name: atom
         classic: yes
 
+- name: Instala snap beekeeper-studio
+  snap:
+        name: beekeeper-studio
+
 - name: Instala snap blender
   snap:
         name: blender
@@ -46,6 +50,10 @@
   snap:
         name: eclipse
         classic: yes
+
+- name: Instala snap flameshot
+  snap:
+        name: flameshot
 
 - name: Instala snap gimp
   snap:
@@ -118,6 +126,10 @@
   snap:
         name: mysql-workbench-community
 
+- name: Instala snap natron
+  snap:
+        name: natron
+
 - name: Instala snap netbeans
   snap:
         name: netbeans
@@ -171,6 +183,10 @@
   snap:
         name: syncthing
 
+- name: Instala snap umbrello
+  snap:
+        name: umbrello
+
 - name: Instala snap vlc
   snap:
         name: vlc       
@@ -221,6 +237,7 @@
     - httpie
     - ipcalc
     - jq
+    - julia
     - kicad
     - kicad-doc-es
     - korganizer
