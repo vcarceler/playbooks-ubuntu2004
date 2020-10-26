@@ -14,6 +14,11 @@
 #       - krita
 #       - krita-l10n
 
+- name: Elimina snaps deprecated
+  snap:
+          state: absent
+          name:
+                  - mysql-workbench-community
 
 - name: Instala snap atom
   snap:
@@ -121,10 +126,6 @@
 - name: Instala snap musescore
   snap:
         name: musescore
-
-- name: Instala snap mysql-workbench-community
-  snap:
-        name: mysql-workbench-community
 
 - name: Instala snap natron
   snap:
