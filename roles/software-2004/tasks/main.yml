@@ -229,6 +229,7 @@
     - dialog
     - docutils-doc
     - filezilla
+    - flatpak
     - freecad
     - fritzing
     - git
@@ -273,3 +274,9 @@
     - virtualenv
     - vpcs
     - xorriso
+
+# Instalación de paquetes Flatpak
+- name: Instala flatpak de openboard
+  flatpak:
+          name: https://dl.flathub.org/repo/appstream/ch.openboard.OpenBoard.flatpakref
+          state: present

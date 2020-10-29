@@ -1,6 +1,7 @@
 ---
 - hosts: lenovo-v510
   user: root
+  #connection: paramiko
 
   vars:
     grupos: adm,cdrom,dialout,kvm,libvirt,lpadmin,lxd,plugdev,sambashare,ubridge,vboxusers
@@ -39,7 +40,7 @@
     - include: users/esobat/grupos/tec1d-g2.yml
     - include: users/esobat/grupos/tec1e-g1.yml
     - include: users/esobat/grupos/tec1e-g2.yml
-    - include: users/esobat/grupos/tec2a.g1.yml
+    - include: users/esobat/grupos/tec2a-g1.yml
     - include: users/esobat/grupos/tec2a-g2.yml
     - include: users/esobat/grupos/tec2b-g1.yml
     - include: users/esobat/grupos/tec2b-g2.yml
