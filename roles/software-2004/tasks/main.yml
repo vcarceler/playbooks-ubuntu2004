@@ -19,6 +19,7 @@
           state: absent
           name:
                   - mysql-workbench-community
+                  - ruby
 
 - name: Instala snap atom
   snap:
@@ -166,11 +167,6 @@
   snap:
         name: qalculate
 
-- name: Instala snap ruby
-  snap:
-        name: ruby
-        classic: yes
-
 - name: Instala snap shotcut
   snap:
         name: shotcut
@@ -262,6 +258,7 @@
     - recordmydesktop
     - relational
     - rst2pdf
+    - ruby
     - scratch
     - slic3r
     - texlive-lang-spanish
