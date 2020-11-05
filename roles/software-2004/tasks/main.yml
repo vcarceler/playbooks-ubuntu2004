@@ -18,6 +18,7 @@
   snap:
           state: absent
           name:
+                  - flameshot
                   - mysql-workbench-community
                   - ruby
 
@@ -56,10 +57,6 @@
   snap:
         name: eclipse
         classic: yes
-
-- name: Instala snap flameshot
-  snap:
-        name: flameshot
 
 - name: Instala snap gimp
   snap:
@@ -212,7 +209,7 @@
   when: result is failed
 
 # Instalación de paquetes
-- name: Instalación de paquetes
+- name: Instalación de paquetes que están en los repos de 18.04 y 20.04
   apt:
     update_cache: yes
     pkg:
@@ -235,7 +232,6 @@
     - httpie
     - ipcalc
     - jq
-    - julia
     - kicad
     - kicad-doc-es
     - korganizer
@@ -244,7 +240,6 @@
     - libreoffice-report-builder
     - lyx
     - ncdu
-    - openscad
     - openshot
     - pgadmin3
     - planner
@@ -272,8 +267,42 @@
     - vpcs
     - xorriso
 
+# Instalación de paquetes
+- name: Instalación de paquetes que solo están en 20.04
+  apt:
+    update_cache: yes
+    pkg:
+    - openscad
+    - julia
+  when: ansible_distribution_version == "20.04"
+
+
 # Instalación de paquetes Flatpak
+
+- name: Instala flatpak de calibre
+  flatpak:
+          name: https://dl.flathub.org/repo/appstream/com.calibre_ebook.calibre.flatpakref
+          state: present
+
+- name: Instala flatpak de dbeaver
+  flatpak:
+          name: https://dl.flathub.org/repo/appstream/io.dbeaver.DBeaverCommunity.flatpakref
+          state: present
+
+- name: Instala flatpak de flameshot
+  flatpak:
+          name: https://dl.flathub.org/repo/appstream/org.flameshot.Flameshot.flatpakref
+          state: present
+
 - name: Instala flatpak de openboard
   flatpak:
           name: https://dl.flathub.org/repo/appstream/ch.openboard.OpenBoard.flatpakref
           state: present
+
+- name: Instala flatpak de peek
+  flatpak:
+          name: https://dl.flathub.org/repo/appstream/com.uploadedlobster.peek.flatpakref
+          state: present
+
+
+
