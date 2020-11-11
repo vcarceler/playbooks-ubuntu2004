@@ -9,3 +9,10 @@
     dest: /etc/profile.d/04-fix-dotnet.sh
     owner: root
     group: root
+
+# https://github.com/dotnet/sdk/issues/10403#issuecomment-621463370
+- name: Enlace para evitar warnings al trabajar con dotnet
+  file:
+    src: /snap/dotnet-sdk/current/dotnet
+    dest: /usr/local/bin/dotnet
+    state: link
