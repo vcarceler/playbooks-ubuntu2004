@@ -1,0 +1,15 @@
+---
+- hosts: 192.168.17.28
+  user: root
+
+  tasks:
+          - name: Instala Flatpak
+            apt:
+                    name: flatpak
+                    state: present
+                    update_cache: yes
+
+          - name: Instala flatpak de openboard
+            flatpak:
+                    name: https://dl.flathub.org/repo/appstream/ch.openboard.OpenBoard.flatpakref
+                    state: present

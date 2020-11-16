@@ -1,0 +1,17 @@
+#!/bin/bash
+
+#
+# Los playbooks en portátiles pueden bloquearse cuando algún equipo pierde la conexión.
+# Por eso se lanzan en paralelo.
+#
+
+playbooks="/home/vcarceler/playbooks-ubuntu2004"
+export ANSIBLE_CALLBACK_PLUGINS="$(python3 -m ara.setup.callback_plugins)"
+
+ansible-playbook -i $playbooks/hosts $playbooks/carret10-u2004.yml &
+ansible-playbook -i $playbooks/hosts $playbooks/carret11-u2004.yml &
+ansible-playbook -i $playbooks/hosts $playbooks/carret12-u2004.yml &
+ansible-playbook -i $playbooks/hosts $playbooks/carret13-u2004.yml &
+ansible-playbook -i $playbooks/hosts $playbooks/lenovo-v510-u2004.yml &
+ansible-playbook -i $playbooks/hosts $playbooks/portatiles-prestamo-u2004.yml &
+ansible-playbook -i $playbooks/hosts $playbooks/portatils-ciencies-u2004.yml &
