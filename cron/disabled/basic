@@ -1,0 +1,11 @@
+#!/bin/bash
+
+#
+# Playbook con la preparación básica
+#
+
+playbooks="/home/vcarceler/playbooks-ubuntu2004"
+
+export ANSIBLE_CALLBACK_PLUGINS="$(python3 -m ara.setup.callback_plugins)"
+
+ansible-playbook -i $playbooks/hosts $playbooks/basic-u2004.yml
