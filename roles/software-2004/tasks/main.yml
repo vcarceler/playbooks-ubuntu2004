@@ -45,6 +45,10 @@
         name: brackets
         classic: yes
 
+- name: Instala snap brave
+  snap:
+        name: brave
+
 - name: Instala snap chromium
   snap:
         name: chromium
