@@ -29,6 +29,7 @@
 
   tasks:
     # Usuarios
+    - include: users/esobat/docent.yml
     - include: users/idiomes/idiomes.yml
     #- include: users/informatica/smx2b.yml
     #- include: users/informatica/smx2c.yml
