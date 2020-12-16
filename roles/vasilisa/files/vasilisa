@@ -14,6 +14,8 @@
 #
 # - Si hay datasets que eran el home de usuarios antiguos se destruyen.
 #
+# - Si hay actualizaciones flatpak las aplica.
+#
 
 
 THRESHOLD=209715200 # 200GiB
@@ -119,5 +121,16 @@ done
 # 		fi
 # 	done
 # fi
+
+#
+# Actualizaciones flatpak
+#
+
+if [ -f /usr/bin/flatpak ]
+then
+	log "Comprobando actualizaciones flatpak"
+	flatpak -y update
+	log "Actualizaciones flatpak aplicadas"
+fi
 
 log "There is nothing more to do."
