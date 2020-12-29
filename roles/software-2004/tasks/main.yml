@@ -303,6 +303,11 @@
           name: https://dl.flathub.org/repo/appstream/ch.openboard.OpenBoard.flatpakref
           state: present
 
+- name: Instala flatpak de pdfarranger
+  flatpak:
+          name: https://dl.flathub.org/repo/appstream/com.github.jeromerobert.pdfarranger.flatpakref
+          state: present
+
 - name: Instala flatpak de peek
   flatpak:
           name: https://dl.flathub.org/repo/appstream/com.uploadedlobster.peek.flatpakref
