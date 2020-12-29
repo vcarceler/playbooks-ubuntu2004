@@ -1,0 +1,9 @@
+[Unit]
+Description=Ejecuta Vasilisa en el arranque y cada día.
+
+[Timer]
+OnBootSec=1min
+OnUnitActiveSec=1d
+
+[Install]
+WantedBy=timers.target

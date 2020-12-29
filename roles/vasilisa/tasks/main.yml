@@ -1,4 +1,4 @@
-# Instala Vasilisa para borrar el directorio descargas si hay poco espacio.
+# Instala Vasilisa para ocuparse de los hosts durante el arranque y cada día.
 - name: Copia el script vasilisa en /opt/vasilisa
   copy:
     src: files/vasilisa
@@ -7,7 +7,7 @@
     group: root
     mode: u=rwx,g=r,o=r
 
-- name: Copia la unidad de Vasilisa en /etc/systemd/system
+- name: Copia vasilisa.service en /etc/systemd/system
   copy:
     src: files/vasilisa.service
     dest: /etc/systemd/system/vasilisa.service
@@ -15,11 +15,24 @@
     group: root
     mode: u=rw,g=r,o=r
 
-- name: Activa la unidad de Vasilisa
+- name: Copia vasilisa.timer en /etc/systemd/system
+  copy:
+    src: files/vasilisa.service
+    dest: /etc/systemd/system/vasilisa.timer
+    owner: root
+    group: root
+    mode: u=rw,g=r,o=r
+
+- name: Activa vasilisa.timer
   file:
-    src: /etc/systemd/system/vasilisa.service
-    dest: /etc/systemd/system/default.target.wants/vasilisa.service
+    src: /etc/systemd/system/vasilisa.timer
+    dest: /etc/systemd/system/timers.target.wants/vasilisa.timer
     state: link
+
+- name: Borra el antiguo enlace /etc/systemd/system/default.target.wants/vasilisa.service
+  file:
+    path: /etc/systemd/system/default.target.wants/vasilisa.service
+    state: absent
 
 # Ansible 2.2 soporta el módulo systemd
 #- name: Activa Vasilisa

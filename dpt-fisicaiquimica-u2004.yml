@@ -1,5 +1,5 @@
 ---
-- hosts: dpt-fisicaiquimica
+- hosts: dpt_fisicaiquimica
   user: root
 
   vars:

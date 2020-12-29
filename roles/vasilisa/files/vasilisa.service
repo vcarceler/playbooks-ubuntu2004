@@ -1,8 +1,6 @@
 [Unit]
-Description=Vasilisa la sabia cuida de que los discos duros tengan espacio libre.
+Description=Vasilisa la sabia cuida de los equipos al arrancar y cada día.
 
 [Service]
 ExecStart=/opt/vasilisa
 
-[Install]
-WantedBy=default.target
