@@ -96,7 +96,7 @@ then
 	log "There are LXD running containers?"
 
 	# We need to wait for lxd containers
-	sleep 60
+	#sleep 60
 
 	for container in `$LXC list -c n,s --format csv | grep RUNNING | cut -f1 -d','`
 	do
