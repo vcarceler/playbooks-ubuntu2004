@@ -16,6 +16,8 @@
 #
 # - Si hay actualizaciones flatpak las aplica.
 #
+# - Si existe /opt/sirin hace una petición a Sirin.
+#
 
 SCRIPT=`basename $0`
 
@@ -31,6 +33,8 @@ log "There is something to do?"
 NODE_EXPORTER_DIR='/var/lib/prometheus/node-exporter'
 if [ -d $NODE_EXPORTER_DIR ]
 then
+	log "Preparo métricas para Prometheus"
+
 	FILE='misc.prom'
 	CPU_MODEL_NAME=`cat /proc/cpuinfo | grep "model name" | head -n 1 | cut -d':' -f2`
 	CPU_CORES=`cat /proc/cpuinfo | grep "cpu cores" | head -n 1 | cut -d':' -f2`
@@ -39,6 +43,8 @@ then
 	echo "# HELP misc_labels Labeled information as provided by /proc/cpuinfo." >$NODE_EXPORTER_DIR/$FILE
 	echo "# TYPE misc_labels gauge" >>$NODE_EXPORTER_DIR/$FILE
 	echo "misc_labels{cpu=\"$CPU_MODEL_NAME\",cores=\"$CPU_CORES\",startup=\"$STARTUP_FINISHED\"} 1" >>$NODE_EXPORTER_DIR/$FILE
+
+	log "Métricas preparadas en $NODE_EXPORTER_DIR/$FILE"
 fi
 
 
@@ -125,7 +131,16 @@ then
 	log "Actualizaciones flatpak aplicadas"
 fi
 
-
+#
+# Sirin. https://github.com/vcarceler/sirin
+#
+SIRIN='/opt/sirin'
+if [ -f $SIRIN ]
+then
+	log "Haciendo una petición a Sirin"
+	wget -O /dev/null -i $SIRIN
+	log "Petición a Sirin completada"
+fi
 
 log "There is nothing more to do."
 
