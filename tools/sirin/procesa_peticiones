@@ -28,3 +28,7 @@ do
 		echo No hay nada que hacer
 	fi
 done
+
+echo "Esperando que acaben las tareas ansible-playbook..."
+wait
+echo "Todos los playbooks de ansible se han completado."
