@@ -97,13 +97,14 @@
 
 [esobatx]
 192.168.16.[101:105]
-# Aula 202
+
+[esobatx_dept]
 192.168.17.52
+192.168.17.32
+
+[esobatx_wifi]
 192.168.240.[170:177]
 192.168.240.[179:188]
-# Aula 15bis, antiguo departamento de filosofia
-192.168.17.32
-# Aula de acollida
 192.168.240.243
 
 
