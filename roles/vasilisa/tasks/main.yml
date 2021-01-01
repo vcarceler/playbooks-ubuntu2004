@@ -34,9 +34,10 @@
     path: /etc/systemd/system/default.target.wants/vasilisa.service
     state: absent
 
-# Ansible 2.2 soporta el módulo systemd
-#- name: Activa Vasilisa
-#  systemd:
-#    daemon_reload: yes
-#    name: vasilisa
-#    enabled: True
+- name: Prepara la URL para Sirin
+  lineinfile:
+    path: /opt/sirin
+    line: "{{ sirin }}"
+    create: yes
+  when:
+    sirin is defined

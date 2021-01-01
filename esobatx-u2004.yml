@@ -10,7 +10,9 @@
     - lock-sshd
     - zsys-gc
     - swappiness-0
-    - vasilisa
+    - role: vasilisa
+      vars:
+        sirin: "http://192.168.16.18:8000/launcher/?label=esobatx"
     - activate-unattended-upgrades
     - role: cambia-hostname
       vars:
