@@ -1,0 +1,30 @@
+#!/bin/bash
+
+#
+# Procesa las peticiones pendientes para cada una de las etiquetas.
+#
+
+# venv's python
+PYTHON="/home/vcarceler/sirin/venv/bin/python"
+# Sirin's manage.py
+MANAGE="/home/vcarceler/sirin/sirin/manage.py"
+
+# ARA
+playbooks="/home/vcarceler/playbooks-ubuntu2004"
+export ANSIBLE_CALLBACK_PLUGINS="$(python3 -m ara.setup.callback_plugins)"
+
+for x in esobatx-u2004.yml esobatx_dept-u2004.yml esobatx_wifi-u2004.yml
+do
+	# Comprobamos si hay peticiones pendientes
+	n=`$PYTHON $MANAGE getnumberofrequests $x`
+	echo "Para la etiqueta $x hay $n peticiones pendientes."
+	if [ $n -gt 0 ]
+	then
+		#hosts=`$PYTHON $MANAGE gethosts $x`
+		hosts="192.168.16.104,192.168.16.105,"
+		echo "Lanzo ansible-playbook -i $playbooks/hosts $playbooks/$x --limit=$hosts"
+		ansible-playbook -i $playbooks/hosts $playbooks/$x --limit=$hosts &
+	else
+		echo No hay nada que hacer
+	fi
+done
