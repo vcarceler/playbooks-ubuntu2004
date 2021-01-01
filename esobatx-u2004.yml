@@ -12,7 +12,7 @@
     - swappiness-0
     - role: vasilisa
       vars:
-        sirin: "http://192.168.16.18:8000/launcher/?label=esobatx"
+        sirin: "http://192.168.16.18:8000/launcher/?label=esobatx-u2004.yml"
     - activate-unattended-upgrades
     - role: cambia-hostname
       vars:

@@ -37,6 +37,7 @@
 - name: Prepara la URL para Sirin
   lineinfile:
     path: /opt/sirin
+    regexp: "^.*$"
     line: "{{ sirin }}"
     create: yes
   when:
