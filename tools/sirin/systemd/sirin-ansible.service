@@ -1,0 +1,7 @@
+[Unit]
+Description=Procesa con ansible-playbook las peticiones pendientes
+
+[Service]
+User=vcarceler
+Group=vcarceler
+ExecStart=/home/vcarceler/playbooks-ubuntu2004/tools/sirin/procesa_peticiones

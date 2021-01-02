@@ -1,0 +1,8 @@
+[Unit]
+Description=Procesa con ansible-playbook las peticiones pendientes
+
+[Timer]
+OnCalendar=*:0/15
+
+[Install]
+WantedBy=timers.target

@@ -1,0 +1,12 @@
+[Unit]
+Description=Sirin recibe peticiones de los clientes y prepara listas de hosts para ansible-playbook
+
+[Service]
+User=vcarceler
+Group=vcarceler
+Restart=on-failure
+WorkingDirectory=/home/vcarceler/sirin/sirin
+ExecStart=/home/vcarceler/sirin/venv/bin/python manage.py runserver 0:8000
+
+[Install]
+WantedBy=default.target
