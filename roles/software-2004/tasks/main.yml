@@ -266,7 +266,7 @@
     - ttf-mscorefonts-installer
     - unrar
     - virt-top
-    - virtualbox
+      #- virtualbox
     - virtualenv
     - vpcs
     - xorriso
@@ -279,6 +279,23 @@
     - openscad
     - julia
   when: ansible_distribution_version == "20.04"
+
+# Cambio de Virtualbox. Se desinstala la versión de los repos y se instala la versión de Oracle.
+- name: Quita Virtualbox 6.1 de los repos
+  apt:
+    state: absent
+    pkg:
+      - virtualbox
+      - virtualbox-dkms
+
+- name: Copia paquete de Virtualbox
+  copy:
+    src: /home/vcarceler/playbooks-ubuntu2004/files/virtualbox-6.1_6.1.16-140961~Ubuntu~eoan_amd64.deb
+    dest: /opt
+
+- name: Instala Virtualbox libre de Oracle
+  apt:
+    deb: /opt/virtualbox-6.1_6.1.16-140961~Ubuntu~eoan_amd64.deb 
 
 
 # Instalación de paquetes Flatpak
