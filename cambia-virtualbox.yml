@@ -1,0 +1,20 @@
+---
+- hosts: dpt-inf
+  user: root
+
+  tasks:
+    - name: Quita Virtualbox 6.1 de los repos
+      apt:
+        state: absent
+        pkg:
+          - virtualbox
+          - virtualbox-dkms
+
+    - name: Copia paquete de Virtualbox
+      copy:
+        src: /home/vcarceler/playbooks-ubuntu2004/files/virtualbox-6.1_6.1.16-140961~Ubuntu~eoan_amd64.deb
+        dest: /opt
+
+    - name: Instala Virtualbox libre de Oracle
+      apt:
+        deb: /opt/virtualbox-6.1_6.1.16-140961~Ubuntu~eoan_amd64.deb
