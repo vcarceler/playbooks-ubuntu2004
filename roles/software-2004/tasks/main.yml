@@ -19,6 +19,7 @@
           state: absent
           name:
                   - flameshot
+                  - gimp
                   - mysql-workbench-community
                   - ruby
 
@@ -61,10 +62,6 @@
   snap:
         name: eclipse
         classic: yes
-
-- name: Instala snap gimp
-  snap:
-        name: gimp
 
 - name: Instala godot-3-1
   snap:
@@ -313,6 +310,11 @@
 - name: Instala flatpak de flameshot
   flatpak:
           name: https://dl.flathub.org/repo/appstream/org.flameshot.Flameshot.flatpakref
+          state: present
+
+- name: Instala flatpak de gimp
+  flatpak:
+          name: https://dl.flathub.org/repo/appstream/org.gimp.GIMP.flatpakref
           state: present
 
 - name: Instala flatpak de openboard
