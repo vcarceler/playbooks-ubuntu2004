@@ -13,7 +13,7 @@ MANAGE="/home/vcarceler/sirin/sirin/manage.py"
 playbooks="/home/vcarceler/playbooks-ubuntu2004"
 export ANSIBLE_CALLBACK_PLUGINS="$(python3 -m ara.setup.callback_plugins)"
 
-for x in ada-u2004.yml aif-u2004.yml biblioteca-u2004.yml chomsky-u2004.yml consergeria-u2004.yml esobatx-u2004.yml esobatx_dept-u2004.yml esobatx_wifi-u2004.yml stallman-u2004.yml torvalds-u2004.yml 
+for x in ada-u2004.yml aif-u2004.yml biblioteca-u2004.yml chomsky-u2004.yml consergeria-u2004.yml dpt-aif-u2004.yml esobatx-u2004.yml esobatx_dept-u2004.yml esobatx_wifi-u2004.yml stallman-u2004.yml torvalds-u2004.yml 
 do
 	# Comprobamos si hay peticiones pendientes
 	n=`$PYTHON $MANAGE getnumberofrequests $x`
