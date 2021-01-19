@@ -12,7 +12,7 @@
     - swappiness-0
     - role: vasilisa
       vars:
-        sirin: "http://192.168.0.18:8000/launcher/?label=dpt-psico-u2004.yml"
+        sirin: "http://192.168.17.18:8000/launcher/?label=dpt-psico-u2004.yml"
     - activate-unattended-upgrades
     - role: cambia-hostname
       vars:
