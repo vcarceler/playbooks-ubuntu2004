@@ -206,11 +206,13 @@ Lenovo-V510
 192.168.17.20
 192.168.17.21
 
-[dpt-ciencies]
-# aula laboratorio
-192.168.240.189
+[dpt_ciencies]
 # departamento
 192.168.17.54
+
+[dpt_ciencies_lab]
+# aula laboratorio
+192.168.240.189
 
 [dpt-dibuix]
 192.168.17.47
