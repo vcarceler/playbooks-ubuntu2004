@@ -10,7 +10,9 @@
     - lock-sshd
     - zsys-gc
     - swappiness-0
-    - vasilisa
+    - role: vasilisa
+      vars:
+        sirin: "http://192.168.17.18:8000/launcher/?label=saladeprofessors-u2004.yml"
     - activate-unattended-upgrades
     - role: cambia-hostname
       vars:

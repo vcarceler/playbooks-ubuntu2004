@@ -1,5 +1,5 @@
 ---
-- hosts: saladeguardies
+- hosts: dpt_ciencies_lab
   user: root
 
   vars:
@@ -12,11 +12,11 @@
     - swappiness-0
     - role: vasilisa
       vars:
-        sirin: "http://192.168.240.18:8000/launcher/?label=saladeguardies-u2004.yml"
+        sirin: "http://192.168.240.18:8000/launcher/?label=dpt-ciencies-lab-u2004.yml"
     - activate-unattended-upgrades
     - role: cambia-hostname
       vars:
-        base_hostname: "saladeguardies"
+        base_hostname: "dpt-ciencies-lab"
     - gnome3-dconf
     - software-2004
     - apache-userdir
