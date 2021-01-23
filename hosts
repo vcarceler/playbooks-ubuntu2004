@@ -294,6 +294,12 @@ dpt-inf
 [lenovo-v510]
 192.168.240.[101:120]
 
+# Portátiles para inicialización completa.
+# Normalmente conectados con cable a la LAN de Darwin utilizando
+# una IP dinámica.
+[carretx]
+192.168.19.[123:200]
+
 # Portátiles HP 250 G6 plateados
 # carret10
 [carret10]

@@ -1,0 +1,5 @@
+- name: Instala wireguard-tools
+  apt:
+    update_cache: yes
+    pkg:
+    - wireguard-tools

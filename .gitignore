@@ -1,5 +1,6 @@
-users/
 files/
+users/
+vpn/
 *.retry
 *.swp
 *.swo
