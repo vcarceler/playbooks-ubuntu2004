@@ -19,9 +19,13 @@
     - role: vasilisa
       vars:
         sirin: "http://10.0.0.2:8000/launcher/?label=carret14-u2004.yml"
-    - include: "vpn/{{ ip_vpn }}.yml"
-      loop:
-        - { name: 'testuser1', groups: 'wheel' }
+    - wireguard
+    - include: "vpn/{{ vpn }}.yml"
+    - name: Activa la VPN wg0 (enable y start)
+      systemd:
+        name: wg-quick@wg0
+        enabled: yes
+        state: started
     - activate-unattended-upgrades
     - role: cambia-hostname
       vars:
