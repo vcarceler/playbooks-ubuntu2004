@@ -297,8 +297,13 @@ dpt-inf
 # Portátiles para inicialización completa.
 # Normalmente conectados con cable a la LAN de Darwin utilizando
 # una IP dinámica.
+#
+# Ejemplo:
+# [carretx]
+# 192.168.19.123 vpn=10.0.0.101
+# 192.168.19.124 vpn=10.0.0.102
 [carretx]
-192.168.19.[123:200]
+#192.168.19.123 vpn=
 
 # Portátiles HP 250 G6 plateados
 # carret10

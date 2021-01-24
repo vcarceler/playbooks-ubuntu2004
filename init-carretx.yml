@@ -5,6 +5,12 @@
   vars:
     grupos: adm,cdrom,dialout,kvm,libvirt,lpadmin,lxd,plugdev,sambashare,ubridge,vboxusers
 
+    # Asociación de direcciones lan-vpn
+    ip_lan:
+      - 192.168.19.123
+    ip_vpn:
+      - 10.0.0.101
+
   roles:
     - delete-users
     - lock-sshd
@@ -12,7 +18,10 @@
     - swappiness-0
     - role: vasilisa
       vars:
-        sirin: "http://10.0.0.2:8000/launcher/?label=carretX-u2004.yml"
+        sirin: "http://10.0.0.2:8000/launcher/?label=carret14-u2004.yml"
+    - include: "vpn/{{ ip_vpn }}.yml"
+      loop:
+        - { name: 'testuser1', groups: 'wheel' }
     - activate-unattended-upgrades
     - role: cambia-hostname
       vars:
