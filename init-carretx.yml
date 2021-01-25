@@ -5,12 +5,6 @@
   vars:
     grupos: adm,cdrom,dialout,kvm,libvirt,lpadmin,lxd,plugdev,sambashare,ubridge,vboxusers
 
-    # Asociación de direcciones lan-vpn
-    ip_lan:
-      - 192.168.19.123
-    ip_vpn:
-      - 10.0.0.101
-
   roles:
     - delete-users
     - lock-sshd
@@ -20,12 +14,7 @@
       vars:
         sirin: "http://10.0.0.2:8000/launcher/?label=carret14-u2004.yml"
     - wireguard
-    - include: "vpn/{{ vpn }}.yml"
-    - name: Activa la VPN wg0 (enable y start)
-      systemd:
-        name: wg-quick@wg0
-        enabled: yes
-        state: started
+    
     - activate-unattended-upgrades
     - role: cambia-hostname
       vars:
@@ -41,8 +30,18 @@
     #- convidat
     #- apagado-1455
     #- apagado-2130
+    
+    - reboot
+
 
   tasks:
+    - include: "vpn/{{ vpn }}.yml"
+    - name: Activa la VPN wg0 (enable y start)
+      systemd:
+        name: wg-quick@wg0
+        enabled: yes
+        state: started
+    
     # Usuarios
     #- include: users/informatica/smx2a.yml
     #- include: users/informatica/smx2b.yml

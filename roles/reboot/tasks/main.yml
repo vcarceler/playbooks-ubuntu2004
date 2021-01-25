@@ -1,0 +1,6 @@
+---
+# Reinicia el equipo
+
+- name: reboot
+  reboot:
+    reboot_timeout: 120
