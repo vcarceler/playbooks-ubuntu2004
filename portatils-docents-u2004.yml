@@ -17,7 +17,7 @@
     - role: cambia-hostname
       vars:
         base_hostname: "docent"
-    - gnome3-dconf
+    #- gnome3-dconf
     - software-2004
     - apache-userdir
     - wireshark
@@ -25,11 +25,15 @@
     - dotnet
     - kvm
     - lxd-zfs
-    - convidat
+    #- convidat
     #- apagado-1455
     #- apagado-2130
+    - flush-handlers
 
   tasks:
+    # Cada equipo tiene un usuario particular
+    - include: "vpn/{{ ansible_host }}.yml"
+
     # Usuarios
     #- include: users/informatica/smx2a.yml
     #- include: users/informatica/smx2b.yml
