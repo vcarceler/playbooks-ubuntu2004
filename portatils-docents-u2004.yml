@@ -1,5 +1,5 @@
 ---
-- hosts: carretx
+- hosts: portatils_docents
   user: root
 
   vars:
@@ -13,41 +13,23 @@
     - role: vasilisa
       vars:
         sirin: "http://10.0.0.2:8000/launcher/?label=portatils-docents-u2004.yml"
-    - wireguard
-    
     - activate-unattended-upgrades
     - role: cambia-hostname
       vars:
-        base_hostname: "carretx"
-        
-    #- gnome3-dconf
-    #- software-2004
-    #- apache-userdir
-    #- wireshark
-    #- gns3
-    #- dotnet
-    #- kvm
-    #- lxd-zfs
-
-    #- convidat
+        base_hostname: "docent"
+    - gnome3-dconf
+    - software-2004
+    - apache-userdir
+    - wireshark
+    - gns3
+    - dotnet
+    - kvm
+    - lxd-zfs
+    - convidat
     #- apagado-1455
     #- apagado-2130
-    
-    - flush-handlers
-    #- reboot
-
 
   tasks:
-    - include: "vpn/{{ vpn }}.yml"
-    - name: Activa la VPN wg0 (enable y start)
-      systemd:
-        name: wg-quick@wg0
-        enabled: yes
-        state: started
-    
-    - name: Reboot
-      reboot:
-
     # Usuarios
     #- include: users/informatica/smx2a.yml
     #- include: users/informatica/smx2b.yml
