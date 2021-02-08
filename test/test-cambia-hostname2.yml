@@ -1,0 +1,8 @@
+---
+- hosts: carret14
+  user: root
+
+  roles:
+    - role: cambia-hostname2
+      vars:
+        base_hostname: "carret14"

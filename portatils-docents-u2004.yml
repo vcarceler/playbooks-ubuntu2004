@@ -14,7 +14,7 @@
       vars:
         sirin: "http://10.0.0.2:8000/launcher/?label=portatils-docents-u2004.yml"
     - activate-unattended-upgrades
-    - role: cambia-hostname
+    - role: cambia-hostname-wg0
       vars:
         base_hostname: "docent"
     #- gnome3-dconf

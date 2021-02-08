@@ -3,16 +3,16 @@
   user: root
 
   vars:
-    grupos: adm,cdrom,dialout,kvm,libvirt,lpadmin,lxd,plugdev,sambashare,ubridge,vboxusers
+    grupos: adm,cdrom,dialout,lpadmin,netdev,plugdev,sambashare
 
   roles:
     - delete-users
-    - lock-sshd
+      #- lock-sshd
     - zsys-gc
     - swappiness-0
     - role: vasilisa
       vars:
-        sirin: "http://10.0.0.2:8000/launcher/?label=portatils-docents-u2004.yml"
+        sirin: "http://10.0.0.2:8000/launcher/?label=carret14-u2004.yml"
     - wireguard
     
     - activate-unattended-upgrades
@@ -44,6 +44,7 @@
         name: wg-quick@wg0
         enabled: yes
         state: started
+        daemon_reload: yes
     
     - name: Reboot
       reboot:
