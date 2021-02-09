@@ -319,6 +319,11 @@
           name: https://dl.flathub.org/repo/appstream/org.gimp.GIMP.flatpakref
           state: present
 
+- name: Instala flatpak de libreoffice
+  flatpak:
+          name: https://dl.flathub.org/repo/appstream/org.libreoffice.LibreOffice.flatpakref
+          state: present
+
 - name: Instala flatpak de openboard
   flatpak:
           name: https://dl.flathub.org/repo/appstream/ch.openboard.OpenBoard.flatpakref
