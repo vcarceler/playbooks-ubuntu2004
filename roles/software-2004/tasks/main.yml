@@ -19,6 +19,7 @@
   snap:
           state: absent
           name:
+                  - atom
                   - bluej
                   - brackets
                   - flameshot
@@ -31,10 +32,10 @@
                   - ruby
                   - sweethome3d-homedesign
 
-- name: Instala snap atom
-  snap:
-        name: atom
-        classic: yes
+#- name: Instala snap atom
+#  snap:
+#        name: atom
+#        classic: yes
 
 - name: Instala snap beekeeper-studio
   snap:
@@ -305,6 +306,11 @@
 
 
 # Instalación de paquetes Flatpak
+
+- name: Instala flatpak de atom
+  flatpak:
+          name: https://dl.flathub.org/repo/appstream/io.atom.Atom.flatpakref
+          state: present
 
 - name: Instala flatpak de bluej
   flatpak:
