@@ -367,11 +367,12 @@
 - name: Instala flatpak de herramientas kde
   flatpak:
           state: present
-          name:
-                  - https://dl.flathub.org/repo/appstream/org.kde.kbruch.flatpakref
-                  - https://dl.flathub.org/repo/appstream/org.kde.kcalc.flatpakref
-                  - https://dl.flathub.org/repo/appstream/org.kde.kdenlive.flatpakref
-                  - https://dl.flathub.org/repo/appstream/org.kde.kig.flatpakref
+          name: "{{ item  }}"
+  loop:
+          - https://dl.flathub.org/repo/appstream/org.kde.kbruch.flatpakref
+          - https://dl.flathub.org/repo/appstream/org.kde.kcalc.flatpakref
+          - https://dl.flathub.org/repo/appstream/org.kde.kdenlive.flatpakref
+          - https://dl.flathub.org/repo/appstream/org.kde.kig.flatpakref
 
 - name: Instala flatpak de libreoffice
   flatpak:
