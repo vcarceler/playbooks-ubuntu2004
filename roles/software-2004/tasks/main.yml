@@ -26,6 +26,7 @@
                   - flameshot
                   - gimp
                   - godot-3-1
+                  - inkscape
                   - mysql-workbench-community
                   - natron
                   - obs-studio
@@ -79,9 +80,9 @@
 #        name: godot-3-1
 #        channel: edge
 
-- name: Instala snap inkscape
-  snap:
-        name: inkscape
+#- name: Instala snap inkscape
+#  snap:
+#        name: inkscape
 
 - name: Instala snap intellij-idea-educational
   snap:
@@ -353,6 +354,11 @@
 - name: Instala flatpak de godot
   flatpak:
           name: https://dl.flathub.org/repo/appstream/org.godotengine.Godot.flatpakref
+          state: present
+
+- name: Instala flatpak de inkscape
+  flatpak:
+          name: https://dl.flathub.org/repo/appstream/org.inkscape.Inkscape.flatpakref
           state: present
 
 - name: Instala flatpak de libreoffice
