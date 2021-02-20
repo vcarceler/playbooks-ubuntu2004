@@ -41,6 +41,7 @@
                   - pdfmixtool
                   - qalculate
                   - ruby
+                  - shotcut
                   - sweethome3d-homedesign
 
 #- name: Instala snap atom
@@ -185,10 +186,10 @@
 #  snap:
 #        name: qalculate
 
-- name: Instala snap shotcut
-  snap:
-        name: shotcut
-        classic: yes
+#- name: Instala snap shotcut
+#  snap:
+#        name: shotcut
+#        classic: yes
 
 #- name: Instala snap sweethome3d-homedesign
 #  snap:
@@ -439,3 +440,7 @@
           name: https://dl.flathub.org/repo/appstream/com.sweethome3d.Sweethome3d.flatpakref
           state: present
 
+- name: Instala flatpak de shotcut
+  flatpak:
+          name: https://dl.flathub.org/repo/appstream/org.shotcut.Shotcut.flatpakref
+          state: present
