@@ -32,6 +32,7 @@
                   - kdenlive
                   - kig
                   - krita
+                  - librepcb
                   - mysql-workbench-community
                   - natron
                   - obs-studio
@@ -135,9 +136,9 @@
   snap:
         name: ktouch
 
-- name: Instala snap librepcb
-  snap:
-        name: librepcb
+#- name: Instala snap librepcb
+#  snap:
+#        name: librepcb
 
 - name: Instala snap musescore
   snap:
@@ -383,6 +384,11 @@
 - name: Instala flatpak de libreoffice
   flatpak:
           name: https://dl.flathub.org/repo/appstream/org.libreoffice.LibreOffice.flatpakref
+          state: present
+
+- name: Instala flatpak de librepcb
+  flatpak:
+          name: https://dl.flathub.org/repo/appstream/org.librepcb.LibrePCB.flatpakref
           state: present
 
 - name: Instala flatpak de natron
