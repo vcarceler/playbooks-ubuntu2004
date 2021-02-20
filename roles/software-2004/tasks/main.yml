@@ -31,6 +31,7 @@
                   - kcalc
                   - kdenlive
                   - kig
+                  - krita
                   - mysql-workbench-community
                   - natron
                   - obs-studio
@@ -126,9 +127,9 @@
         name: kotlin
         classic: yes
 
-- name: Instala snap krita
-  snap:
-        name: krita
+#- name: Instala snap krita
+#  snap:
+#        name: krita
 
 - name: Instala snap ktouch
   snap:
@@ -373,6 +374,11 @@
           - https://dl.flathub.org/repo/appstream/org.kde.kcalc.flatpakref
           - https://dl.flathub.org/repo/appstream/org.kde.kdenlive.flatpakref
           - https://dl.flathub.org/repo/appstream/org.kde.kig.flatpakref
+
+- name: Instala flatpak de krita
+  flatpak:
+          name: https://dl.flathub.org/repo/appstream/org.kde.krita.flatpakref
+          state: present
 
 - name: Instala flatpak de libreoffice
   flatpak:
