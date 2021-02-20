@@ -19,6 +19,7 @@
   snap:
           state: absent
           name:
+                  - bluej
                   - flameshot
                   - gimp
                   - mysql-workbench-community
@@ -38,9 +39,9 @@
         name: blender
         classic: yes
 
-- name: Instala snap bluej
-  snap:
-        name: bluej
+#- name: Instala snap bluej
+#  snap:
+#        name: bluej
 
 - name: Instala snap brackets
   snap:
@@ -298,6 +299,11 @@
 
 
 # Instalación de paquetes Flatpak
+
+- name: Instala flatpak de bluej
+  flatpak:
+          name: https://dl.flathub.org/repo/appstream/org.bluej.BlueJ.flatpakref
+          state: present
 
 - name: Instala flatpak de calibre
   flatpak:
