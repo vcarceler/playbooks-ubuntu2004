@@ -37,6 +37,7 @@
                   - musescore
                   - mysql-workbench-community
                   - natron
+                  - octave
                   - obs-studio
                   - pdfmixtool
                   - qalculate
@@ -171,9 +172,9 @@
 #  snap:
 #        name: obs-studio
 
-- name: Instala snap octave
-  snap:
-        name: octave
+#- name: Instala snap octave
+#  snap:
+#        name: octave
 
 #- name: Instala snap pdfmixtool
 #  snap:
@@ -404,6 +405,11 @@
 - name: Instala flatpak de natron
   flatpak:
           name: https://dl.flathub.org/repo/appstream/fr.natron.Natron.flatpakref
+          state: present
+
+- name: Instala flatpak de octave
+  flatpak:
+          name: https://dl.flathub.org/repo/appstream/org.octave.Octave.flatpakref
           state: present
 
 - name: Instala flatpak de obs-studio
