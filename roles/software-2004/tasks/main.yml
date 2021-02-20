@@ -31,6 +31,7 @@
                   - kcalc
                   - kdenlive
                   - kig
+                  - ktouch
                   - krita
                   - librepcb
                   - mysql-workbench-community
@@ -132,9 +133,9 @@
 #  snap:
 #        name: krita
 
-- name: Instala snap ktouch
-  snap:
-        name: ktouch
+#- name: Instala snap ktouch
+#  snap:
+#        name: ktouch
 
 #- name: Instala snap librepcb
 #  snap:
@@ -375,6 +376,7 @@
           - https://dl.flathub.org/repo/appstream/org.kde.kcalc.flatpakref
           - https://dl.flathub.org/repo/appstream/org.kde.kdenlive.flatpakref
           - https://dl.flathub.org/repo/appstream/org.kde.kig.flatpakref
+          - https://dl.flathub.org/repo/appstream/org.kde.ktouch.flatpakref
 
 - name: Instala flatpak de krita
   flatpak:
