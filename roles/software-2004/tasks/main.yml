@@ -34,6 +34,7 @@
                   - ktouch
                   - krita
                   - librepcb
+                  - musescore
                   - mysql-workbench-community
                   - natron
                   - obs-studio
@@ -141,9 +142,9 @@
 #  snap:
 #        name: librepcb
 
-- name: Instala snap musescore
-  snap:
-        name: musescore
+#- name: Instala snap musescore
+#  snap:
+#        name: musescore
 
 #- name: Instala snap natron
 #  snap:
@@ -391,6 +392,11 @@
 - name: Instala flatpak de librepcb
   flatpak:
           name: https://dl.flathub.org/repo/appstream/org.librepcb.LibrePCB.flatpakref
+          state: present
+
+- name: Instala flatpak de musescore
+  flatpak:
+          name: https://dl.flathub.org/repo/appstream/org.musescore.MuseScore.flatpakref
           state: present
 
 - name: Instala flatpak de natron
