@@ -24,6 +24,7 @@
                   - flameshot
                   - gimp
                   - mysql-workbench-community
+                  - natron
                   - ruby
 
 - name: Instala snap atom
@@ -129,9 +130,9 @@
   snap:
         name: musescore
 
-- name: Instala snap natron
-  snap:
-        name: natron
+#- name: Instala snap natron
+#  snap:
+#        name: natron
 
 - name: Instala snap netbeans
   snap:
@@ -334,6 +335,11 @@
 - name: Instala flatpak de libreoffice
   flatpak:
           name: https://dl.flathub.org/repo/appstream/org.libreoffice.LibreOffice.flatpakref
+          state: present
+
+- name: Instala flatpak de natron
+  flatpak:
+          name: https://dl.flathub.org/repo/appstream/fr.natron.Natron.flatpakref
           state: present
 
 - name: Instala flatpak de openboard
