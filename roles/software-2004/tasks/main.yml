@@ -22,6 +22,7 @@
                   - atom
                   - bluej
                   - brackets
+                  - darktable
                   - flameshot
                   - gimp
                   - mysql-workbench-community
@@ -63,9 +64,9 @@
   snap:
         name: chromium
 
-- name: Instala snap darktable
-  snap:
-        name: darktable
+#- name: Instala snap darktable
+#  snap:
+#        name: darktable
 
 - name: Instala snap eclipse
   snap:
@@ -326,6 +327,12 @@
   flatpak:
           name: https://dl.flathub.org/repo/appstream/com.calibre_ebook.calibre.flatpakref
           state: present
+
+- name: Instala flatpak de darktable
+  flatpak:
+          name: https://dl.flathub.org/repo/appstream/org.darktable.Darktable.flatpakref
+          state: present
+
 
 - name: Instala flatpak de dbeaver
   flatpak:
