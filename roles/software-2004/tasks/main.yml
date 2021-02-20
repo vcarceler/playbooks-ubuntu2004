@@ -25,6 +25,7 @@
                   - gimp
                   - mysql-workbench-community
                   - natron
+                  - obs-studio
                   - ruby
 
 - name: Instala snap atom
@@ -149,9 +150,9 @@
   snap:
         name: node-red
 
-- name: Instala snap obs-studio
-  snap:
-        name: obs-studio
+#- name: Instala snap obs-studio
+#  snap:
+#        name: obs-studio
 
 - name: Instala snap octave
   snap:
@@ -340,6 +341,11 @@
 - name: Instala flatpak de natron
   flatpak:
           name: https://dl.flathub.org/repo/appstream/fr.natron.Natron.flatpakref
+          state: present
+
+- name: Instala flatpak de obs-studio
+  flatpak:
+          name: https://dl.flathub.org/repo/appstream/com.obsproject.Studio.flatpakref
           state: present
 
 - name: Instala flatpak de openboard
