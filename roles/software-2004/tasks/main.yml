@@ -25,6 +25,7 @@
                   - darktable
                   - flameshot
                   - gimp
+                  - godot-3-1
                   - mysql-workbench-community
                   - natron
                   - obs-studio
@@ -73,10 +74,10 @@
         name: eclipse
         classic: yes
 
-- name: Instala godot-3-1
-  snap:
-        name: godot-3-1
-        channel: edge
+#- name: Instala godot-3-1
+#  snap:
+#        name: godot-3-1
+#        channel: edge
 
 - name: Instala snap inkscape
   snap:
@@ -347,6 +348,11 @@
 - name: Instala flatpak de gimp
   flatpak:
           name: https://dl.flathub.org/repo/appstream/org.gimp.GIMP.flatpakref
+          state: present
+
+- name: Instala flatpak de godot
+  flatpak:
+          name: https://dl.flathub.org/repo/appstream/org.godotengine.Godot.flatpakref
           state: present
 
 - name: Instala flatpak de libreoffice
