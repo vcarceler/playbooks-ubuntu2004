@@ -29,6 +29,7 @@
                   - pdfmixtool
                   - qalculate
                   - ruby
+                  - sweethome3d-homedesign
 
 - name: Instala snap atom
   snap:
@@ -177,9 +178,9 @@
         name: shotcut
         classic: yes
 
-- name: Instala snap sweethome3d-homedesign
-  snap:
-        name: sweethome3d-homedesign
+#- name: Instala snap sweethome3d-homedesign
+#  snap:
+#        name: sweethome3d-homedesign
 
 - name: Instala snap syncthing
   snap:
@@ -373,5 +374,10 @@
 - name: Instala flatpak de qalculate
   flatpak:
           name: https://dl.flathub.org/repo/appstream/io.github.Qalculate.flatpakref
+          state: present
+
+- name: Instala flatpak de sweethome3d
+  flatpak:
+          name: https://dl.flathub.org/repo/appstream/com.sweethome3d.Sweethome3d.flatpakref
           state: present
 
