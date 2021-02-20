@@ -27,6 +27,7 @@
                   - natron
                   - obs-studio
                   - pdfmixtool
+                  - qalculate
                   - ruby
 
 - name: Instala snap atom
@@ -167,9 +168,9 @@
   snap:
         name: pdftk
 
-- name: Instala snap qalculate
-  snap:
-        name: qalculate
+#- name: Instala snap qalculate
+#  snap:
+#        name: qalculate
 
 - name: Instala snap shotcut
   snap:
@@ -369,5 +370,8 @@
           name: https://dl.flathub.org/repo/appstream/com.uploadedlobster.peek.flatpakref
           state: present
 
-
+- name: Instala flatpak de qalculate
+  flatpak:
+          name: https://dl.flathub.org/repo/appstream/io.github.Qalculate.flatpakref
+          state: present
 
