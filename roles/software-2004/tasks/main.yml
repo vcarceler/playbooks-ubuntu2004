@@ -27,6 +27,10 @@
                   - gimp
                   - godot-3-1
                   - inkscape
+                  - kbruch
+                  - kcalc
+                  - kdenlive
+                  - kig
                   - mysql-workbench-community
                   - natron
                   - obs-studio
@@ -97,21 +101,21 @@
   snap:
         name: kalgebra
 
-- name: Instala snap kbruch
-  snap:
-        name: kbruch
+#- name: Instala snap kbruch
+#  snap:
+#        name: kbruch
 
-- name: Instala snap kcalc
-  snap:
-        name: kcalc
+#- name: Instala snap kcalc
+#  snap:
+#        name: kcalc
 
-- name: Instala snap kdenlive
-  snap:
-        name: kdenlive
+#- name: Instala snap kdenlive
+#  snap:
+#        name: kdenlive
 
-- name: Instala snap kig
-  snap:
-        name: kig   
+#- name: Instala snap kig
+#  snap:
+#        name: kig   
 
 - name: Instala snap kmplot
   snap:
@@ -335,7 +339,6 @@
           name: https://dl.flathub.org/repo/appstream/org.darktable.Darktable.flatpakref
           state: present
 
-
 - name: Instala flatpak de dbeaver
   flatpak:
           name: https://dl.flathub.org/repo/appstream/io.dbeaver.DBeaverCommunity.flatpakref
@@ -360,6 +363,15 @@
   flatpak:
           name: https://dl.flathub.org/repo/appstream/org.inkscape.Inkscape.flatpakref
           state: present
+
+- name: Instala flatpak de herramientas kde
+  flatpak:
+          state: present
+          name:
+                  - https://dl.flathub.org/repo/appstream/org.kde.kbruch.flatpakref
+                  - https://dl.flathub.org/repo/appstream/org.kde.kcalc.flatpakref
+                  - https://dl.flathub.org/repo/appstream/org.kde.kdenlive.flatpakref
+                  - https://dl.flathub.org/repo/appstream/org.kde.kig.flatpakref
 
 - name: Instala flatpak de libreoffice
   flatpak:
