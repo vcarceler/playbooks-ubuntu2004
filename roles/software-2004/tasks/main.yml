@@ -43,6 +43,7 @@
                   - ruby
                   - shotcut
                   - sweethome3d-homedesign
+                  - vlc
 
 #- name: Instala snap atom
 #  snap:
@@ -203,9 +204,9 @@
   snap:
         name: umbrello
 
-- name: Instala snap vlc
-  snap:
-        name: vlc       
+#- name: Instala snap vlc
+#  snap:
+#        name: vlc       
 
 - name: Instala snap code
   snap:
@@ -443,4 +444,9 @@
 - name: Instala flatpak de shotcut
   flatpak:
           name: https://dl.flathub.org/repo/appstream/org.shotcut.Shotcut.flatpakref
+          state: present
+
+- name: Instala flatpak de vlc
+  flatpak:
+          name: https://dl.flathub.org/repo/appstream/org.videolan.VLC.flatpakref
           state: present
