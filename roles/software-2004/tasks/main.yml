@@ -26,6 +26,7 @@
                   - mysql-workbench-community
                   - natron
                   - obs-studio
+                  - pdfmixtool
                   - ruby
 
 - name: Instala snap atom
@@ -158,9 +159,9 @@
   snap:
         name: octave
 
-- name: Instala snap pdfmixtool
-  snap:
-        name: pdfmixtool
+#- name: Instala snap pdfmixtool
+#  snap:
+#        name: pdfmixtool
 
 - name: Instala snap pdftk
   snap:
@@ -356,6 +357,11 @@
 - name: Instala flatpak de pdfarranger
   flatpak:
           name: https://dl.flathub.org/repo/appstream/com.github.jeromerobert.pdfarranger.flatpakref
+          state: present
+
+- name: Instala flatpak de pdfmixtool
+  flatpak:
+          name: https://dl.flathub.org/repo/appstream/eu.scarpetta.PDFMixTool.flatpakref
           state: present
 
 - name: Instala flatpak de peek
