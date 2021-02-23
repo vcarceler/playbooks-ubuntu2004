@@ -43,6 +43,7 @@
                   - qalculate
                   - ruby
                   - shotcut
+                  - syncthing
                   - sweethome3d-homedesign
                   - vlc
 
@@ -197,9 +198,9 @@
 #  snap:
 #        name: sweethome3d-homedesign
 
-- name: Instala snap syncthing
-  snap:
-        name: syncthing
+#- name: Instala snap syncthing
+#  snap:
+#        name: syncthing
 
 - name: Instala snap umbrello
   snap:
