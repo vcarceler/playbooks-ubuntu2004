@@ -122,6 +122,17 @@ do
 done
 
 #
+# Actualizaciones del sistema
+#
+if [ -f /usr/bin/unattended-upgrade ]
+then
+	log "Lanzando unattended-upgrade"
+	apt update
+	unattended-upgrade
+	log "Actualizaciones de unattended-upgrade completadas"
+fi
+
+#
 # Actualizaciones flatpak
 #
 if [ -f /usr/bin/flatpak ]
