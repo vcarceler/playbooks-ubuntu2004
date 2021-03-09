@@ -23,6 +23,7 @@ SCRIPT=`basename $0`
 
 function log () {
         logger -t $SCRIPT $1
+	echo $1 | systemd-cat -t $SCRIPT -p info
 }
 
 log "There is something to do?"

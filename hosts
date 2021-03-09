@@ -293,9 +293,7 @@ dpt-inf
 # Portátiles Lenovo V510 (Tecno)
 [lenovo-v510]
 192.168.240.[101:120]
-192.168.19.129
-192.168.19.172
-192.168.19.180
+#192.168.19.172
 
 # Portátiles para inicialización completa.
 # Normalmente conectados con cable a la LAN de Darwin utilizando
