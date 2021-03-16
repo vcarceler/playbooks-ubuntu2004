@@ -264,6 +264,10 @@ Lenovo-V510
 192.168.17.53
 192.168.240.202
 
+# Ordenadores para que hagan la matricula
+[matricula]
+192.168.240.100
+
 [saladeprofessors]
 # Junto a las konica
 192.168.17.55
@@ -293,7 +297,7 @@ dpt-inf
 # Portátiles Lenovo V510 (Tecno)
 [lenovo-v510]
 192.168.240.[101:120]
-#192.168.19.172
+
 
 # Portátiles para inicialización completa.
 # Normalmente conectados con cable a la LAN de Darwin utilizando
@@ -304,7 +308,7 @@ dpt-inf
 # 192.168.19.123 vpn=10.0.0.101
 # 192.168.19.124 vpn=10.0.0.102
 [carretx]
-192.168.19.160 vpn=10.0.0.154
+#192.168.17.174 vpn=10.0.0.155
 #192.168.19.193 vpn=10.0.0.135
 #192.168.19.194 vpn=10.0.0.136
 #192.168.19.195 vpn=10.0.0.137
@@ -361,7 +365,7 @@ dpt-inf
 # Portátiles para los docentes
 #
 [portatils_docents]
-10.0.0.[141:154]
+10.0.0.[141:155]
 
 # Portátiles HP 250 G4 negro
 # Préstamo a los alumnos de DAM
