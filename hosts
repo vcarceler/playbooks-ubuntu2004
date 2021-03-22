@@ -308,7 +308,7 @@ dpt-inf
 # 192.168.19.123 vpn=10.0.0.101
 # 192.168.19.124 vpn=10.0.0.102
 [carretx]
-#192.168.17.174 vpn=10.0.0.155
+192.168.19.153 vpn=10.0.0.157
 #192.168.19.193 vpn=10.0.0.135
 #192.168.19.194 vpn=10.0.0.136
 #192.168.19.195 vpn=10.0.0.137
@@ -365,7 +365,7 @@ dpt-inf
 # Portátiles para los docentes
 #
 [portatils_docents]
-10.0.0.[141:155]
+10.0.0.[141:157]
 
 # Portátiles HP 250 G4 negro
 # Préstamo a los alumnos de DAM

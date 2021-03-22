@@ -293,6 +293,14 @@
     - vpcs
     - xorriso
 
+# Desactiva el collector de systemd porque tiene una cardinalidad muy alta
+# https://www.robustperception.io/dropping-metrics-at-scrape-time-with-prometheus
+- name: Aplica --no-collector.systemd en /etc/default/prometheus-node-exporter
+  replace:
+    dest: /etc/default/prometheus-node-exporter
+    regexp: '^ARGS=""'
+    replace: 'ARGS="--no-collector.systemd"'
+
 # Instalación de paquetes
 - name: Instalación de paquetes que solo están en 20.04
   apt:

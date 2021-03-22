@@ -12,7 +12,7 @@
     - swappiness-0
     - role: vasilisa
       vars:
-        sirin: "http://10.0.0.2:8000/launcher/?label=carret12-u2004.yml"
+        sirin: "http://192.168.240.18:8000/launcher/?label=carret12-u2004.yml"
     - activate-unattended-upgrades
     - role: cambia-hostname
       vars:
