@@ -129,6 +129,7 @@ if [ -f /usr/bin/unattended-upgrade ]
 then
 	log "Lanzando unattended-upgrade"
 	dpkg --configure -a
+	apt -y --fix-broken install
 	apt update
 	unattended-upgrade
 	log "Actualizaciones de unattended-upgrade completadas"
