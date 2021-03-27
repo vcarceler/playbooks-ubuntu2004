@@ -78,6 +78,10 @@
   snap:
         name: chromium
 
+- name: Instala snap cura-slicer
+  snap:
+        name: cura-slicer
+
 #- name: Instala snap darktable
 #  snap:
 #        name: darktable
@@ -449,6 +453,11 @@
 - name: Instala flatpak de peek
   flatpak:
           name: https://dl.flathub.org/repo/appstream/com.uploadedlobster.peek.flatpakref
+          state: present
+
+- name: Instala flatpak de prusaslicer
+  flatpak:
+          name: https://dl.flathub.org/repo/appstream/com.prusa3d.PrusaSlicer.flatpakref
           state: present
 
 - name: Instala flatpak de qalculate
