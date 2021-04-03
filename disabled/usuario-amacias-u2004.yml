@@ -1,0 +1,12 @@
+---
+- hosts: amacias
+  user: root
+
+  vars:
+    grupos: adm,cdrom,dialout,kvm,libvirt,lpadmin,lxd,plugdev,sambashare,ubridge,vboxusers
+
+  roles:
+
+  tasks:
+    # Usuarios
+    - include: users/informatica/amacias.yml

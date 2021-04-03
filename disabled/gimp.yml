@@ -1,0 +1,9 @@
+---
+- hosts: carret10
+  user: root
+
+  tasks:
+    - name: Instala flatpak de gimp
+      flatpak:
+        name: https://dl.flathub.org/repo/appstream/org.gimp.GIMP.flatpakref
+        state: present
