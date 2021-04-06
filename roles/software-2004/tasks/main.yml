@@ -374,7 +374,7 @@
           name: https://dl.flathub.org/repo/appstream/org.flameshot.Flameshot.flatpakref
           state: present
 
-- name: Instala flatpak de gafor
+- name: Instala flatpak de gaphor
   flatpak:
           name: https://dl.flathub.org/repo/appstream/org.gaphor.Gaphor.flatpakref
           state: present
