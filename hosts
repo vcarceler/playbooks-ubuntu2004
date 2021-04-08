@@ -297,6 +297,9 @@ dpt-inf
 # Portátiles Lenovo V510 (Tecno)
 [lenovo-v510]
 192.168.240.[101:120]
+192.168.19.148
+192.168.19.150
+192.168.19.155
 
 
 # Portátiles para inicialización completa.
