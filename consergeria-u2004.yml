@@ -31,6 +31,6 @@
 
   tasks:
     # Usuarios
-    #- include: users/informatica/smx2a.yml
+    - include: users/consergeria/consergeria.yml
     #- include: users/informatica/smx2b.yml
     #- include: users/informatica/smx2c.yml
