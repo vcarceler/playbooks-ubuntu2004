@@ -1,0 +1,13 @@
+---
+- hosts: 10.0.0.201
+  user: root
+
+  tasks:
+          - name: Apaga el equipo
+            command: systemctl poweroff
+            async: 10
+            poll: 0
+          
+            #- name: Espera a que se complete el apagado
+            #local_action: wait_for host={{ ansible_ssh_host }} port=22 state=stopped
+

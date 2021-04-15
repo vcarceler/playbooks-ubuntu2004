@@ -308,7 +308,7 @@ dpt-inf
 # 192.168.19.123 vpn=10.0.0.101
 # 192.168.19.124 vpn=10.0.0.102
 [carretx]
-#192.168.17.167 vpn=10.0.0.159
+192.168.253.107 vpn=10.0.0.201
 #192.168.19.193 vpn=10.0.0.135
 #192.168.19.194 vpn=10.0.0.136
 #192.168.19.195 vpn=10.0.0.137
@@ -361,6 +361,11 @@ dpt-inf
 # Laboratorio de ciencias
 [ciencias]
 192.168.240.[190:199]
+
+# Portátiles para los alumnos
+#
+[portatils_alumnes]
+10.0.0.201
 
 # Portátiles para los docentes
 #
