@@ -352,7 +352,7 @@
 - name: Instala flatpak de brackets
   flatpak:
           name: https://dl.flathub.org/repo/appstream/io.brackets.Brackets.flatpakref
-          state: present
+          state: absent
 
 - name: Instala flatpak de calibre
   flatpak:
