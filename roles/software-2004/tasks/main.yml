@@ -349,10 +349,10 @@
           name: https://dl.flathub.org/repo/appstream/org.bluej.BlueJ.flatpakref
           state: present
 
-- name: Instala flatpak de brackets
-  flatpak:
-          name: https://dl.flathub.org/repo/appstream/io.brackets.Brackets.flatpakref
-          state: absent
+          #- name: Instala flatpak de brackets
+          #flatpak:
+          #name: https://dl.flathub.org/repo/appstream/io.brackets.Brackets.flatpakref
+          #state: present
 
 - name: Instala flatpak de calibre
   flatpak:
