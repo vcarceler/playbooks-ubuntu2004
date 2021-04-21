@@ -1,0 +1,10 @@
+---
+# Cambia la configuración de unattended-upgrades para que esté activo
+
+- name: Pone el parámetro pnpacpi=off en /etc/default/grub
+  replace:
+    dest: /etc/default/grub
+    regexp: '^GRUB_CMDLINE_LINUX_DEFAULT="quiet splash"'
+    replace: 'GRUB_CMDLINE_LINUX_DEFAULT="quiet splash pnpacpi=off"'
+  notify:
+    - update-grub

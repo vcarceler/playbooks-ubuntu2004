@@ -1,5 +1,5 @@
 ---
-- hosts: carretx
+- hosts: init_portatils_alumnes
   user: root
 
   vars:
@@ -15,10 +15,10 @@
         sirin: "http://10.0.0.2:8000/launcher/?label=portatils-alumnes-u2004.yml"
     - wireguard
     
-      #- activate-unattended-upgrades
-      #- role: cambia-hostname
-      #vars:
-      #base_hostname: "carretx"
+    - activate-unattended-upgrades
+    - role: cambia-hostname
+      vars:
+      base_hostname: "initalumnes"
         
     #- gnome3-dconf
     #- software-2004

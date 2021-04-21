@@ -52,7 +52,7 @@ fi
 #
 # Libera espacio borrando los directorios de descargas y las papeleras.
 #
-THRESHOLD=104857600 # 100GiB
+THRESHOLD=52428800 # 50GiB
 DOWNLOAD_DIR='Baixades'
 
 DISK_FREE=`df | grep -E \/$ | sed "s/  */ /g" | cut -f4 -d' ' | cut -f1 -d'%'`
