@@ -1,6 +1,7 @@
 ---
 - hosts: init_portatils_alumnes
   user: root
+  strategy: free
 
   vars:
     grupos: adm,cdrom,dialout,lpadmin,netdev,plugdev,sambashare
