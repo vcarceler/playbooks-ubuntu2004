@@ -146,6 +146,17 @@ then
 fi
 
 #
+# Snap refresh. (En algunos equipos hay paquetes rotos - chromium)
+#
+#if [ -f /usr/bin/snap ]
+#then
+#	log "Refresca los snap"
+#        snap refresh
+#        log "Paquetes snap refrescados"
+#
+#fi
+
+#
 # Sirin. https://github.com/vcarceler/sirin
 #
 SIRIN='/opt/sirin'

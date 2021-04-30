@@ -1,0 +1,6 @@
+---
+- hosts: init_portatils_alumnes
+  user: root
+  strategy: free
+
+  tasks:

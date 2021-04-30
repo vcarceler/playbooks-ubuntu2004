@@ -1,0 +1,9 @@
+---
+# Instala mlink para el taller de robótica
+# https://mblock.makeblock.com/en-us/download/mlink/
+
+- name: Instala https://dl.makeblock.com/mblock5/linux/mLink-1.2.0-amd64.deb
+  apt:
+    deb: https://dl.makeblock.com/mblock5/linux/mLink-1.2.0-amd64.deb
+    state: present
+
