@@ -1,0 +1,11 @@
+---
+- name: Instala PPA Flatpak ppa:alexlarsson/flatpak
+  apt_repository:
+    repo: ppa:alexlarsson/flatpak
+
+- name: Añade LP-PPA-alexlarsson-flatpak:focal a /etc/apt/apt.conf.d/50unattended-upgrades
+  lineinfile:
+    path: /etc/apt/apt.conf.d/50unattended-upgrades
+    insertafter: '^Unattended-Upgrade::Allowed-Origins'
+    line: '        "LP-PPA-alexlarsson-flatpak:focal";'
+

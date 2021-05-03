@@ -237,6 +237,19 @@
   shell: dpkg --configure -a
   when: result is failed
 
+#
+# Añade PPA Flatpak ppa:alexlarsson/flatpak y configura 50unattended-upgrades
+#
+- name: Instala PPA Flatpak ppa:alexlarsson/flatpak
+  apt_repository:
+    repo: ppa:alexlarsson/flatpak
+
+- name: Añade LP-PPA-alexlarsson-flatpak:focal a /etc/apt/apt.conf.d/50unattended-upgrades
+  lineinfile:
+    path: /etc/apt/apt.conf.d/50unattended-upgrades
+    insertafter: '^Unattended-Upgrade::Allowed-Origins'
+    line: '        "LP-PPA-alexlarsson-flatpak:focal";'
+
 # Instalación de paquetes
 - name: Instalación de paquetes que están en los repos de 18.04 y 20.04
   apt:
@@ -357,6 +370,11 @@
 - name: Instala flatpak de calibre
   flatpak:
           name: https://dl.flathub.org/repo/appstream/com.calibre_ebook.calibre.flatpakref
+          state: present
+
+- name: Instala flatpak de chromium
+  flatpak:
+          name: https://dl.flathub.org/repo/appstream/org.chromium.Chromium.flatpakref
           state: present
 
 - name: Instala flatpak de darktable
