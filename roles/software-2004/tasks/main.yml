@@ -372,10 +372,10 @@
           name: https://dl.flathub.org/repo/appstream/com.calibre_ebook.calibre.flatpakref
           state: present
 
-- name: Instala flatpak de chromium
-  flatpak:
-          name: https://dl.flathub.org/repo/appstream/org.chromium.Chromium.flatpakref
-          state: present
+          #- name: Instala flatpak de chromium
+          #  flatpak:
+          #name: https://dl.flathub.org/repo/appstream/org.chromium.Chromium.flatpakref
+          #state: present
 
 - name: Instala flatpak de darktable
   flatpak:
