@@ -10,8 +10,8 @@
     - lock-sshd
 
       # Si se ha modificado /etc/default/grub se actualiza grub.
-    - pnpacpi-off
-    - flush-handlers
+      #- pnpacpi-off
+      #- flush-handlers
 
     - zsys-gc
     - swappiness-0

@@ -13,8 +13,8 @@
       #- swappiness-0
  
     # Si se ha modificado /etc/default/grub se actualiza grub.
-    - pnpacpi-off
-    - flush-handlers
+    #- pnpacpi-off
+    #- flush-handlers
 
     - role: vasilisa
       vars:
