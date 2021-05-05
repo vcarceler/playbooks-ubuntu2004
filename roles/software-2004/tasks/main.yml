@@ -74,9 +74,9 @@
   snap:
         name: brave
 
-- name: Instala snap chromium
-  snap:
-        name: chromium
+#- name: Instala snap chromium
+#  snap:
+#        name: chromium
 
 - name: Instala snap cura-slicer
   snap:
@@ -372,10 +372,10 @@
           name: https://dl.flathub.org/repo/appstream/com.calibre_ebook.calibre.flatpakref
           state: present
 
-          #- name: Instala flatpak de chromium
-          #  flatpak:
-          #name: https://dl.flathub.org/repo/appstream/org.chromium.Chromium.flatpakref
-          #state: present
+- name: Instala flatpak de chromium
+  flatpak:
+          name: https://dl.flathub.org/repo/appstream/org.chromium.Chromium.flatpakref
+          state: present
 
 - name: Instala flatpak de darktable
   flatpak:
@@ -395,6 +395,11 @@
 - name: Instala flatpak de gaphor
   flatpak:
           name: https://dl.flathub.org/repo/appstream/org.gaphor.Gaphor.flatpakref
+          state: present
+
+- name: Instala flatpak de geogebra
+  flatpak:
+          name: https://dl.flathub.org/repo/appstream/org.geogebra.GeoGebra.flatpakref
           state: present
 
 - name: Instala flatpak de gimp
