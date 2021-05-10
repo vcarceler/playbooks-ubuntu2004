@@ -56,10 +56,10 @@
   snap:
         name: beekeeper-studio
 
-- name: Instala snap blender
-  snap:
-        name: blender
-        classic: yes
+#- name: Instala snap blender
+#  snap:
+#        name: blender
+#        classic: yes
 
 #- name: Instala snap bluej
 #  snap:
@@ -70,9 +70,9 @@
 #        name: brackets
 #        classic: yes
 
-- name: Instala snap brave
-  snap:
-        name: brave
+#- name: Instala snap brave
+#  snap:
+#        name: brave
 
 #- name: Instala snap chromium
 #  snap:
@@ -355,6 +355,11 @@
 - name: Instala flatpak de atom
   flatpak:
           name: https://dl.flathub.org/repo/appstream/io.atom.Atom.flatpakref
+          state: present
+
+- name: Instala flatpak de blender
+  flatpak:
+          name: https://dl.flathub.org/repo/appstream/org.blender.Blender.flatpakref
           state: present
 
 - name: Instala flatpak de bluej
