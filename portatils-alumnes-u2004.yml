@@ -9,9 +9,9 @@
     - delete-users
     - lock-sshd
 
-      # Si se ha modificado /etc/default/grub se actualiza grub.
-      #- pnpacpi-off
-      #- flush-handlers
+    # Si se ha modificado /etc/default/grub se actualiza grub.
+    - desactiva-pnpacpi-off
+    - flush-handlers
 
     - zsys-gc
     - swappiness-0

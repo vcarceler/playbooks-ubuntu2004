@@ -1,0 +1,16 @@
+---
+- hosts: carret10
+  user: root
+  strategy: free
+
+  tasks:
+          #- name: Instala Flatpak
+          #  apt:
+          #          name: flatpak
+          #          state: present
+          #          update_cache: yes
+
+          - name: Instala flatpak musescore
+            flatpak:
+                    name: https://dl.flathub.org/repo/appstream/org.musescore.MuseScore.flatpakref
+                    state: present
