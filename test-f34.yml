@@ -1,0 +1,34 @@
+---
+- hosts: 10.0.0.6
+  user: root
+
+  vars:
+    grupos: adm,cdrom,dialout,kvm,libvirt,lpadmin,lxd,netdev,plugdev,sambashare,ubridge,vboxusers
+
+  roles:
+    - delete-users
+    - lock-sshd
+
+    - swappiness-0
+    - role: vasilisa
+      vars:
+        sirin: "http://10.0.0.2:8000/launcher/?label=portatils-alumnes-u2004.yml"
+    - role: cambia-hostname-wg0
+      vars:
+        base_hostname: "alumne"
+    #- gnome3-dconf
+    #- software-2004
+    #- kvm
+    #- convidat
+    #- apagado-1455
+    #- apagado-2130
+    #- flush-handlers
+
+  tasks:
+    # Cada equipo tiene un usuario particular
+    #- include: "vpn/{{ ansible_host }}.yml"
+
+    # Usuarios
+    #- include: users/informatica/smx2a.yml
+    #- include: users/informatica/smx2b.yml
+    #- include: users/informatica/smx2c.yml

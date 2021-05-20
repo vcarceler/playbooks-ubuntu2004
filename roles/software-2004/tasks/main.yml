@@ -233,6 +233,7 @@
       - vim
   ignore_errors: True
   register: result
+  when: ansible_distribution_version == "20.04"
 
 - name: Si es necesario ejecuta 'dpkg --configure -a'
   shell: dpkg --configure -a
@@ -244,12 +245,14 @@
 - name: Instala PPA Flatpak ppa:alexlarsson/flatpak
   apt_repository:
     repo: ppa:alexlarsson/flatpak
+  when: ansible_distribution_version == "20.04"
 
 - name: Añade LP-PPA-alexlarsson-flatpak:focal a /etc/apt/apt.conf.d/50unattended-upgrades
   lineinfile:
     path: /etc/apt/apt.conf.d/50unattended-upgrades
     insertafter: '^Unattended-Upgrade::Allowed-Origins'
     line: '        "LP-PPA-alexlarsson-flatpak:focal";'
+  when: ansible_distribution_version == "20.04"
 
 # Instalación de paquetes
 - name: Instalación de paquetes que están en los repos de 18.04 y 20.04
@@ -266,6 +269,7 @@
     - docutils-doc
     - filezilla
     - flatpak
+    - flatpak-builder
     - freecad
     - fritzing
     - git
@@ -284,7 +288,8 @@
     - lyx
     - ncdu
     - openshot
-    - pgadmin3
+      # No está en el 21.04
+      #- pgadmin3
     - planner
     - prometheus-node-exporter
     - pylint
