@@ -7,6 +7,7 @@
   apt:
     state: absent
     pkg:
+      - openscad
       - virtualbox-6.1
 #       - chromium-browser
 #       - chromium-browser-l10n
@@ -329,7 +330,7 @@
   apt:
     update_cache: yes
     pkg:
-    - openscad
+            #- openscad
     - julia
   when: ansible_distribution_version == "20.04"
 
@@ -338,6 +339,7 @@
   apt:
     update_cache: yes
     pkg:
+    - julia
     - podman
     - vim
   when: ansible_distribution_version == "21.04"
@@ -481,6 +483,11 @@
 - name: Instala flatpak de octave
   flatpak:
           name: https://dl.flathub.org/repo/appstream/org.octave.Octave.flatpakref
+          state: present
+
+- name: Instala flatpak de openscad
+  flatpak:
+          name: https://dl.flathub.org/repo/appstream/org.openscad.OpenSCAD.flatpakref
           state: present
 
 - name: Instala flatpak de plots
