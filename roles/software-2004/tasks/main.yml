@@ -333,6 +333,15 @@
     - julia
   when: ansible_distribution_version == "20.04"
 
+# Instalación de paquetes
+- name: Instalación de paquetes que solo están en 21.04
+  apt:
+    update_cache: yes
+    pkg:
+    - podman
+    - vim
+  when: ansible_distribution_version == "21.04"
+
 # Cambio de Virtualbox. Se desinstala la versión de los repos y se instala la versión de Oracle.
 #- name: Quita Virtualbox 6.1 de los repos
 #  apt:
