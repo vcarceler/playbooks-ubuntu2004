@@ -1,0 +1,6 @@
+- name: Fija sync=disabled en rpool
+  zfs:
+    name: rpool
+    state: present
+    extra_zfs_properties:
+      sync: disabled

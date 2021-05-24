@@ -29,24 +29,9 @@ function log () {
 log "There is something to do?"
 
 #
-# Métricas para Prometheus
+# Mitiga el problema en el arranque de los Lenovo 300e 2nd Gen
 #
-NODE_EXPORTER_DIR='/var/lib/prometheus/node-exporter'
-if [ -d $NODE_EXPORTER_DIR ]
-then
-	log "Preparo métricas para Prometheus"
-
-	FILE='misc.prom'
-	CPU_MODEL_NAME=`cat /proc/cpuinfo | grep "model name" | head -n 1 | cut -d':' -f2`
-	CPU_CORES=`cat /proc/cpuinfo | grep "cpu cores" | head -n 1 | cut -d':' -f2`
-	STARTUP_FINISHED=`systemd-analyze | head -n1 | cut -d'=' -f2`
-
-	echo "# HELP misc_labels Labeled information as provided by /proc/cpuinfo." >$NODE_EXPORTER_DIR/$FILE
-	echo "# TYPE misc_labels gauge" >>$NODE_EXPORTER_DIR/$FILE
-	echo "misc_labels{cpu=\"$CPU_MODEL_NAME\",cores=\"$CPU_CORES\",startup=\"$STARTUP_FINISHED\"} 1" >>$NODE_EXPORTER_DIR/$FILE
-
-	log "Métricas preparadas en $NODE_EXPORTER_DIR/$FILE"
-fi
+journalctl -b | grep "watchdog: BUG: soft lockup - CPU#" >/dev/null && init 6
 
 
 #
@@ -166,6 +151,29 @@ then
 	wget -O /dev/null -i $SIRIN
 	log "Petición a Sirin completada"
 fi
+
+#
+# Métricas para Prometheus
+#
+NODE_EXPORTER_DIR='/var/lib/prometheus/node-exporter'
+if [ -d $NODE_EXPORTER_DIR ]
+then
+        log "Preparo métricas para Prometheus"
+
+	sleep 120
+
+        FILE='misc.prom'
+        CPU_MODEL_NAME=`cat /proc/cpuinfo | grep "model name" | head -n 1 | cut -d':' -f2`
+        CPU_CORES=`cat /proc/cpuinfo | grep "cpu cores" | head -n 1 | cut -d':' -f2`
+        STARTUP_FINISHED=`systemd-analyze | head -n1 | cut -d'=' -f2`
+
+        echo "# HELP misc_labels Labeled information as provided by /proc/cpuinfo." >$NODE_EXPORTER_DIR/$FILE
+        echo "# TYPE misc_labels gauge" >>$NODE_EXPORTER_DIR/$FILE
+        echo "misc_labels{cpu=\"$CPU_MODEL_NAME\",cores=\"$CPU_CORES\",startup=\"$STARTUP_FINISHED\"} 1" >>$NODE_EXPORTER_DIR/$FILE
+
+        log "Métricas preparadas en $NODE_EXPORTER_DIR/$FILE"
+fi
+
 
 log "There is nothing more to do."
 
