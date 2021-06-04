@@ -268,7 +268,7 @@
     - dia2code
     - dialog
     - docutils-doc
-    - filezilla
+      #- filezilla
     - flatpak
     - flatpak-builder
     - freecad
@@ -412,6 +412,11 @@
 - name: Instala flatpak de dbeaver
   flatpak:
           name: https://dl.flathub.org/repo/appstream/io.dbeaver.DBeaverCommunity.flatpakref
+          state: present
+
+- name: Instala flatpak de filezilla
+  flatpak:
+          name: https://dl.flathub.org/repo/appstream/org.filezillaproject.Filezilla.flatpakref
           state: present
 
 - name: Instala flatpak de flameshot
