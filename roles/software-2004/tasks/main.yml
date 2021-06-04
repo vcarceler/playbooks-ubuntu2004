@@ -7,7 +7,16 @@
   apt:
     state: absent
     pkg:
+      - filezilla
+      - freecad
+      - fritzing
+      - kicad
+      - korganizer
       - openscad
+      - openshot
+      - recordmydesktop
+      - scratch
+      - slic3r
       - virtualbox-6.1
 #       - chromium-browser
 #       - chromium-browser-l10n
