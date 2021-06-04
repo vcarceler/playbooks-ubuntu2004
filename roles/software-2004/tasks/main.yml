@@ -260,7 +260,7 @@
   apt:
     update_cache: yes
     pkg:
-    - audacity
+            #- audacity
     - default-jdk
     - dia
     - dia-rib-network
@@ -372,6 +372,11 @@
 - name: Instala flatpak de atom
   flatpak:
           name: https://dl.flathub.org/repo/appstream/io.atom.Atom.flatpakref
+          state: present
+
+- name: Instala flatpak de audacity
+  flatpak:
+          name: https://dl.flathub.org/repo/appstream/org.audacityteam.Audacity.flatpakref
           state: present
 
 - name: Instala flatpak de blender

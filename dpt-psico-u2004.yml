@@ -9,6 +9,7 @@
     - delete-users
     - lock-sshd
     - zsys-gc
+    - zfs-rpool-sync-disabled
     - swappiness-0
     - role: vasilisa
       vars:
@@ -31,6 +32,6 @@
 
   tasks:
     # Usuarios
-    #- include: users/informatica/smx2a.yml
+    - include: users/psico/psico.yml
     #- include: users/informatica/smx2b.yml
     #- include: users/informatica/smx2c.yml
