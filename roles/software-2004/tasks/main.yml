@@ -300,12 +300,12 @@
     - python3-pip
     - python3-pylint-django
     - python3-pypdf2
-    - recordmydesktop
+      #- recordmydesktop
     - relational
     - rst2pdf
     - ripgrep
     - ruby
-    - scratch
+      #- scratch
     - slic3r
     - texlive-lang-spanish
     - tree
@@ -565,6 +565,11 @@
 - name: Instala flatpak de qalculate
   flatpak:
           name: https://dl.flathub.org/repo/appstream/io.github.Qalculate.flatpakref
+          state: present
+
+- name: Instala flatpak de scratch
+  flatpak:
+          name: https://dl.flathub.org/repo/appstream/edu.mit.Scratch.flatpakref
           state: present
 
 - name: Instala flatpak de sweethome3d
