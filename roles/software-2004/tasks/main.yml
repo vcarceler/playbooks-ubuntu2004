@@ -306,7 +306,7 @@
     - ripgrep
     - ruby
       #- scratch
-    - slic3r
+      #- slic3r
     - texlive-lang-spanish
     - tree
     - tshark
