@@ -271,8 +271,8 @@
       #- filezilla
     - flatpak
     - flatpak-builder
-    - freecad
-    - fritzing
+      #- freecad
+      #- fritzing
     - git
     - gnome-boxes
     - golang-go
@@ -422,6 +422,16 @@
 - name: Instala flatpak de flameshot
   flatpak:
           name: https://dl.flathub.org/repo/appstream/org.flameshot.Flameshot.flatpakref
+          state: present
+
+- name: Instala flatpak de freecad
+  flatpak:
+          name: https://dl.flathub.org/repo/appstream/org.freecadweb.FreeCAD.flatpakref
+          state: present
+
+- name: Instala flatpak de fritzing
+  flatpak:
+          name: https://dl.flathub.org/repo/appstream/org.fritzing.Fritzing.flatpakref
           state: present
 
 - name: Instala flatpak de gaphor
