@@ -288,7 +288,7 @@
     - libreoffice-report-builder
     - lyx
     - ncdu
-    - openshot
+      #- openshot
       # No está en el 21.04
       #- pgadmin3
     - planner
@@ -515,6 +515,11 @@
 - name: Instala flatpak de openscad
   flatpak:
           name: https://dl.flathub.org/repo/appstream/org.openscad.OpenSCAD.flatpakref
+          state: present
+
+- name: Instala flatpak de openshot
+  flatpak:
+          name: https://dl.flathub.org/repo/appstream/org.openshot.OpenShot.flatpakref
           state: present
 
 - name: Instala flatpak de plots
