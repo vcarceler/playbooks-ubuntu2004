@@ -280,8 +280,8 @@
     - httpie
     - ipcalc
     - jq
-    - kicad
-    - kicad-doc-es
+      #- kicad
+      #- kicad-doc-es
     - korganizer
     - librecad
     - libreoffice-base
@@ -470,6 +470,11 @@
           - https://dl.flathub.org/repo/appstream/org.kde.kdenlive.flatpakref
           - https://dl.flathub.org/repo/appstream/org.kde.kig.flatpakref
           - https://dl.flathub.org/repo/appstream/org.kde.ktouch.flatpakref
+
+- name: Instala flatpak de kicad
+  flatpak:
+          name: https://dl.flathub.org/repo/appstream/org.kicad.KiCad.flatpakref
+          state: present
 
 - name: Instala flatpak de krita
   flatpak:
