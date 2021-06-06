@@ -556,10 +556,10 @@
           name: https://dl.flathub.org/repo/appstream/com.github.jeromerobert.pdfarranger.flatpakref
           state: present
 
-- name: Elimina flatpak de pdfmixtool
+- name: Instala flatpak de pdfmixtool
   flatpak:
           name: https://dl.flathub.org/repo/appstream/eu.scarpetta.PDFMixTool.flatpakref
-          state: absent
+          state: present
 
 - name: Instala flatpak de pdfslicer
   flatpak:
