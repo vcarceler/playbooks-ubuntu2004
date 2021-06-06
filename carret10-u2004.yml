@@ -10,7 +10,7 @@
     - delete-users
     - lock-sshd
     - zsys-gc
-    - zfs-rpool-sync-disabled
+    - zfs-rpool-sync-standard
     - swappiness-0
     - role: vasilisa
       vars:

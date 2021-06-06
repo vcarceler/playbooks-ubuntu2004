@@ -478,7 +478,7 @@
           - https://dl.flathub.org/repo/appstream/org.kde.kcalc.flatpakref
           - https://dl.flathub.org/repo/appstream/org.kde.kdenlive.flatpakref
           - https://dl.flathub.org/repo/appstream/org.kde.kig.flatpakref
-          - https://dl.flathub.org/repo/appstream/org.kde.kontact.flatpakref
+            #- https://dl.flathub.org/repo/appstream/org.kde.kontact.flatpakref
           - https://dl.flathub.org/repo/appstream/org.kde.ktouch.flatpakref
 
 - name: Instala flatpak de kicad
@@ -556,9 +556,14 @@
           name: https://dl.flathub.org/repo/appstream/com.github.jeromerobert.pdfarranger.flatpakref
           state: present
 
-- name: Instala flatpak de pdfmixtool
+- name: Elimina flatpak de pdfmixtool
   flatpak:
           name: https://dl.flathub.org/repo/appstream/eu.scarpetta.PDFMixTool.flatpakref
+          state: absent
+
+- name: Instala flatpak de pdfslicer
+  flatpak:
+          name: https://dl.flathub.org/repo/appstream/com.github.junrrein.PDFSlicer.flatpakref
           state: present
 
 - name: Instala flatpak de peek
