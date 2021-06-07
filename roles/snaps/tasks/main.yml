@@ -2,8 +2,106 @@
 # Instalación de snaps
 #
 
+# Fedora necesita instalar el paquete snapd
+#
 - name: Instala el paquete snapd en Fedora
   dnf:
     name: snapd
     state: present
   when: ansible_distribution_version == "34"
+
+- name: Elimina snaps deprecated
+  snap:
+          state: absent
+          name:
+                  - atom
+                  - blender
+                  - bluej
+                  - brackets
+                  - darktable
+                  - flameshot
+                  - gimp
+                  - godot-3-1
+                  - inkscape
+                  - kbruch
+                  - kcalc
+                  - kdenlive
+                  - kig
+                  - ktouch
+                  - krita
+                  - librepcb
+                  - musescore
+                  - mysql-workbench-community
+                  - natron
+                  - octave
+                  - obs-studio
+                  - pdfmixtool
+                  - qalculate
+                  - ruby
+                  - shotcut
+                  - syncthing
+                  - sweethome3d-homedesign
+                  - vlc
+
+- name: Instala snap beekeeper-studio
+  snap:
+        name: beekeeper-studio
+
+- name: Instala snap code
+  snap:
+        name: code
+        classic: yes
+
+- name: Instala snap cura-slicer
+  snap:
+        name: cura-slicer
+
+- name: Instala snap eclipse
+  snap:
+        name: eclipse
+        classic: yes
+
+- name: Instala snap intellij-idea-educational
+  snap:
+        name: intellij-idea-educational
+        classic: yes
+
+- name: Instala snap jupyter
+  snap:
+        name: jupyter
+
+- name: Instala snap kalgebra
+  snap:
+        name: kalgebra
+
+- name: Instala snap kmplot
+  snap:
+        name: kmplot
+
+- name: Instala snap kotlin
+  snap:
+        name: kotlin
+        classic: yes
+
+- name: Instala snap netbeans
+  snap:
+        name: netbeans
+        classic: yes
+
+- name: Instala snap node
+  snap:
+        name: node
+        classic: yes
+        channel: edge
+
+- name: Instala snap node-red
+  snap:
+        name: node-red
+
+- name: Instala snap pdftk
+  snap:
+        name: pdftk
+
+- name: Instala snap umbrello
+  snap:
+        name: umbrello
