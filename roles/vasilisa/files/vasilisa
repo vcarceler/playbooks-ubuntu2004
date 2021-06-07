@@ -74,8 +74,11 @@ then
 	DISK_FREE=`df -h | grep -E \/$ | sed "s/  */ /g" | cut -f5 -d' ' | cut -f1 -d'%'`
 
 	# Clean apt cache
-	log "apt-get clean"
-	apt-get clean
+	if [ -f /usr/bin/apt-get ]
+	then
+		log "apt-get clean"
+		apt-get clean
+	fi
 
 	log "Final disk usage: $DISK_FREE%"
 fi
@@ -155,7 +158,12 @@ fi
 #
 # Métricas para Prometheus
 #
-NODE_EXPORTER_DIR='/var/lib/prometheus/node-exporter'
+# Ubuntu NODE_EXPORTER_DIR='/var/lib/prometheus/node-exporter'
+# Fedora NODE_EXPORTER_DIR='/var/lib/node_exporter/textfile_collector'
+NODE_EXPORTER_DIR_UBUNTU='/var/lib/prometheus/node-exporter'
+NODE_EXPORTER_DIR_FEDORA='/var/lib/node_exporter/textfile_collector'
+[ -d $NODE_EXPORTER_DIR_UBUNTU ] && NODE_EXPORTER_DIR=$NODE_EXPORTER_DIR_UBUNTU
+[ -d $NODE_EXPORTER_DIR_FEDORA ] && NODE_EXPORTER_DIR=$NODE_EXPORTER_DIR_FEDORA
 if [ -d $NODE_EXPORTER_DIR ]
 then
         log "Preparo métricas para Prometheus"

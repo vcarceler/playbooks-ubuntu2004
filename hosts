@@ -327,10 +327,10 @@ dpt-inf
 [carret10]
 192.168.240.[125:159]
 # Cable
-192.168.19.137
-192.168.19.177
-192.168.19.176
-192.168.19.192
+#192.168.19.137
+#192.168.19.177
+#192.168.19.176
+#192.168.19.192
 
 # Portátiles HP 250 G6 Plateados 256 GB SSD y pantalla FullHD
 [carret11]
@@ -376,6 +376,11 @@ dpt-inf
 10.0.1.[0:255]
 # test
 #10.0.0.6
+
+# Portátiles para los alumnos con Fedora 34
+#
+[portatils_alumnes_f34]
+10.0.0.6
 
 # Portátiles para los docentes
 #
