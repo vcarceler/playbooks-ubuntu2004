@@ -21,7 +21,7 @@
       - scratch
       - slic3r
       - virtualbox-6.1
-    when: ansible_distribution_version == "20.04"
+  when: ansible_distribution_version == "20.04"
 
 - name: Elimina snaps deprecated
   snap:

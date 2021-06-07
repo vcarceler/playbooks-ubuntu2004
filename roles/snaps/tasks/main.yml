@@ -1,0 +1,9 @@
+#
+# Instalación de snaps
+#
+
+- name: Instala el paquete snapd en Fedora
+  dnf:
+    name: snapd
+    state: present
+  when: ansible_distribution_version == "34"
