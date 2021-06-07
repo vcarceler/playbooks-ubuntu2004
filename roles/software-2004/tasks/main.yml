@@ -1,126 +1,39 @@
 #
-# Instalación general de software para Ubuntu 20.04 LTS
+# Instalación general de software para Ubuntu 20.04 LTS y Fedora 34
 #
 
-- name: Instala aplicaciones en flatpak
+- name: Gestiona aplicaciones en flatpak
   include_role:
     name: flatpaks
 
-- name: Instala aplicaciones en snap
+- name: Gestiona aplicaciones en snap
   include_role:
     name: snaps
 
-- name: Desinstala paquetes deprecated Ubuntu 20.04
-  apt:
-    state: absent
-    pkg:
-      - filezilla
-      - freecad
-      - fritzing
-      - kicad
-      - korganizer
-      - openscad
-      - openshot
-      - recordmydesktop
-      - scratch
-      - slic3r
-      - virtualbox-6.1
+- name: Gestiona paquetes en Ubuntu
+  include_role:
+    name: paquetes-ubuntu
   when: ansible_distribution_version == "20.04"
 
 # Actualiza a la última versión
-- name: Actualiza a la última versión
-  apt:
-    state: latest
-    update_cache: yes
-    pkg: 
-      - firefox
-      - firefox-locale-ca
-      - flashplugin-installer
-      - net-tools
-      - vim
-  ignore_errors: True
-  register: result
-  when: ansible_distribution_version == "20.04"
-
-- name: Si es necesario ejecuta 'dpkg --configure -a'
-  shell: dpkg --configure -a
-  when: result is failed
-
-#
-# Añade PPA Flatpak ppa:alexlarsson/flatpak y configura 50unattended-upgrades
-#
-#- name: Instala PPA Flatpak ppa:alexlarsson/flatpak
-#  apt_repository:
-#    repo: ppa:alexlarsson/flatpak
-#  when: ansible_distribution_version == "20.04"
-#
-#- name: Añade LP-PPA-alexlarsson-flatpak:focal a /etc/apt/apt.conf.d/50unattended-upgrades
-#  lineinfile:
-#    path: /etc/apt/apt.conf.d/50unattended-upgrades
-#    insertafter: '^Unattended-Upgrade::Allowed-Origins'
-#    line: '        "LP-PPA-alexlarsson-flatpak:focal";'
+#- name: Actualiza a la última versión
+#  apt:
+#    state: latest
+#    update_cache: yes
+#    pkg: 
+#      - firefox
+#      - firefox-locale-ca
+#      - flashplugin-installer
+#      - net-tools
+#      - vim
+#  ignore_errors: True
+#  register: result
 #  when: ansible_distribution_version == "20.04"
 
-# Instalación de paquetes
-- name: Instalación de paquetes que están en los repos de 18.04 y 20.04
-  apt:
-    update_cache: yes
-    pkg:
-            #- audacity
-    - default-jdk
-    - dia
-    - dia-rib-network
-    - dia-shapes
-    - dia2code
-    - dialog
-    - docutils-doc
-      #- filezilla
-      #- freecad
-      #- fritzing
-    - git
-    - gnome-boxes
-    - golang-go
-    - htop
-    - httpie
-    - ipcalc
-    - jq
-      #- kicad
-      #- kicad-doc-es
-      #- korganizer
-    - librecad
-    - libreoffice-base
-    - libreoffice-report-builder
-    - lyx
-    - ncdu
-      #- openshot
-      # No está en el 21.04
-      #- pgadmin3
-    - planner
-    - prometheus-node-exporter
-    - pylint
-    - pylint3    
-    - python3-docutils
-    - python3-easygui
-    - python3-pip
-    - python3-pylint-django
-    - python3-pypdf2
-      #- recordmydesktop
-    - relational
-    - rst2pdf
-    - ripgrep
-    - ruby
-      #- scratch
-      #- slic3r
-    - texlive-lang-spanish
-    - tree
-    - tshark
-    - ttf-mscorefonts-installer
-    - unrar
-    - virt-top
-    - virtualbox
-    - virtualenv
-    - vpcs
-    - xorriso
+#- name: Si es necesario ejecuta 'dpkg --configure -a'
+#  shell: dpkg --configure -a
+#  when: result is failed
+
 
 # Desactiva el collector de systemd porque tiene una cardinalidad muy alta
 # https://www.robustperception.io/dropping-metrics-at-scrape-time-with-prometheus
@@ -130,14 +43,6 @@
     regexp: '^ARGS=""'
     replace: 'ARGS="--no-collector.systemd"'
 
-# Instalación de paquetes
-- name: Instalación de paquetes que solo están en 20.04
-  apt:
-    update_cache: yes
-    pkg:
-            #- openscad
-    - julia
-  when: ansible_distribution_version == "20.04"
 
 # Instalación de paquetes
 - name: Instalación de paquetes que solo están en 21.04
