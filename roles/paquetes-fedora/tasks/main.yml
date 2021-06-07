@@ -1,0 +1,14 @@
+#
+# Instala paquetes en Fedora
+#
+
+- name: Instalación de paquetes que están en los repos de Fedora
+  dnf:
+    state: present
+    update_cache: yes
+    name: '{{ item }}'
+    with_items:
+      - dia
+      - vim-enhanced
+
+

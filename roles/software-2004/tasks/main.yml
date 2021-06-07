@@ -15,6 +15,11 @@
     name: paquetes-ubuntu
   when: ansible_distribution_version == "20.04"
 
+- name: Gestiona paquetes en Fedora
+  include_role:
+    name: paquetes-fedora
+  when: ansible_distribution_version == "34"
+
 # Actualiza a la última versión
 #- name: Actualiza a la última versión
 #  apt:
@@ -34,25 +39,6 @@
 #  shell: dpkg --configure -a
 #  when: result is failed
 
-
-# Desactiva el collector de systemd porque tiene una cardinalidad muy alta
-# https://www.robustperception.io/dropping-metrics-at-scrape-time-with-prometheus
-- name: Aplica --no-collector.systemd en /etc/default/prometheus-node-exporter
-  replace:
-    dest: /etc/default/prometheus-node-exporter
-    regexp: '^ARGS=""'
-    replace: 'ARGS="--no-collector.systemd"'
-
-
-# Instalación de paquetes
-- name: Instalación de paquetes que solo están en 21.04
-  apt:
-    update_cache: yes
-    pkg:
-    - julia
-    - podman
-    - vim
-  when: ansible_distribution_version == "21.04"
 
 # Cambio de Virtualbox. Se desinstala la versión de los repos y se instala la versión de Oracle.
 #- name: Quita Virtualbox 6.1 de los repos
