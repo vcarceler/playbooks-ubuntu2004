@@ -16,6 +16,7 @@
     - role: cambia-hostname-wg0
       vars:
         base_hostname: "alumne"
+    - paquetes-fedora
     #- gnome3-dconf
     #- software-2004
     #- kvm
