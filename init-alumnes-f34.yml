@@ -1,9 +1,9 @@
 ---
-- hosts: portatils_alumnes_f34
+- hosts: init_portatils_alumnes
   user: root
 
   vars:
-    grupos: adm,cdrom,dialout,netdev,plugdev,sambashare
+    grupos: adm,cdrom,dialout
 
   roles:
     - delete-users

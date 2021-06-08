@@ -55,7 +55,7 @@
 # 192.168.19.123 vpn=10.0.0.101
 # 192.168.19.124 vpn=10.0.0.102
 [init_portatils_alumnes]
-192.168.242.124 vpn=10.0.1.103
+#192.168.249.79 vpn=10.0.0.138
 #192.168.242.182 vpn=10.0.1.104
 #192.168.242.183 vpn=10.0.1.105
 
@@ -380,7 +380,7 @@ dpt-inf
 # Portátiles para los alumnos con Fedora 34
 #
 [portatils_alumnes_f34]
-10.0.0.6
+10.0.0.138
 
 # Portátiles para los docentes
 #
