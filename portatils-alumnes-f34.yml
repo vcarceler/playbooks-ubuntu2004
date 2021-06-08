@@ -22,7 +22,7 @@
 
   tasks:
     # Cada equipo tiene un usuario particular
-    #- include: "vpn/{{ ansible_host }}.yml"
+    - include: "vpn/{{ ansible_host }}.yml"
 
     # Usuarios
     #- include: users/informatica/smx2a.yml
