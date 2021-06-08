@@ -1,5 +1,13 @@
-- name: Instala wireguard-tools
+- name: Instala wireguard-tools (Ubuntu)
   apt:
     update_cache: yes
     pkg:
-    - wireguard-tools
+      - wireguard-tools
+  when: ansible_distribution_version == "20.04"
+
+- name: Instala wireguard-tools (Fedora)
+  dnf:
+    state: present
+    name:
+      - wireguard-tools
+  when: ansible_distribution_version == "34"

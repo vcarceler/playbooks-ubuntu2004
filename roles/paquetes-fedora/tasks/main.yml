@@ -2,6 +2,12 @@
 # Instala paquetes en Fedora
 #
 
+- name: Activa el repo RPM Fusion para VirtualBox
+  dnf:
+    state: present
+    name: "https://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-{{ansible_distribution_major_version}}.noarch.rpm"
+  when: ansible_distribution == 'Fedora'
+
 - name: Instalación de paquetes que están en los repos de Fedora
   dnf:
     state: present
@@ -15,6 +21,8 @@
       - dia-gnomeDIAicons
       - dia-optics
       - dialog
+      - gns3-gui
+      - gns3-server
       - golang-bin
       - golang-github-prometheus-node-exporter
       - htop
@@ -30,6 +38,12 @@
       - ripgrep
       - ruby
       - vim-enhanced
+      - VirtualBox
+      - '@virtualization'
       - xorriso
 
-
+- name: Activa node_exporter
+  systemd:
+    enabled: yes
+    state: started
+    name: node_exporter

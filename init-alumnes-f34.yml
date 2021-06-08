@@ -3,7 +3,7 @@
   user: root
 
   vars:
-    grupos: adm,cdrom,dialout,kvm,libvirt,lpadmin,lxd,netdev,plugdev,sambashare,ubridge,vboxusers
+    grupos: adm,cdrom,dialout,netdev,plugdev,sambashare
 
   roles:
     - delete-users
@@ -14,7 +14,7 @@
     - role: cambia-hostname-wg0
       vars:
         base_hostname: "alumne"
-    - software-2004
+    - wireguard
     #- convidat
     #- apagado-1455
     #- apagado-2130
@@ -22,7 +22,20 @@
 
   tasks:
     # Cada equipo tiene un usuario particular
-    #- include: "vpn/{{ ansible_host }}.yml"
+    - include: "vpn/{{ vpn }}.yml"
+
+    - name: Activa la VPN wg0 (enable y start)
+      systemd:
+        name: wg-quick@wg0
+        enabled: yes
+        state: started
+        daemon_reload: yes
+
+    - name: Apaga el equipo
+      command: systemctl poweroff
+      async: 10
+      poll: 0
+
 
     # Usuarios
     #- include: users/informatica/smx2a.yml
