@@ -1,0 +1,7 @@
+- name: Instala lxd
+  snap:
+        name: lxd
+  notify:
+    - copy lxd-preseed
+    - config lxd
+    - config firewall
