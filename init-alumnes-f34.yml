@@ -1,5 +1,5 @@
 ---
-- hosts: init_portatils_alumnes
+- hosts: init-portatils-alumnes-f34
   user: root
 
   vars:
@@ -11,9 +11,9 @@
     - role: vasilisa
       vars:
         sirin: "http://10.0.0.2:8000/launcher/?label=portatils-alumnes-f34.yml"
-    - role: cambia-hostname-wg0
-      vars:
-        base_hostname: "alumne"
+    #- role: cambia-hostname-wg0
+    #  vars:
+    #    base_hostname: "alumne"
     - wireguard
     #- convidat
     #- apagado-1455
