@@ -81,6 +81,11 @@
           name: https://dl.flathub.org/repo/appstream/io.dbeaver.DBeaverCommunity.flatpakref
           state: present
 
+- name: Instala flatpak de eclipse
+  flatpak:
+          name: https://dl.flathub.org/repo/appstream/org.eclipse.Java.flatpakref
+          state: present
+
 - name: Instala flatpak de filezilla
   flatpak:
           name: https://dl.flathub.org/repo/appstream/org.filezillaproject.Filezilla.flatpakref
@@ -124,6 +129,11 @@
 - name: Instala flatpak de inkscape
   flatpak:
           name: https://dl.flathub.org/repo/appstream/org.inkscape.Inkscape.flatpakref
+          state: present
+
+- name: Instala flatpak de IntelliJ-IDEA-Community
+  flatpak:
+          name: https://dl.flathub.org/repo/appstream/com.jetbrains.IntelliJ-IDEA-Community.flatpakref
           state: present
 
 - name: Instala flatpak de herramientas kde
@@ -171,6 +181,11 @@
 - name: Instala flatpak de natron
   flatpak:
           name: https://dl.flathub.org/repo/appstream/fr.natron.Natron.flatpakref
+          state: present
+
+- name: Instala flatpak de netbeans
+  flatpak:
+          name: https://dl.flathub.org/repo/appstream/org.apache.netbeans.flatpakref
           state: present
 
 - name: Instala flatpak de octave

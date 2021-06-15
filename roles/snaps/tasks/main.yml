@@ -26,10 +26,12 @@
                   - bluej
                   - brackets
                   - darktable
+                  - eclipse
                   - flameshot
                   - gimp
                   - godot-3-1
                   - inkscape
+                  - intellij-idea-educational
                   - kbruch
                   - kcalc
                   - kdenlive
@@ -39,6 +41,7 @@
                   - librepcb
                   - musescore
                   - mysql-workbench-community
+                  - netbeans
                   - natron
                   - octave
                   - obs-studio
@@ -63,16 +66,6 @@
   snap:
         name: cura-slicer
 
-- name: Instala snap eclipse
-  snap:
-        name: eclipse
-        classic: yes
-
-- name: Instala snap intellij-idea-educational
-  snap:
-        name: intellij-idea-educational
-        classic: yes
-
 - name: Instala snap jupyter
   snap:
         name: jupyter
@@ -88,11 +81,6 @@
 - name: Instala snap kotlin
   snap:
         name: kotlin
-        classic: yes
-
-- name: Instala snap netbeans
-  snap:
-        name: netbeans
         classic: yes
 
 - name: Instala snap node
