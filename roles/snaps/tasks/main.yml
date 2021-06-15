@@ -10,6 +10,13 @@
     state: present
   when: ansible_distribution_version == "34"
 
+- name: Fedora requiere un enlace para snapd
+  file:
+    src: /var/lib/snapd/snap
+    dest: /snap
+    state: link
+  when: ansible_distribution_version == "34"
+
 - name: Elimina snaps deprecated
   snap:
           state: absent
