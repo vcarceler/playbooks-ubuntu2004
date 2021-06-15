@@ -31,7 +31,7 @@ log "There is something to do?"
 #
 # Mitiga el problema en el arranque de los Lenovo 300e 2nd Gen
 #
-journalctl -b | grep "watchdog: BUG: soft lockup - CPU#" >/dev/null && init 6
+#journalctl -b | grep "watchdog: BUG: soft lockup - CPU#" >/dev/null && init 6
 
 
 #
