@@ -32,6 +32,7 @@
                   - godot-3-1
                   - inkscape
                   - intellij-idea-educational
+                  - kalgebra
                   - kbruch
                   - kcalc
                   - kdenlive
@@ -46,6 +47,7 @@
                   - octave
                   - obs-studio
                   - pdfmixtool
+                  - pdftk
                   - qalculate
                   - ruby
                   - shotcut
@@ -70,9 +72,9 @@
   snap:
         name: jupyter
 
-- name: Instala snap kalgebra
-  snap:
-        name: kalgebra
+#- name: Instala snap kalgebra
+#  snap:
+#        name: kalgebra
 
 - name: Instala snap kmplot
   snap:
@@ -93,9 +95,9 @@
   snap:
         name: node-red
 
-- name: Instala snap pdftk
-  snap:
-        name: pdftk
+#- name: Instala snap pdftk
+#  snap:
+#        name: pdftk
 
 - name: Instala snap umbrello
   snap:
