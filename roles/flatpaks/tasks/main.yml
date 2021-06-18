@@ -136,6 +136,11 @@
           name: https://dl.flathub.org/repo/appstream/com.jetbrains.IntelliJ-IDEA-Community.flatpakref
           state: present
 
+- name: Instala flatpak de kalzium
+  flatpak:
+          name: https://dl.flathub.org/repo/appstream/org.kde.kalzium.flatpakref
+          state: present
+
 - name: Instala flatpak de herramientas kde
   flatpak:
           state: present
