@@ -273,6 +273,11 @@
           name: https://dl.flathub.org/repo/appstream/org.shotcut.Shotcut.flatpakref
           state: present
 
+- name: Instala flatpak de transmission
+  flatpak:
+          name: https://dl.flathub.org/repo/appstream/com.transmissionbt.Transmission.flatpakref
+          state: present
+
 - name: Instala flatpak de vlc
   flatpak:
           name: https://dl.flathub.org/repo/appstream/org.videolan.VLC.flatpakref
