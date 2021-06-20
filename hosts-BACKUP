@@ -1,0 +1,465 @@
+# This is the default ansible 'hosts' file.
+#
+# It should live in /etc/ansible/hosts
+#
+#   - Comments begin with the '#' character
+#   - Blank lines are ignored
+#   - Groups of hosts are delimited by [header] elements
+#   - You can enter hostnames or ip addresses
+#   - A hostname/ip can be a member of multiple groups
+
+# Ex 1: Ungrouped hosts, specify before any group headers.
+
+#green.example.com
+#blue.example.com
+#192.168.100.1
+#192.168.100.10
+
+# Ex 2: A collection of hosts belonging to the 'webservers' group
+
+#[webservers]
+#alpha.example.org
+#beta.example.org
+#192.168.1.100
+#192.168.1.110
+
+# If you have multiple hosts following a pattern you can specify
+# them like this:
+
+#www[001:006].example.com
+
+# Ex 3: A collection of database servers in the 'dbservers' group
+
+#[dbservers]
+#
+#db01.intranet.mydomain.net
+#db02.intranet.mydomain.net
+#10.25.1.56
+#10.25.1.57
+
+# Here's another example of host ranges, this time there are no
+# leading 0s:
+
+#db-[99:101]-node.example.com
+
+##############################
+#                            #
+# Grupos para nuestras VLANs #
+#                            #
+##############################
+[basic]
+#192.168.19.183
+
+# Ejemplo: Para inicializar los portátiles de los alumnos
+# [init_alumnes]
+# 192.168.19.123 vpn=10.0.0.101
+# 192.168.19.124 vpn=10.0.0.102
+[init_portatils_alumnes]
+#192.168.249.79 vpn=10.0.0.138
+#192.168.242.182 vpn=10.0.1.104
+#192.168.242.183 vpn=10.0.1.105
+
+[init-portatils-alumnes-f34]
+#192.168.242.173 vpn=10.0.1.95
+192.168.249.107 vpn=10.0.0.226
+192.168.242.49 vpn=10.0.1.58
+192.168.242.71 vpn=10.0.1.80
+
+[init_alumnes_ext4]
+192.168.248.85
+
+[torvalds]
+192.168.10.[100:123]
+
+[torvalds-alumnos]
+192.168.10.[101:123]
+
+[torvalds-profesor]
+192.168.10.100
+
+[stallman]
+192.168.11.[100:123]
+
+
+#[stallman-u1804]
+#192.168.11.100
+
+[ada]
+192.168.12.[100:123]
+
+[aif]
+192.168.14.[100:129]
+192.168.14.[150:167]
+
+# Usuario ga para el profesor de gestió administrativa
+[ga]
+# snowden
+#192.168.15.100
+# Aula 3 (1D)
+#192.168.240.172
+# Aula (4A)
+#192.168.16.103
+# Aula 9 (2F)
+#192.168.240.177
+# Aula 1 (1B)
+#192.168.240.170
+# Aula 2 (1C)
+#192.168.240.171
+# Aula 7 (2A)
+#192.168.240.176
+
+[snowden]
+192.168.15.[100:121]
+
+[esobatx]
+192.168.16.[101:105]
+
+[esobatx_dept]
+192.168.17.52
+192.168.17.32
+
+[esobatx_wifi]
+192.168.240.[170:177]
+192.168.240.[179:188]
+192.168.240.243
+
+
+[departaments]
+192.168.17.[20:22]
+192.168.17.[24:32]
+192.168.17.[35:41]
+192.168.17.45
+
+[turing]
+192.168.18.[100:119]
+
+[darwin]
+192.168.19.[100:122]
+
+[xeill]
+#10.0.[0:254].[101:254]
+Lenovo-V510
+
+[tesla]
+192.168.22.[100:117]
+
+[chomsky]
+192.168.23.[100:118]
+
+#[berners-lee]
+#192.168.16.105
+# Portátiles HP250 en préstamos Berners-Lee
+#192.168.16.106
+#192.168.16.107
+#192.168.16.108
+#192.168.16.109
+#192.168.16.110
+# Fin
+
+[profes]
+192.168.10.100
+192.168.11.100
+#192.168.120117
+192.168.12.100
+192.168.18.100
+192.168.19.100
+# profe Snowden
+192.168.15.100
+# profe Tesla
+192.168.22.100
+# dept. informática A
+192.168.17.187
+# profe Berners-Lee
+192.168.16.105
+
+# Ordenadores de física y química
+[dpt_fisicaiquimica]
+# 101
+#192.168.16.132
+# 102
+#192.168.16.104
+# 202
+#192.168.240.184
+# Lab física y química
+192.168.16.106
+192.168.16.107
+192.168.16.108
+# 2D
+#192.168.16.116
+# Departamento de física y química
+192.168.16.108
+# Aula 7 (2A)
+#192.168.240.176
+# 2B
+#192.168.16.101
+# 2C
+#192.168.240.179
+# 2E
+#192.168.240.187
+# 2F
+#192.168.240.177
+# 3A
+#192.168.240.174
+# 3B
+#192.168.240.175
+# 3C
+#192.168.240.180
+# 3D
+#192.168.240.186
+
+[dpt-aif]
+192.168.17.30
+192.168.17.31
+
+[profesaig]
+192.168.14.100
+192.168.14.150
+
+[dpt-cast]
+192.168.17.46
+
+[dpt-cat]
+192.168.17.20
+192.168.17.21
+
+[dpt_ciencies]
+# departamento
+192.168.17.54
+
+[dpt_ciencies_lab]
+# aula laboratorio
+192.168.240.189
+
+[dpt-dibuix]
+192.168.17.47
+192.168.17.48
+
+[dpt-edufis]
+192.168.17.51
+
+[dpt-erasmus]
+192.168.240.159
+192.168.240.160
+
+[dpt-filosofia]
+192.168.240.247
+
+[dpt-historia]
+192.168.240.245
+
+# Listados desde la puerta hacia la ventana
+[dpt-inf]
+# junto a la puerta
+192.168.17.27
+192.168.17.28
+# junto a la impresora 3d
+192.168.17.29
+
+[dpt-ing]
+192.168.17.45
+192.168.240.164
+
+[dpt-mat]
+192.168.17.60
+
+[dpt-musica]
+192.168.240.178
+
+[dpt-religio]
+192.168.240.246
+
+[dpt-tecno]
+# Profesor taller de tecno
+192.168.16.100
+# Tres ordenadores dentro del departamento
+192.168.16.111
+192.168.16.112
+192.168.16.113
+
+[dpt-psico]
+192.168.17.53
+192.168.240.202
+
+# Ordenadores para que hagan la matricula
+[matricula]
+192.168.240.100
+
+[saladeprofessors]
+# Junto a las konica
+192.168.17.55
+# Junto a la pared
+192.168.17.56
+192.168.17.57
+192.168.17.58
+
+[saladeguardies]
+192.168.240.161
+192.168.240.162
+
+[salondeactos]
+192.168.240.163
+
+
+[profesinf:children]
+profes
+dpt-inf
+
+# Test de ordenadores con u1804
+[profesinf-u1804]
+192.168.17.29
+192.168.10.100
+192.168.11.100
+
+# Portátiles Lenovo V510 (Tecno)
+[lenovo-v510]
+192.168.240.[101:120]
+192.168.19.180
+
+
+# Portátiles para inicialización completa.
+# Normalmente conectados con cable a la LAN de Darwin utilizando
+# una IP dinámica.
+#
+# Ejemplo:
+# [carretx]
+# 192.168.19.123 vpn=10.0.0.101
+# 192.168.19.124 vpn=10.0.0.102
+[carretx]
+192.168.248.107 vpn=10.0.0.125
+
+
+# Portátiles HP 250 G6 plateados
+# carret10
+[carret10]
+192.168.240.[125:159]
+# Cable
+#192.168.19.137
+#192.168.19.177
+#192.168.19.176
+#192.168.19.192
+
+# Portátiles HP 250 G6 Plateados 256 GB SSD y pantalla FullHD
+[carret11]
+192.168.240.[210:242]
+
+
+# Portátiles HP 250 G7 Gris oscuro. No FullHD
+[carret12]
+192.168.241.[1:30]
+
+[carret13]
+192.168.241.[31:37]
+
+[carret14]
+10.0.0.[101:130]
+# equipos en psicopedagogia
+10.0.0.[131:137]
+
+# Aulas ESO/BAT con WiFi y cable
+[aulas-esobat]
+192.168.240.[170:188]
+192.168.16.[101:104]
+# Aula 15bis, antiguo departamento de filosofia
+192.168.17.32
+# Departamento de fisica y quimica
+192.168.16.114
+# Aula de acollida
+192.168.240.243
+# Aula de dibuix
+192.168.17.47
+# Aula 202
+192.168.17.52
+
+# Portátiles HP 250 G4 negros
+# Laboratorio de ciencias
+[ciencias]
+192.168.240.[190:199]
+
+# Portátiles para los alumnos
+#
+[portatils_alumnes]
+10.0.0.[201:255]
+10.0.1.[0:255]
+# test
+#10.0.0.6
+
+# Portátiles para los alumnos con Fedora 34
+#
+[portatils-alumnes-f34]
+10.0.0.138
+10.0.0.226
+10.0.1.58
+10.0.1.80
+10.0.1.95
+
+# Portátiles para los docentes
+#
+[portatils_docents]
+10.0.0.[141:160]
+
+# Portátiles HP 250 G4 negro
+# Préstamo a los alumnos de DAM
+[portatiles-prestamo]
+192.168.240.200
+192.168.240.201
+192.168.240.203
+192.168.240.204
+#192.168.19.148
+#192.168.19.170
+#192.168.19.193
+#192.168.19.178
+#192.168.19.124
+
+[secretaria]
+192.168.240.205
+
+[biblioteca]
+192.168.17.[35:41]
+
+[consergeria]
+192.168.17.50
+
+# Ordenadores de AIF con J1900
+# necesitan un parámetro en el núcleo
+# para no colgarse
+[j1900]
+192.168.14.[100:107]
+192.168.14.[114:128]
+192.168.17.32
+192.168.17.47
+192.168.240.160
+192.168.17.53
+
+# Grupo para crear el usuario manteniment
+[manteniment]
+
+# Grupo para crear el usuario admin
+[admin]
+#192.168.240.236 Iván AiF
+#192.168.240.237 Lydia asix
+#192.168.240.145
+#192.168.240.137
+#192.168.240.136
+#192.168.240.154
+#192.168.240.151
+#192.168.240.141
+#192.168.240.129
+#192.168.240.153
+#192.168.240.133
+#192.168.240.128
+#192.168.240.132
+#192.168.240.140
+#192.168.240.130
+#192.168.240.146
+#192.168.240.144
+
+# Clases en las que imparte clases amacias
+[amacias]
+# Chomsky
+192.168.23.100
+# Aula 4 (1E)
+192.168.240.173
+# Aula 4A
+192.168.16.103
+# Aula 202
+192.168.17.52
