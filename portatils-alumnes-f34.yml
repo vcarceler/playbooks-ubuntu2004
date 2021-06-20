@@ -3,7 +3,7 @@
   user: root
 
   vars:
-    grupos: adm,cdrom,dialout,kvm,libvirt,vboxusers
+    grupos: adm,cdrom,dialout,kvm,libvirt,lxd,vboxusers
 
   roles:
     - delete-users
@@ -15,6 +15,7 @@
       vars:
         base_hostname: "alumne"
     - software-2004
+    - lxd-fedora
     #- convidat
     #- apagado-1455
     #- apagado-2130
