@@ -5,6 +5,7 @@
 - name: Desinstala paquetes deprecated de Ubuntu
   apt:
     state: absent
+    autoremove: yes
     pkg:
       - filezilla
       - freecad
@@ -16,7 +17,7 @@
       - recordmydesktop
       - scratch
       - slic3r
-      - transmission
+      - transmission-gtk
       - virtualbox-6.1
 
 # Instalación de paquetes
@@ -67,6 +68,10 @@
     - virtualenv
     - vpcs
     - xorriso
+
+- name: Elimina paquetes innecesarios con apt autoremove
+  apt:
+    autoremove: yes
 
 # Desactiva el collector de systemd porque tiene una cardinalidad muy alta
 # https://www.robustperception.io/dropping-metrics-at-scrape-time-with-prometheus
