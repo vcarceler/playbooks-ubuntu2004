@@ -68,6 +68,9 @@
 [init_alumnes_ext4]
 192.168.248.85
 
+[init-docents]
+192.168.17.164 vpn=10.0.0.161
+
 [torvalds]
 192.168.10.[100:123]
 
@@ -109,7 +112,7 @@
 #192.168.240.176
 
 [snowden]
-192.168.15.[100:121]
+#192.168.15.[100:121]
 
 [esobatx]
 192.168.16.[101:105]
@@ -394,7 +397,7 @@ dpt-inf
 # Portátiles para los docentes
 #
 [portatils_docents]
-10.0.0.[141:160]
+10.0.0.[141:161]
 
 # Portátiles HP 250 G4 negro
 # Préstamo a los alumnos de DAM

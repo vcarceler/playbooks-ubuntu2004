@@ -1,5 +1,5 @@
 ---
-- hosts: carretx
+- hosts: init-docents
   user: root
 
   vars:
@@ -18,7 +18,7 @@
     - activate-unattended-upgrades
     - role: cambia-hostname
       vars:
-        base_hostname: "carretx"
+        base_hostname: "docents"
         
     #- gnome3-dconf
     #- software-2004
