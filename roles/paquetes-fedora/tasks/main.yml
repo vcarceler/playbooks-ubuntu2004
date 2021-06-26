@@ -13,6 +13,7 @@
     state: present
     update_cache: yes
     name:
+      - buildah
       - dia
       - dia-CMOS
       - dia-Digital
