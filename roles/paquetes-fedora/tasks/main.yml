@@ -22,6 +22,8 @@
       - dia-gnomeDIAicons
       - dia-optics
       - dialog
+      # RPM Fusion - codecs para reproducir vídeo fluído en Firefox
+      - ffmpeg-libs
       - gns3-gui
       - gns3-server
       - golang-bin
@@ -41,6 +43,7 @@
       - ripgrep
       - ruby
       - vim-enhanced
+      # RPM Fusion
       - VirtualBox
       - '@virtualization'
       - xorriso
