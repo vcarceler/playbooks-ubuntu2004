@@ -268,6 +268,11 @@
           name: https://dl.flathub.org/repo/appstream/edu.mit.Scratch.flatpakref
           state: present
 
+- name: Instala flatpak de soundrecorder
+  flatpak:
+          name: https://dl.flathub.org/repo/appstream/org.gnome.SoundRecorder.flatpakref
+          state: present
+
 - name: Instala flatpak de sweethome3d
   flatpak:
           name: https://dl.flathub.org/repo/appstream/com.sweethome3d.Sweethome3d.flatpakref
