@@ -158,6 +158,11 @@
           name: https://dl.flathub.org/repo/appstream/org.kicad.KiCad.flatpakref
           state: present
 
+- name: Instala flatpak de kooha
+  flatpak:
+          name: https://dl.flathub.org/repo/appstream/io.github.seadve.Kooha.flatpakref
+          state: present
+
 - name: Instala flatpak de krita
   flatpak:
           name: https://dl.flathub.org/repo/appstream/org.kde.krita.flatpakref
@@ -246,7 +251,7 @@
 - name: Instala flatpak de peek
   flatpak:
           name: https://dl.flathub.org/repo/appstream/com.uploadedlobster.peek.flatpakref
-          state: present
+          state: absent
 
 - name: Instala flatpak de prusaslicer
   flatpak:
