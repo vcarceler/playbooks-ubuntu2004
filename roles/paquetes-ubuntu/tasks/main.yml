@@ -63,6 +63,7 @@
     - tshark
     - ttf-mscorefonts-installer
     - unrar
+    - vagrant
     - virt-top
     - virtualbox
     - virtualenv

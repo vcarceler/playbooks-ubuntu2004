@@ -42,6 +42,7 @@
       - python3-virtualenv
       - ripgrep
       - ruby
+      - vagrant
       - vim-enhanced
       # RPM Fusion
       - VirtualBox
