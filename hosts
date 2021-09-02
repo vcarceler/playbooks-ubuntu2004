@@ -392,6 +392,8 @@ dpt-inf
 # Portátiles para los alumnos con Fedora 34
 #
 [portatils-alumnes-f34]
+# alumne-0-138
+10.0.0.138
 10.0.0.[201:255]
 10.0.1.[0:255]
 10.0.2.[0:255]

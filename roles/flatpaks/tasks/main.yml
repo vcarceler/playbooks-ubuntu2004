@@ -31,6 +31,11 @@
 
 # Instalación de paquetes Flatpak
 
+- name: Instala flatapk de ardour
+  flatpak:
+          name: https://dl.flathub.org/repo/appstream/org.ardour.Ardour.flatpakref
+          state: present
+
 - name: Instala flatpak de arduino-ide
   flatpak:
           name: https://dl.flathub.org/repo/appstream/cc.arduino.arduinoide.flatpakref
@@ -134,6 +139,11 @@
 - name: Instala flatpak de IntelliJ-IDEA-Community
   flatpak:
           name: https://dl.flathub.org/repo/appstream/com.jetbrains.IntelliJ-IDEA-Community.flatpakref
+          state: present
+
+- name: Instala flatpak de LMMS
+  flatpak:
+          name: https://dl.flathub.org/repo/appstream/io.lmms.LMMS.flatpakref
           state: present
 
 - name: Instala flatpak de kalzium
@@ -286,6 +296,11 @@
 - name: Instala flatpak de transmission
   flatpak:
           name: https://dl.flathub.org/repo/appstream/com.transmissionbt.Transmission.flatpakref
+          state: present
+
+- name: Instala flatpak de tuxguitar
+  flatpak:
+          name: https://dl.flathub.org/repo/appstream/ar.com.tuxguitar.TuxGuitar.flatpakref
           state: present
 
 - name: Instala flatpak de vlc
