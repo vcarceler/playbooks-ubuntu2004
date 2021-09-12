@@ -58,6 +58,7 @@
     - rst2pdf
     - ripgrep
     - ruby
+    - ruby-bundler
     - texlive-lang-spanish
     - tree
     - tshark
