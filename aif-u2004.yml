@@ -31,8 +31,22 @@
 
   tasks:
     # Usuarios
-    - include: users/aig/alumnos/ga1a.yml
-    - include: users/aig/alumnos/ga1b.yml
-    - include: users/aig/alumnos/ga2.yml
+    - include: users/aig/alumnos/1aga.yml
+    - include: users/aig/alumnos/1bga.yml
+    - include: users/aig/alumnos/2ga.yml
     - include: users/aig/alumnos/afcat.yml
-    - include: users/aig/alumnos/afeng.yml
+    - include: users/aig/xavic.yml
+    
+    - name: Borrado de usuarios antiguos
+      user:
+              name: "{{ item }}"
+              state: absent
+              remove: yes
+      with_items:
+              - afeng
+              - dorin
+              - ga1a
+              - ga1b
+              - ga2
+              - afcat
+              - xavicruz

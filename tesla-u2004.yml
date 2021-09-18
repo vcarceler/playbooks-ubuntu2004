@@ -31,6 +31,7 @@
 
   tasks:
     # Usuarios
+    - include: users/informatica/delete-users.yml
     - include: users/informatica/alumnos/dam2a.yml
     - include: users/esobat/grupos/tec3a-g1.yml
     - include: users/esobat/grupos/tec3a-g2.yml

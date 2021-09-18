@@ -19,7 +19,7 @@
         base_hostname: "turing"
     - gnome3-dconf
     - software-2004
-    - podman
+      #- podman
     - apache-userdir
     - wireshark
     - gns3
@@ -32,5 +32,6 @@
 
   tasks:
     # Usuarios
-    - include: users/informatica/alumnos/smx1b.yml
-    - include: users/informatica/alumnos/asix2.yml
+    - include: users/informatica/delete-users.yml
+    - include: users/informatica/alumnos/smx2b.yml
+    - include: users/informatica/alumnos/smx1c.yml

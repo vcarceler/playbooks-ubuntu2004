@@ -30,5 +30,6 @@
     - apagado-2130
 
   tasks:
-    # Usuarios
+    # Usuariosç
+    - include: users/informatica/delete-users.yml
     - include: users/informatica/alumnos/smx2c.yml

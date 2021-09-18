@@ -31,8 +31,8 @@
 
   tasks:
     # Usuarios
-    - include: users/informatica/alumnos/smx1a.yml
-    - include: users/informatica/alumnos/smx1b.yml
-    - include: users/informatica/alumnos/smx1c.yml
+    - include: users/informatica/delete-users.yml
+      #- include: users/informatica/alumnos/smx1b.yml
+      #- include: users/informatica/alumnos/smx1c.yml
     - include: users/aig/alumnos/ga2.yml
     #- include: users/informatica/smx2c.yml
