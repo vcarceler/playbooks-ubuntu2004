@@ -55,6 +55,7 @@
     - python3-pylint-django
     - python3-pypdf2
     - relational
+    - renpy
     - rst2pdf
     - ripgrep
     - ruby
