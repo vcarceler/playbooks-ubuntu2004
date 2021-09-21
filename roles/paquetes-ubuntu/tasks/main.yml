@@ -25,7 +25,7 @@
   apt:
     update_cache: yes
     pkg:
-    - default-jdk
+            #- default-jdk
     - dia
     - dia-rib-network
     - dia-shapes
@@ -45,6 +45,7 @@
     - libreoffice-report-builder
     - lyx
     - ncdu
+    - openjdk-16-jdk
     - planner
     - prometheus-node-exporter
     - pylint
