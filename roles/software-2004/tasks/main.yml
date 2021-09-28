@@ -5,10 +5,14 @@
 - name: Gestiona aplicaciones en flatpak
   include_role:
     name: flatpaks
+  tags:
+    - slow
 
 - name: Gestiona aplicaciones en snap
   include_role:
     name: snaps
+  tags:
+    - slow
 
 - name: Gestiona paquetes en Ubuntu
   include_role:
