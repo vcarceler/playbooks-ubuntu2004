@@ -632,6 +632,9 @@ dpt-inf
 10.0.2.[0:255]
 10.0.3.[0:5]
 
+[dnf-update]
+192.168.243.36
+
 # Portátiles para los docentes
 #
 [portatils_docents]

@@ -23,6 +23,8 @@
   include_role:
     name: paquetes-fedora
   when: ansible_distribution_version == "34"
+  tags:
+    - paquetes-fedora
 
 # Actualiza a la última versión
 #- name: Actualiza a la última versión
