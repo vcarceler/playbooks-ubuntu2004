@@ -61,10 +61,10 @@
           name: https://dl.flathub.org/repo/appstream/org.bluej.BlueJ.flatpakref
           state: present
 
-- name: Instala flatpak de brave (beta)
-  flatpak:
-          name: https://flathub.org/beta-repo/appstream/com.brave.Browser.flatpakref
-          state: present
+#- name: Instala flatpak de brave (beta)
+#  flatpak:
+#          name: https://flathub.org/beta-repo/appstream/com.brave.Browser.flatpakref
+#          state: present
 
 - name: Instala flatpak de calibre
   flatpak:

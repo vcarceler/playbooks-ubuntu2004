@@ -126,11 +126,11 @@ fi
 #
 # Fedora: dnf update
 #
-if [ -f /usb/bin/dnf ]
+capacity=`cat /sys/class/power_supply/BAT1/capacity`
+if [ -f /usr/bin/dnf ] && [ $capacity -ge 50 ]
 then
-	capacity=`cat /sys/class/power_supply/BAT1/capacity`
 	log "Actualizando paquetes con dnf update -y"
-	[ $capacity -ge 50 ] && dnf update -y
+	dnf update -y
 	log "Actualizaciones de dnf update -y aplicadas"
 fi
 
