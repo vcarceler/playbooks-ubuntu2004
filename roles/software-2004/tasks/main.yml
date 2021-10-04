@@ -7,6 +7,7 @@
     name: flatpaks
   tags:
     - slow
+    - flatpak
 
 - name: Gestiona aplicaciones en snap
   include_role:

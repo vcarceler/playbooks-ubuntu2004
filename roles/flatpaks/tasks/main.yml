@@ -31,7 +31,7 @@
 
 # Instalación de paquetes Flatpak
 
-- name: Instala flatapk de ardour
+- name: Instala flatpak de ardour
   flatpak:
           name: https://dl.flathub.org/repo/appstream/org.ardour.Ardour.flatpakref
           state: present

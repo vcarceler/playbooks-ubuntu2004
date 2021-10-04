@@ -124,11 +124,23 @@ then
 fi
 
 #
+# Fedora: dnf update
+#
+if [ -f /usb/bin/dnf ]
+then
+	capacity=`cat /sys/class/power_supply/BAT1/capacity`
+	log "Actualizando paquetes con dnf update -y"
+	[ $capacity -ge 50 ] && dnf update -y
+	log "Actualizaciones de dnf update -y aplicadas"
+fi
+
+#
 # Actualizaciones flatpak
 #
 if [ -f /usr/bin/flatpak ]
 then
 	log "Comprobando actualizaciones flatpak"
+	flatpak repair
 	flatpak -y update
 	log "Actualizaciones flatpak aplicadas"
 fi
