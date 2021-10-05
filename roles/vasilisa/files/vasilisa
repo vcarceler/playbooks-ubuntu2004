@@ -140,8 +140,7 @@ fi
 if [ -f /usr/bin/flatpak ]
 then
 	log "Comprobando actualizaciones flatpak"
-	flatpak repair
-	flatpak -y update
+	flatpak -y update || flatpak repair
 	log "Actualizaciones flatpak aplicadas"
 fi
 
