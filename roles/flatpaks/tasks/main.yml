@@ -146,6 +146,11 @@
           name: https://dl.flathub.org/repo/appstream/com.jetbrains.IntelliJ-IDEA-Community.flatpakref
           state: present
 
+- name: Instala flatpak de Klavaro
+  flatpak:
+          name: https://dl.flathub.org/repo/appstream/net.sourceforge.Klavaro.flatpakref
+          state: present
+
 - name: Instala flatpak de LMMS
   flatpak:
           name: https://dl.flathub.org/repo/appstream/io.lmms.LMMS.flatpakref
