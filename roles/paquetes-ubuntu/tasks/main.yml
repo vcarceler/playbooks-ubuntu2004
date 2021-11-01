@@ -44,9 +44,11 @@
     - libreoffice-base
     - libreoffice-report-builder
     - lyx
+    - net-tools
     - ncdu
     - openjdk-16-jdk
     - planner
+    - postgresql-client
     - prometheus-node-exporter
     - pylint
     - pylint3    
