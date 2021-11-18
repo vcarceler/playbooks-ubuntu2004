@@ -115,6 +115,20 @@ done
 #
 if [ -f /usr/bin/unattended-upgrade ]
 then
+
+        # Mitiga este problema https://bugs.launchpad.net/ubuntu/+source/grub2/+bug/439784
+        grub-editenv /boot/grub/grubenv list
+        if [ $? -ne 0 ]
+        then
+                log "Mitigo el problema con grubenv https://bugs.launchpad.net/ubuntu/+source/grub2/+bug/439784"
+                rm /boot/grub/grubenv
+                grub-editenv /boot/grub/grubenv create
+                grub-editenv /boot/grub/grubenv set default=0
+                log "Mitigado"
+
+        fi
+
+
 	log "Lanzando unattended-upgrade"
 	dpkg --configure -a
 	apt -y --fix-broken install
