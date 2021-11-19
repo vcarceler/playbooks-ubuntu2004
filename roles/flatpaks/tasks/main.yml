@@ -133,6 +133,11 @@
           name: https://dl.flathub.org/repo/appstream/org.gaphor.Gaphor.flatpakref
           state: present
 
+- name: Instala flatpak de geany
+  flatpak:
+          name: https://dl.flathub.org/repo/appstream/org.geany.Geany.flatpakref
+          state: present
+
 - name: Instala flatpak de geogebra
   flatpak:
           name: https://dl.flathub.org/repo/appstream/org.geogebra.GeoGebra.flatpakref
