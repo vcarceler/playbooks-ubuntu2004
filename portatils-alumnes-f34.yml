@@ -15,7 +15,7 @@
       vars:
         base_hostname: "alumne"
     - software-2004
-    - dotnet
+      #- dotnet
     - lxd-fedora
     #- convidat
     #- apagado-1455

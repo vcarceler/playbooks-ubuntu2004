@@ -26,6 +26,7 @@
     update_cache: yes
     pkg:
             #- default-jdk
+    - basex
     - dia
     - dia-rib-network
     - dia-shapes
@@ -47,6 +48,7 @@
     - net-tools
     - ncdu
     - openjdk-16-jdk
+    - pdftk
     - planner
     - postgresql-client
     - prometheus-node-exporter
