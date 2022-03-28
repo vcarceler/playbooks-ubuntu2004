@@ -24,6 +24,7 @@
       - dialog
       # RPM Fusion - codecs para reproducir vídeo fluído en Firefox
       - ffmpeg-libs
+      - ftp
       - gns3-gui
       - gns3-server
       - golang-bin
@@ -53,4 +54,4 @@
   systemd:
     enabled: yes
     state: started
-    name: node_exporter
+    name: prometheus-node-exporter

@@ -31,18 +31,6 @@
 
 # Instalación de paquetes Flatpak
 
-- name: Instala flatpaks
-  block:
-
-        - name: Instala flatpak de ardour
-          flatpak:
-                  name: https://dl.flathub.org/repo/appstream/org.ardour.Ardour.flatpakref
-                  state: present
-
-  rescue:
-    - name: Repara el repositorio flatpak
-      shell: flatpak repair
-
 - name: Instala flatpak de ardour
   flatpak:
           name: https://dl.flathub.org/repo/appstream/org.ardour.Ardour.flatpakref
@@ -73,10 +61,10 @@
           name: https://dl.flathub.org/repo/appstream/org.bluej.BlueJ.flatpakref
           state: present
 
-#- name: Instala flatpak de brave (beta)
-#  flatpak:
-#          name: https://flathub.org/beta-repo/appstream/com.brave.Browser.flatpakref
-#          state: present
+- name: Instala flatpak de brave (beta)
+  flatpak:
+          name: https://flathub.org/beta-repo/appstream/com.brave.Browser.flatpakref
+          state: present
 
 - name: Instala flatpak de calibre
   flatpak:
@@ -131,11 +119,6 @@
 - name: Instala flatpak de gaphor
   flatpak:
           name: https://dl.flathub.org/repo/appstream/org.gaphor.Gaphor.flatpakref
-          state: present
-
-- name: Instala flatpak de geany
-  flatpak:
-          name: https://dl.flathub.org/repo/appstream/org.geany.Geany.flatpakref
           state: present
 
 - name: Instala flatpak de geogebra

@@ -1,0 +1,4 @@
+#!/bin/bash
+/home/vcarceler/.local/bin/ara playbook prune --days 30 --confirm
+/usr/bin/sqlite3 /home/vcarceler/.ara/server/ansible.sqlite vacuum
+

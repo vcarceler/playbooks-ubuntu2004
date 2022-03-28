@@ -1,0 +1,12 @@
+---
+- hosts: dnf-update
+  user: root
+
+  tasks:
+    - name: Ejecuta dnf update -y
+      shell: dnf update -y
+
+    - name: Apaga el equipo
+      command: systemctl poweroff
+      async: 10
+      poll: 0

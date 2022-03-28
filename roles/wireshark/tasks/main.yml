@@ -1,3 +1,15 @@
+- name: Wireshark let non root to capture traffic
+  # Before installing any package, this only sets the preference for the question
+  debconf:
+    name='wireshark-common'
+    question='wireshark-common/install-setuid'
+    vtype='boolean'
+    value='true'
+  become: yes
+  notify:
+    - desinstala wireshark-common
+    - instala wireshark-common
+
 - name: Crea el grupo wireshark
   group:
     name: wireshark

@@ -1,6 +1,7 @@
 - name: Instala lxd
   snap:
         name: lxd
+  ignore_errors: yes
   notify:
     - copy lxd-preseed
     - config lxd

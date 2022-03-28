@@ -1,5 +1,5 @@
 ---
-- hosts: dpt-psico
+- hosts: carret15
   user: root
 
   vars:
@@ -9,15 +9,14 @@
     - delete-users
     - lock-sshd
     - zsys-gc
-    - zfs-rpool-sync-disabled
     - swappiness-0
     - role: vasilisa
       vars:
-        sirin: "http://192.168.17.18:8000/launcher/?label=dpt-psico-u2004.yml"
+        sirin: "http://10.0.0.2:8000/launcher/?label=carret15-u2004.yml"
     - activate-unattended-upgrades
-    - role: cambia-hostname
+    - role: cambia-hostname-wg0
       vars:
-        base_hostname: "dpt-psico"
+        base_hostname: "carret15"
     - gnome3-dconf
     - software-2004
     - apache-userdir
@@ -28,11 +27,10 @@
     - lxd-zfs
     - convidat
     #- apagado-1455
-    - apagado-2130
+    #- apagado-2130
 
   tasks:
     # Usuarios
-    - include: users/psico/psico.yml
-    - include: users/psico/cristina.yml
+    #- include: users/esobat/grupos/robo1.yml
     #- include: users/informatica/smx2b.yml
     #- include: users/informatica/smx2c.yml

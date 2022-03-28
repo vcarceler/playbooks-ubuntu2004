@@ -3,7 +3,7 @@
   user: root
 
   vars:
-    grupos: adm,cdrom,dialout,kvm,libvirt,lpadmin,lxd,plugdev,sambashare,ubridge,vboxusers
+    grupos: adm,cdrom,dialout,kvm,libvirt,lpadmin,lxd,plugdev,sambashare,ubridge,vboxusers,wireshark
 
   roles:
     - delete-users

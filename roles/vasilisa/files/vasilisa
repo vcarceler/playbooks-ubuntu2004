@@ -153,6 +153,15 @@ fi
 #
 if [ -f /usr/bin/flatpak ]
 then
+	log "Si hay algún flatpak medioinstalado lo borra de /var/lib/flatpak/app"
+	apps=`ls /var/lib/flatpak/app`
+	flatpaks=`flatpak list --system --columns=application`
+
+	for x in $apps
+	do 
+		echo $flatpaks | grep $x >/dev/null 2>/dev/null || rm -rfv /var/lib/flatpak/app/$x 
+	done
+
 	log "Comprobando actualizaciones flatpak"
 	flatpak -y update || flatpak repair
 	log "Actualizaciones flatpak aplicadas"
@@ -178,6 +187,14 @@ then
 	log "Haciendo una petición a Sirin"
 	wget -O /dev/null -i $SIRIN
 	log "Petición a Sirin completada"
+fi
+
+#
+# glpi-agent
+#
+if [ -f /snap/bin/glpi-agent ]
+then
+	/snap/bin/glpi-agent
 fi
 
 #

@@ -1,0 +1,9 @@
+- name: desinstala wireshark-common
+  apt:
+    name: wireshark-common
+    state: absent
+
+- name: instala wireshark-common
+  apt:
+    name: wireshark-common
+    state: present

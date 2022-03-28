@@ -44,6 +44,7 @@
                   - mysql-workbench-community
                   - netbeans
                   - natron
+                  - node
                   - octave
                   - obs-studio
                   - pdfmixtool
@@ -85,11 +86,17 @@
         name: kotlin
         classic: yes
 
-- name: Instala snap node
-  snap:
-        name: node
-        classic: yes
-        channel: edge
+#- name: Desinstala snap node edge
+#  snap:
+#        name: node
+#        classic: yes
+#        channel: latest/edge
+#        state: absent
+
+#- name: Instala snap node
+#  snap:
+#        name: node
+#        classic: yes
 
 - name: Instala snap node-red
   snap:
