@@ -25,6 +25,7 @@
     - dotnet
     - kvm
     - lxd-zfs
+    - glpi-agent
     - convidat
 #    - apagado-1455
     - apagado-2130

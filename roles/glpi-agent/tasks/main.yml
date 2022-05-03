@@ -1,0 +1,12 @@
+# Copia el snap de glpi-agent
+- name: Copia el snap de glpi-agent en /opt/
+  copy:
+    src: files/glpi-agent_1.1_amd64.snap
+    dest: /opt/glpi-agent_1.1_amd64.snap
+    owner: root
+    group: root
+    mode: u=rwx,g=r,o=r
+  notify:
+    - instala glpi-agent
+    - configura glpi-agent
+

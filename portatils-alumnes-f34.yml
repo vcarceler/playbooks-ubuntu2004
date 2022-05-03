@@ -17,6 +17,7 @@
     - software-2004
       #- dotnet
     - lxd-fedora
+    - glpi-agent
     #- convidat
     #- apagado-1455
     #- apagado-2130
