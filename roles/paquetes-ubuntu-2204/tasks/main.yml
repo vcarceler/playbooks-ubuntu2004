@@ -25,7 +25,6 @@
   apt:
     update_cache: yes
     pkg:
-            #- default-jdk
     - basex
     - dia
     - dia-rib-network
@@ -47,9 +46,10 @@
     - lyx
     - net-tools
     - ncdu
-      #- openjdk-16-jdk
+    - openjdk-18-jdk
     - pdftk
     - planner
+    - podman
     - postgresql-client
     - prometheus-node-exporter
     - pylint
