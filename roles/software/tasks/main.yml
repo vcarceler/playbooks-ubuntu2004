@@ -15,10 +15,15 @@
   tags:
     - slow
 
-- name: Gestiona paquetes en Ubuntu
+- name: Gestiona paquetes en Ubuntu 20.04
   include_role:
     name: paquetes-ubuntu-2004
   when: ansible_distribution_version == "20.04"
+
+- name: Gestiona paquetes en Ubuntu 22.04
+  include_role:
+    name: paquetes-ubuntu-2204
+  when: ansible_distribution_version == "22.04"
 
 - name: Gestiona paquetes en Fedora
   include_role:
