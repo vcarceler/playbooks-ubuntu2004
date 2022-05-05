@@ -26,7 +26,7 @@
     update_cache: yes
     pkg:
       - flatpak
-  when: ansible_distribution_version == "20.04"
+  when: ansible_distribution == "Ubuntu"
 
 
 # Instalación de paquetes Flatpak
