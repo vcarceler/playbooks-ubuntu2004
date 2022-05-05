@@ -1,0 +1,90 @@
+#
+# Gestiona los paquetes en Ubuntu
+#
+
+- name: Desinstala paquetes deprecated de Ubuntu
+  apt:
+    state: absent
+    autoremove: yes
+    pkg:
+      - filezilla
+      - freecad
+      - fritzing
+      - kicad
+      - korganizer
+      - openscad
+      - openshot
+      - recordmydesktop
+      - scratch
+      - slic3r
+      - transmission-gtk
+      - virtualbox-6.1
+
+# Instalación de paquetes
+- name: Instalación de paquetes que están en los repos de Ubuntu
+  apt:
+    update_cache: yes
+    pkg:
+            #- default-jdk
+    - basex
+    - dia
+    - dia-rib-network
+    - dia-shapes
+    - dia2code
+    - dialog
+    - docutils-doc
+    - git
+    - gnome-boxes
+    - golang-go
+    - htop
+    - httpie
+    - ipcalc
+    - jq
+    - julia
+    - librecad
+    - libreoffice-base
+    - libreoffice-report-builder
+    - lyx
+    - net-tools
+    - ncdu
+    - openjdk-16-jdk
+    - pdftk
+    - planner
+    - postgresql-client
+    - prometheus-node-exporter
+    - pylint
+    - pylint3    
+    - python3-docutils
+    - python3-easygui
+    - python3-pip
+    - python3-pylint-django
+    - python3-pypdf2
+    - relational
+    - renpy
+    - rst2pdf
+    - ripgrep
+    - ruby
+    - ruby-bundler
+    - texlive-lang-spanish
+    - tree
+    - tshark
+    - ttf-mscorefonts-installer
+    - unrar
+    - vagrant
+    - virt-top
+    - virtualbox
+    - virtualenv
+    - vpcs
+    - xorriso
+
+- name: Elimina paquetes innecesarios con apt autoremove
+  apt:
+    autoremove: yes
+
+# Desactiva el collector de systemd porque tiene una cardinalidad muy alta
+# https://www.robustperception.io/dropping-metrics-at-scrape-time-with-prometheus
+- name: Aplica --no-collector.systemd en /etc/default/prometheus-node-exporter
+  replace:
+    dest: /etc/default/prometheus-node-exporter
+    regexp: '^ARGS=""'
+    replace: 'ARGS="--no-collector.systemd"'

@@ -18,7 +18,7 @@
       vars:
         base_hostname: "test-2204"
     - gnome3-dconf
-    - software-2004
+    - software
     - apache-userdir
     - wireshark
     - gns3
