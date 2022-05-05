@@ -2,23 +2,23 @@
 # Gestiona los paquetes en Ubuntu
 #
 
-- name: Desinstala paquetes deprecated de Ubuntu
-  apt:
-    state: absent
-    autoremove: yes
-    pkg:
-      - filezilla
-      - freecad
-      - fritzing
-      - kicad
-      - korganizer
-      - openscad
-      - openshot
-      - recordmydesktop
-      - scratch
-      - slic3r
-      - transmission-gtk
-      - virtualbox-6.1
+#- name: Desinstala paquetes deprecated de Ubuntu
+#  apt:
+#    state: absent
+#    autoremove: yes
+#    pkg:
+#      - filezilla
+#      - freecad
+#      - fritzing
+#      - kicad
+#      - korganizer
+#      - openscad
+#      - openshot
+#      - recordmydesktop
+#      - scratch
+#      - slic3r
+#      - transmission-gtk
+#      - virtualbox-6.1
 
 # Instalación de paquetes
 - name: Instalación de paquetes que están en los repos de Ubuntu
@@ -40,14 +40,14 @@
     - httpie
     - ipcalc
     - jq
-    - julia
+      #- julia
     - librecad
-    - libreoffice-base
-    - libreoffice-report-builder
+      #- libreoffice-base
+      #- libreoffice-report-builder
     - lyx
     - net-tools
     - ncdu
-    - openjdk-16-jdk
+      #- openjdk-16-jdk
     - pdftk
     - planner
     - postgresql-client
