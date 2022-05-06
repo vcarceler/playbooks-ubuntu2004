@@ -1,0 +1,9 @@
+- name: Elimina el snap de firefox
+  snap:
+          state: absent
+          name: firefox
+
+- name: Instala el flatpak de firefox
+  flatpak:
+          name: https://dl.flathub.org/repo/appstream/org.mozilla.firefox.flatpakref
+          
