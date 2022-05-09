@@ -1,0 +1,30 @@
+config: {}
+networks:
+- config:
+    ipv4.address: 172.16.0.1/24
+    ipv4.nat: "true"
+    ipv6.address: none
+  description: ""
+  name: lxdbr0
+  type: "bridge"
+storage_pools:
+- config:
+    source: /var/snap/lxd/common/lxd/storage-pools/default
+    volatile.initial_source: /var/snap/lxd/common/lxd/storage-pools/default
+  description: ""
+  name: default
+  driver: dir
+profiles:
+- config: {}
+  description: ""
+  devices:
+    eth0:
+      name: eth0
+      network: lxdbr0
+      type: nic
+    root:
+      path: /
+      pool: default
+      type: disk
+  name: default
+cluster: null

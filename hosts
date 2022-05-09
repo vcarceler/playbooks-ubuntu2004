@@ -61,7 +61,7 @@
 
 [test-u2204]
 192.168.244.8
-
+192.168.17.27
 
 [init_alumnes_ext4]
 192.168.248.85
@@ -253,7 +253,7 @@ Lenovo-V510
 # Listados desde la puerta hacia la ventana
 [dpt-inf]
 # junto a la puerta
-192.168.17.27
+#192.168.17.27
 192.168.17.28
 # junto a la impresora 3d
 192.168.17.29
