@@ -1,0 +1,27 @@
+- name: Creación del perfil user
+  blockinfile:
+    dest: /etc/dconf/profile/user
+    create: yes
+    owner: root
+    group: root
+    mode: 644
+    block: |
+      user-db:user
+      system-db:local
+  notify:
+    - dconf update
+
+# Se pueden ver las claves originales con dconf-editor
+- name: Definición del fondo de pantalla y de salvapantalla
+  blockinfile:
+    dest: /etc/dconf/db/local.d/00-wallpaper
+    create: yes
+    owner: root
+    group: root
+    mode: 644
+    block: |
+      [org/gnome/shell]
+      favorite-apps = ['org.mozilla.firefox.desktop', 'org.gnome.Nautilus.desktop', 'gnome-terminal.desktop']
+  notify:
+    - dconf update
+

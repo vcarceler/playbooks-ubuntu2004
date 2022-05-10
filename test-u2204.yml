@@ -22,7 +22,7 @@
     - firefox-cambia-snap-por-flatpak
     - apache-userdir
     - wireshark
-    - gns3
+      #- gns3
     - dotnet
     - kvm
     - lxd-dir
