@@ -6,11 +6,10 @@ networks:
     ipv6.address: none
   description: ""
   name: lxdbr0
-  type: "bridge"
+  type: ""
+  project: default
 storage_pools:
-- config:
-    source: /var/snap/lxd/common/lxd/storage-pools/default
-    volatile.initial_source: /var/snap/lxd/common/lxd/storage-pools/default
+- config: {}
   description: ""
   name: default
   driver: dir
@@ -27,4 +26,6 @@ profiles:
       pool: default
       type: disk
   name: default
+projects: []
 cluster: null
+
