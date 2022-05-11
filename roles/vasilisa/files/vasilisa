@@ -194,7 +194,8 @@ fi
 #
 if [ -f /snap/bin/glpi-agent ]
 then
-	/snap/bin/glpi-agent
+	log "Enviando inventario a GLPI"
+	/snap/bin/glpi-agent && log "Inventario eviado a GLPI"
 fi
 
 #

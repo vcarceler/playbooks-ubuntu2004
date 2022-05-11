@@ -17,9 +17,9 @@
     - role: cambia-hostname
       vars:
         base_hostname: "test-2204"
-    - gnome3-dconf
     - software
     - firefox-cambia-snap-por-flatpak
+    - gnome-dconf-2204
     - apache-userdir
     - wireshark
       #- gns3
