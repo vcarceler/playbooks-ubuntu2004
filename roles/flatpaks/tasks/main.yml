@@ -31,22 +31,22 @@
 
 # Instalación de paquetes Flatpak
 
-- name: Instala flatpaks
-  block:
-
-        - name: Instala flatpak de ardour
-          flatpak:
-                  name: https://dl.flathub.org/repo/appstream/org.ardour.Ardour.flatpakref
-                  state: present
-
-        - name: Instala flatpak de geogebra
-          flatpak:
-            name: https://dl.flathub.org/repo/appstream/org.geogebra.GeoGebra.flatpakref
-            state: present
-
-  rescue:
-    - name: Repara el repositorio flatpak
-      shell: flatpak repair
+#- name: Instala flatpaks
+#  block:
+#
+#        - name: Instala flatpak de ardour
+#          flatpak:
+#                  name: https://dl.flathub.org/repo/appstream/org.ardour.Ardour.flatpakref
+#                  state: present
+#
+#        - name: Instala flatpak de geogebra
+#          flatpak:
+#            name: https://dl.flathub.org/repo/appstream/org.geogebra.GeoGebra.flatpakref
+#            state: present
+#
+#  rescue:
+#    - name: Repara el repositorio flatpak
+#      shell: flatpak repair
 
 - name: Instala flatpak de ardour
   flatpak:
@@ -143,10 +143,10 @@
           name: https://dl.flathub.org/repo/appstream/org.geany.Geany.flatpakref
           state: present
 
-- name: Instala flatpak de geogebra
-  flatpak:
-          name: https://dl.flathub.org/repo/appstream/org.geogebra.GeoGebra.flatpakref
-          state: present
+          #- name: Instala flatpak de geogebra
+          #flatpak:
+          #name: https://dl.flathub.org/repo/appstream/org.geogebra.GeoGebra.flatpakref
+          #state: present
 
 - name: Instala flatpak de gimp
   flatpak:
