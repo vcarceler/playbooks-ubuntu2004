@@ -251,6 +251,9 @@ Lenovo-V510
 192.168.240.245
 
 # Listados desde la puerta hacia la ventana
+[dpt-inf-2204]
+192.168.17.27
+
 [dpt-inf]
 # junto a la puerta
 #192.168.17.27

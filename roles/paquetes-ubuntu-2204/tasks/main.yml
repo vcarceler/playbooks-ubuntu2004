@@ -34,12 +34,18 @@
     - docutils-doc
     - git
     - gnome-boxes
+    - gnome-user-docs-ca
     - golang-go
     - htop
     - httpie
+    - hunspell-ca
     - ipcalc
     - jq
       #- julia
+    - language-pack-ca
+    - language-pack-ca-base
+    - language-pack-gnome-ca
+    - language-pack-gnome-ca-base
     - librecad
       #- libreoffice-base
       #- libreoffice-report-builder
@@ -69,12 +75,14 @@
     - tree
     - tshark
     - ttf-mscorefonts-installer
+    - ubuntu-desktop-minimal
     - unrar
     - vagrant
     - virt-top
     - virtualbox
     - virtualenv
     - vpcs
+    - wcatalan
     - xorriso
 
 - name: Elimina paquetes innecesarios con apt autoremove
