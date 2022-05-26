@@ -12,3 +12,27 @@
     - wcatalan
   notify:
   - reboot
+
+- name: Copia el netplan con networkmanager
+  copy:
+    src: files/01-network-manager-all.yaml
+    dest: /etc/netplan/01-network-manager-all.yaml
+    owner: root
+    group: root
+    mode: u=rw,g=r,o=r
+  notify:
+  - reboot
+
+- name: Borra netplan antiguo. rm /etc/netplan/00-installer-config-wifi.yaml
+  file:
+    path: /etc/netplan/00-installer-config-wifi.yaml
+    state: absent
+  notify:
+  - reboot
+
+- name: Borra netplan antiguo. rm /etc/netplan/00-installer-config.yaml
+  file:
+    path: /etc/netplan/00-installer-config.yaml
+    state: absent
+  notify:
+  - reboot
