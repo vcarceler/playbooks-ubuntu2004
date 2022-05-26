@@ -16,6 +16,7 @@
     - role: cambia-hostname
       vars:
         base_hostname: "dpt-inf"
+    - ubuntu-desktop-minimal
     - software
     - firefox-cambia-snap-por-flatpak
     - gnome-dconf-2204

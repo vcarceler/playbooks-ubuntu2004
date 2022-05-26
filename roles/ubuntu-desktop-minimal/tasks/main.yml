@@ -1,0 +1,14 @@
+- name: Instala ubuntu-desktop-minimal y el soporte para català
+  apt:
+    update_cache: yes
+    pkg:
+    - gnome-user-docs-ca
+    - hunspell-ca
+    - language-pack-ca
+    - language-pack-ca-base
+    - language-pack-gnome-ca
+    - language-pack-gnome-ca-base
+    - ubuntu-desktop-minimal
+    - wcatalan
+  notify:
+  - reboot
