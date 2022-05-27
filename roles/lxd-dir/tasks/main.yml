@@ -5,3 +5,13 @@
   notify:
     - copy lxd-preseed
     - config lxd
+
+- name: copy lxd-preseed
+  copy:
+    src: files/lxd-preseed.yml
+    dest: /root/lxd-preseed.yml
+    owner: root
+    group: root
+    mode: u=rw,g=r,o=r
+  notify:
+    - config lxd
