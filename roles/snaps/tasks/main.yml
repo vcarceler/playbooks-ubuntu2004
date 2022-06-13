@@ -25,6 +25,7 @@
                   - blender
                   - bluej
                   - brackets
+                  - code
                   - darktable
                   - eclipse
                   - flameshot
@@ -60,10 +61,10 @@
   snap:
         name: beekeeper-studio
 
-- name: Instala snap code
-  snap:
-        name: code
-        classic: yes
+#- name: Instala snap code
+#  snap:
+#        name: code
+#        classic: yes
 
 - name: Instala snap cura-slicer
   snap:

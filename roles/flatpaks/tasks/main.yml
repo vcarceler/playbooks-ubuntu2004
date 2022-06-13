@@ -93,6 +93,11 @@
           name: https://dl.flathub.org/repo/appstream/org.chromium.Chromium.flatpakref
           state: present
 
+- name: Instala flatpak de code-oss
+  flatpak:
+          name: https://dl.flathub.org/repo/appstream/com.visualstudio.code-oss.flatpakref
+          state: present
+
 - name: Instala flatpak de darktable
   flatpak:
           name: https://dl.flathub.org/repo/appstream/org.darktable.Darktable.flatpakref
