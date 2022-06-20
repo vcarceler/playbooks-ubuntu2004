@@ -1,6 +1,7 @@
 ---
 - hosts: stallman
   user: root
+  strategy: free
 
   vars:
     grupos: adm,cdrom,dialout,kvm,libvirt,lpadmin,lxd,plugdev,sambashare,ubridge,vboxusers
@@ -15,7 +16,7 @@
     - activate-unattended-upgrades
     - role: cambia-hostname
       vars:
-        base_hostname: "dpt-inf"
+        base_hostname: "stallman"
     - ubuntu-desktop-minimal
     - software
     - firefox-cambia-snap-por-flatpak
