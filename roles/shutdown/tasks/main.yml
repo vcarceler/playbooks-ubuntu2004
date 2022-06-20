@@ -1,0 +1,2 @@
+- name: Apagado
+  shell: init 0

@@ -1,0 +1,6 @@
+---
+- hosts: stallman
+  user: root
+
+  roles:
+    - shutdown
