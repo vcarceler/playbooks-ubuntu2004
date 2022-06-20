@@ -1,5 +1,5 @@
 ---
-- hosts: stallman
+- hosts: ada
   user: root
 
   roles:
