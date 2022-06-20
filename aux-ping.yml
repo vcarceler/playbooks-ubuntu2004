@@ -1,0 +1,7 @@
+---
+- hosts: stallman
+  user: root
+
+  tasks:
+          - name: Hacemos ping
+            ping:
