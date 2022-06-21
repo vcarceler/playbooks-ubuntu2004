@@ -6,6 +6,6 @@
   roles:
     - role: vasilisa
       vars:
-        sirin: "http://192.168.12.18:8000/launcher/?label=ada-u2204.yml"
+        sirin: "http://192.168.22.18:8000/launcher/?label=tesla-u2204.yml"
 
     - reboot
