@@ -1,5 +1,5 @@
 ---
-- hosts: tesla
+- hosts: darwin
   user: root
 
   tasks:

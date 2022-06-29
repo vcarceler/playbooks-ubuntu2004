@@ -1,5 +1,5 @@
 ---
-- hosts: stallman
+- hosts: snowden
   user: root
 
   roles:
