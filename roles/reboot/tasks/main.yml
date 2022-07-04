@@ -3,4 +3,4 @@
 
 - name: reboot
   reboot:
-    reboot_timeout: 120
+    reboot_timeout: 60

@@ -1,11 +1,11 @@
 ---
-- hosts: darwin
+- hosts: esobatx_wifi
   user: root
   strategy: free
 
   roles:
     - role: vasilisa
       vars:
-        sirin: "http://192.168.19.18:8000/launcher/?label=darwin-u2204.yml"
+        sirin: "http://192.168.240.18:8000/launcher/?label=esobatx_wifi-u2204.yml"
 
     - reboot
