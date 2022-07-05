@@ -1,11 +1,11 @@
 ---
-- hosts: esobatx
+- hosts: esobatx_wifi
   user: root
   strategy: free
 
   roles:
     - role: vasilisa
       vars:
-        sirin: "http://192.168.16.18:8000/launcher/?label=esobatx-u2204.yml"
+        sirin: "http://192.168.240.18:8000/launcher/?label=esobatx_wifi-u2204.yml"
 
     - reboot
