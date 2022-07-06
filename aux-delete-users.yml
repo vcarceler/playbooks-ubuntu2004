@@ -1,0 +1,21 @@
+---
+- hosts: 10.0.1.186
+  user: root
+
+  # Borra usuarios con UID > 999
+  # Preserva algunos usuarios del sistema que tienen un UID alto
+  #
+  # Ejemplo: https://stackoverflow.com/questions/37441796/ansible-for-user-management-removing-dead-accounts?answertab=trending#tab-top
+
+  vars:
+          myusers: ['convidat', 'libvirt_qemu', 'nobody']
+
+  tasks:
+          - name: Lista de usuarios con UID grande
+            shell:
+                    cmd: "getent passwd | awk -F: '$3 > 999 {print $1}'"
+            register: users
+
+          - user: name={{ item }} state=absent remove=yes
+            with_items: "{{ users.stdout_lines }}"
+            when: item not in myusers
