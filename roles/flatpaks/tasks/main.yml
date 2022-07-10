@@ -345,6 +345,11 @@
           name: https://dl.flathub.org/repo/appstream/ar.com.tuxguitar.TuxGuitar.flatpakref
           state: present
 
+- name: Instala flatpak de umbrello
+  flatpak:
+          name: https://dl.flathub.org/repo/appstream/org.kde.umbrello.flatpakref
+          state: present
+
 - name: Instala flatpak de vlc
   flatpak:
           name: https://dl.flathub.org/repo/appstream/org.videolan.VLC.flatpakref

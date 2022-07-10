@@ -55,6 +55,7 @@
                   - shotcut
                   - syncthing
                   - sweethome3d-homedesign
+                  - umbrello
                   - vlc
 
 - name: Instala snap beekeeper-studio
@@ -107,6 +108,6 @@
 #  snap:
 #        name: pdftk
 
-- name: Instala snap umbrello
-  snap:
-        name: umbrello
+#- name: Instala snap umbrello
+#  snap:
+#        name: umbrello
