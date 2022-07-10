@@ -108,6 +108,11 @@
           name: https://dl.flathub.org/repo/appstream/io.dbeaver.DBeaverCommunity.flatpakref
           state: present
 
+- name: Instala flatpak de digikam
+  flatpak:
+          name: https://dl.flathub.org/repo/appstream/org.kde.digikam.flatpakref
+          state: present
+
 - name: Instala flatpak de diylayoutcreator
   flatpak:
           name: https://dl.flathub.org/repo/appstream/com.diy_fever.DIYLayoutCreator.flatpakref
