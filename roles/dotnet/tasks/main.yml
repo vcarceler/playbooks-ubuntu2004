@@ -1,7 +1,7 @@
-- name: Instala flatpak org.freedesktop.Sdk.Extension.dotnet6
-  flatpak:
-          name: org.freedesktop.Sdk.Extension.dotnet6 
-          state: present
+#- name: Instala flatpak org.freedesktop.Sdk.Extension.dotnet6
+#  flatpak:
+#          name: org.freedesktop.Sdk.Extension.dotnet6 
+#          state: present
 
 - name: Instala dotnet6
   apt:
