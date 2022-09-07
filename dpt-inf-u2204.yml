@@ -1,5 +1,5 @@
 ---
-- hosts: dpt-inf-2204
+- hosts: dpt-inf
   user: root
 
   vars:

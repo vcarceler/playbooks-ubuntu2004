@@ -3,8 +3,9 @@
   user: root
   strategy: free
 
+  # Falta ubridge
   vars:
-    grupos: adm,cdrom,dialout,kvm,libvirt,lpadmin,lxd,plugdev,sambashare,ubridge,vboxusers
+    grupos: adm,cdrom,dialout,kvm,libvirt,lpadmin,lxd,plugdev,vboxusers
 
   roles:
     - delete-users
@@ -33,6 +34,6 @@
 
   tasks:
     # Usuarios
-    #- include: users/informatica/smx2a.yml
-    #- include: users/informatica/smx2b.yml
+    - include: users/informatica/alumnos/smx2a.yml
+    - include: users/informatica/alumnos/asix2a.yml
     #- include: users/informatica/smx2c.yml
