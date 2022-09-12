@@ -33,6 +33,10 @@
 
   tasks:
     # Usuarios
+    - include: users/aig/alumnos/ga1a.yml
+    - include: users/aig/alumnos/ga1b.yml
+    - include: users/aig/alumnos/ga2.yml
+    - include: users/aig/alumnos/af.yml
     #- include: users/informatica/smx2a.yml
     #- include: users/informatica/smx2b.yml
     #- include: users/informatica/smx2c.yml
