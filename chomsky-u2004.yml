@@ -3,7 +3,7 @@
   user: root
 
   vars:
-    grupos: adm,cdrom,dialout,kvm,libvirt,lpadmin,lxd,plugdev,sambashare,ubridge,vboxusers
+    grupos: adm,cdrom,dialout,kvm,libvirt,lpadmin,lxd,plugdev,vboxusers
 
   roles:
     - delete-users
@@ -36,4 +36,5 @@
     - include: users/aig/alumnos/afcat.yml
     - include: users/aig/alumnos/afeng.yml
     - include: users/idiomes/idiomes.yml
+    - include: users/esobat/docent.yml
     #- include: users/informatica/smx2c.yml
