@@ -1,6 +1,8 @@
 ---
-- hosts: 10.0.1.186
+- hosts: delete-users
   user: root
+  #strategy: free
+  gather_facts: no
 
   # Borra usuarios con UID > 999
   # Preserva algunos usuarios del sistema que tienen un UID alto
@@ -19,3 +21,9 @@
           - user: name={{ item }} state=absent remove=yes
             with_items: "{{ users.stdout_lines }}"
             when: item not in myusers
+
+          - name: Apagado
+            shell: init 0
+            async: 10
+            poll: 5
+

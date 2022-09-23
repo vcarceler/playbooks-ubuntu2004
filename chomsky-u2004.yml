@@ -22,7 +22,6 @@
     - apache-userdir
     - wireshark
     - gns3
-    - dotnet
     - kvm
     - lxd-zfs
     - broadcom-sta # Los equipos del aula Chomsky necesitan un driver para la wifi
