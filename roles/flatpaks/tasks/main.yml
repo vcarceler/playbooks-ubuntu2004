@@ -315,6 +315,11 @@
           name: https://dl.flathub.org/repo/appstream/io.github.Qalculate.flatpakref
           state: present
 
+- name: Instala flatpak de remmina
+  flatpak:
+          name: https://dl.flathub.org/repo/appstream/org.remmina.Remmina.flatpakref
+          state: present
+
 - name: Instala flatpak de scratch
   flatpak:
           name: https://dl.flathub.org/repo/appstream/edu.mit.Scratch.flatpakref
