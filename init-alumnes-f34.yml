@@ -1,7 +1,8 @@
 ---
 - hosts: init-portatils-alumnes-f34
   user: root
-  gather_facts: no
+  #gather_facts: no
+  strategy: free
 
   vars:
     grupos: adm,cdrom,dialout

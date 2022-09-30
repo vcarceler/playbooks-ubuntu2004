@@ -23,7 +23,7 @@
     - apache-userdir
     - wireshark
     - gns3
-    - dotnet
+      #- dotnet
     - kvm
     - lxd-zfs
     - glpi-agent

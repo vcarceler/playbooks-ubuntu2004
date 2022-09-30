@@ -316,6 +316,7 @@
 
 [init-docents]
 #192.168.17.195 vpn=10.0.0.166
+192.168.247.144 vpn=10.0.0.160
 
 [torvalds]
 192.168.10.[100:123]
@@ -356,6 +357,8 @@
 #192.168.240.171
 # Aula 7 (2A)
 #192.168.240.176
+# Aula 1.21 
+192.168.240.175
 
 [snowden]
 192.168.15.[100:121]
@@ -571,6 +574,8 @@ Lenovo-V510
 [profesinf:children]
 profes
 dpt-inf
+# Aula Escher
+dpt-dibuix
 
 # Test de ordenadores con u1804
 [profesinf-u1804]

@@ -78,6 +78,7 @@
       #- ubuntu-desktop-minimal
     - unrar
     - vagrant
+    - vim
     - virt-top
     - virtualbox
     - virtualenv
