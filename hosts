@@ -316,7 +316,7 @@
 
 [init-docents]
 #192.168.17.195 vpn=10.0.0.166
-192.168.247.144 vpn=10.0.0.160
+192.168.249.114 vpn=10.0.0.163
 
 [torvalds]
 192.168.10.[100:123]
@@ -664,6 +664,14 @@ dpt-dibuix
 
 [carret15]
 10.0.3.[76:110]
+
+# Antiguos Lenovo de Tecno v510
+[carret16]
+192.168.244.[70:73]
+
+# Toshiba Dynabook
+[carret17]
+192.168.246.126
 
 # Aulas ESO/BAT con WiFi y cable
 [aulas-esobat]
