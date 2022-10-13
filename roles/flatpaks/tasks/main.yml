@@ -280,10 +280,10 @@
           name: https://dl.flathub.org/repo/appstream/ch.openboard.OpenBoard.flatpakref
           state: present
 
-- name: Instala flatpak de passwordsafe
-  flatpak:
-          name: https://dl.flathub.org/repo/appstream/org.gnome.PasswordSafe.flatpakref
-          state: present
+          #- name: Instala flatpak de passwordsafe
+          #  flatpak:
+          #name: https://dl.flathub.org/repo/appstream/org.gnome.PasswordSafe.flatpakref
+          #state: present
 
 - name: Instala flatpak de pdfarranger
   flatpak:
@@ -323,6 +323,11 @@
 - name: Instala flatpak de scratch
   flatpak:
           name: https://dl.flathub.org/repo/appstream/edu.mit.Scratch.flatpakref
+          state: present
+
+- name: Instala flatpak de secrets
+  flatpak:
+          name: https://dl.flathub.org/repo/appstream/org.gnome.World.Secrets.flatpakref
           state: present
 
 - name: Instala flatpak de soundrecorder

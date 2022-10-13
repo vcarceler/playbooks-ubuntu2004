@@ -1,5 +1,5 @@
 ---
-- hosts: portatils_docents
+- hosts: carret18
   user: root
   strategy: free
 
@@ -12,11 +12,11 @@
     - swappiness-0
     - role: vasilisa
       vars:
-        sirin: "http://10.0.0.2:8000/launcher/?label=portatils-docents-u2204.yml"
+        sirin: "http://192.168.240.18:8000/launcher/?label=carret18-u2204.yml"
     - activate-unattended-upgrades
-    - role: cambia-hostname-wg0
+    - role: cambia-hostname
       vars:
-        base_hostname: "docent"
+        base_hostname: "carret18"
     - ubuntu-desktop-minimal
     - software
     - firefox-cambia-snap-por-flatpak
@@ -27,10 +27,12 @@
     - kvm
     - lxd-dir
     - glpi-agent
-      #- convidat
+    - convidat
       #- apagado-1455
       #- apagado-2130
 
   tasks:
-    # Cada equipo tiene un usuario particular
-    - include: "vpn/{{ ansible_host }}.yml"
+    # Usuarios
+    - include: users/esobat/docent.yml
+    - include: users/informatica/alumnos/asix2b.yml
+    #- include: users/informatica/smx2c.yml

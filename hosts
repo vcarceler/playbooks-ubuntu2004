@@ -316,7 +316,7 @@
 
 [init-docents]
 #192.168.17.195 vpn=10.0.0.166
-192.168.249.114 vpn=10.0.0.163
+192.168.247.120 vpn=10.0.0.149
 
 [torvalds]
 192.168.10.[100:123]
@@ -672,6 +672,10 @@ dpt-dibuix
 # Toshiba Dynabook
 [carret17]
 192.168.246.126
+
+# Carro de informática
+[carret18]
+192.168.244.[101:113]
 
 # Aulas ESO/BAT con WiFi y cable
 [aulas-esobat]

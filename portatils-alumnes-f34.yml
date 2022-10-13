@@ -1,6 +1,7 @@
 ---
 - hosts: portatils-alumnes-f34
   user: root
+  strategy: free
 
   vars:
     grupos: adm,cdrom,dialout,kvm,libvirt,lxd,vboxusers
