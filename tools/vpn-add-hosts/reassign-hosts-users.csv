@@ -1,16 +1,2 @@
 address,mask,privatekey,userpath,username,usercomment,password,olduser
-10.0.0.202,/20,AFvXF0vC1kVapBU5APkU6oEioQP/e7lkd3ggDy1sIHw=,users/alumnes,jalvarez,"Álvarez Marín, Justin",5815,mariovarela11
-10.0.1.15,/20,MIU27QDV9iQW3Kc1vOmHsrxFaatucS41u+1gBF51Nkc=,users/alumnes,carroyo,"Arroyo Barrientos, Carlos",1606,cparralejo
-10.0.1.20,/20,IPA4S6BEniiq0P5nTYFuMgcb616U/qcXNxjpuPXMgXA=,users/alumnes,rcastillejos,"Castillejos Cañete, Rubén",6760,vpachon
-10.0.1.31,/20,8EC1UZAGtvfpynM1J6/XSQrjZ84genVLqz+yrDx0fFU=,users/alumnes,hderraz,"Derraz Derraz, Hamza",9669,jmanzanera
-10.0.1.32,/20,QGbLsEp0aKRYMHBS/hZXEgNQeorfhLpimuplcEwGwGU=,users/alumnes,aelouardi,"El Ouardi Moubtakir, Anass",2663,amunozgil
-10.0.1.33,/20,0PLm7cRyjpTE7zgyQBhowhVwC49xrg7qKk6fyB7DwFM=,users/alumnes,nflorian,"Florian Lebrón, Neifer",7146,rpera
-10.0.1.34,/20,4Le7C/4WKmi7U2U9Un1rZVfMcgPAz3kXvz/EZBR2dm0=,users/alumnes,arnaugarcia,"Garcia Cañamero, Arnau",1960,operona
-10.0.1.36,/20,YKgpbn/LBziKZDL4Wo8vfJW9NA281pHBebrjNK2N7lU=,users/alumnes,sgassama,"Gassama, Salimou",2536,asanchezrodriguez
-10.0.1.39,/20,WBebwUhK6mG68XSkkfHodXdFOfZkrVFkNBEfMv1GsHw=,users/alumnes,josejimenez,"Jiménez Marín, José",2430,amerchan
-10.0.1.46,/20,CAHJYYfPHEcbS6pYBvdTka0xh4PN0pFXWcHGI1y/738=,users/alumnes,plaguna,"Laguna Barrero, Pau",1767,ebanos
-10.0.1.49,/20,aAwXObq9r39B4aa+SCVMASLESbkstMTDvLi/asS20Uw=,users/alumnes,ollobregat,"Llobregat Ruiz, Oscar",6478,rjulian
-10.0.1.51,/20,IBpwsmjiIGTNUV/qyhgLN08Ssr9JrhLS5lnmwENDe0w=,users/alumnes,aluque,"Luque Díaz, Adrián",4452,rrodriguezrico
-10.0.1.55,/20,kD/Y8murVqwkflaX7CH/20BYkuDy+DAwuRhSMiZ/VmU=,users/alumnes,hmartinez,"Martínez Gonzalez, Hugo",8120,hzheng
-10.0.1.56,/20,2PI2L1hQ9eonItesjrulDTqU+GbsoCEXAqDwy5wxsHI=,users/alumnes,emeneses,"Meneses de la Peña, Erick",8586,ybenjallan
-10.0.1.60,/20,iERP1y3CEJC9WFUKBgK0TiP+EV9I1gy+0QfIosoaMWQ=,users/alumnes,aocampo,"Ocampo Peña, Alejandro",4857,mpastor
+10.0.2.172,/20,gG4g1uiA2gPehi+9HjDTrnN//sbGPvzq4kjGP3RvL3M=,users/alumnes,alamparvinnorinnowara,Norin Nowara Alam,9092,perezmoraanna
