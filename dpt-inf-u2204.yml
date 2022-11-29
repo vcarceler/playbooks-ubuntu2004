@@ -16,6 +16,7 @@
     - role: cambia-hostname
       vars:
         base_hostname: "dpt-inf"
+    - timesyncd-ntp
     - ubuntu-desktop-minimal
     - software
     - firefox-cambia-snap-por-flatpak

@@ -1,5 +1,5 @@
 ---
-- hosts: saladeprofessors-u2204
+- hosts: saladeprofessors
   user: root
 
   vars:

@@ -1,2 +1,17 @@
 address,mask,privatekey,userpath,username,usercomment,password,olduser
-10.0.2.172,/20,gG4g1uiA2gPehi+9HjDTrnN//sbGPvzq4kjGP3RvL3M=,users/alumnes,alamparvinnorinnowara,Norin Nowara Alam,9092,perezmoraanna
+10.0.0.253,/20,oFjPqgK4wB8JtlbcHy1ZovN5gnQ8+rxkTZplLUdkO2w=,users/alumnes,sguer,Samy Jahaira Guerrero Mora,6674,nfernandezc
+10.0.1.3,/20,GBJyjYrJ12kiYnuP96cbcu9hHR3d6FhU+0tbfjOPwHc=,users/alumnes,arrakaz-gannounchaboudoae,"Arrakaz- Gannoun Chabou, Doae",9964,lmartinez
+10.0.1.5,/20,CP27F2Xejx0Uq6t8/OJTQYSwqwCGkUS7lT/pKS0QlVo=,users/alumnes,druizp,Darian Ruiz Peña,6655,sanjose
+10.0.1.64,/20,0D3cbwj5ecKRgHAQf/Y5NNlPQ+sjb519vEXKbn4Yxko=,users/alumnes,belham,Basma El Hammani,4113,eadsuara
+10.0.1.68,/20,IBuaEWARIyy5PZVNUJWLgoEg4l1v3nZmNHcs5eQsBFA=,users/alumnes,cbend,Chayma Ben Dihaj Bakkali,5493,acriado
+10.0.1.69,/20,wEBZTiyMGHYR5xv2ClvCfJq7Z982G2nZuzmpIXIPUEE=,users/alumnes,schem,Sanae Chemlel,2230,baba
+10.0.1.7,/20,cBmIfbj/dmtMEwjup8PWnqJS/aEgoxFnmONm0isWPX4=,users/alumnes,sghaz,Silvia Ghazaryan Apitsaryan,9837,cynthiam
+10.0.1.70,/20,4P36QE3ZIH5HPupiNVk6yKPSBbVPjZbBiiKfNCePRlk=,users/alumnes,datra,Douae Atrach,5084,nventura
+10.0.1.71,/20,UOYYi7gz5+2JK64rU0nPXe0Lq/GXsrMWS7+j8HGQBWI=,users/alumnes,ajmil,Anas Jmili Garbaui,2115,hfernandez
+10.0.1.75,/20,iNkegv1YW/dVBFI+qeQVyXO+S3LZDBexrY2LWsc1kn8=,users/alumnes,belka,Bilal El Kadiri Ennajdi,7997,rkaur
+10.0.1.76,/20,wCGC08vADNOahgy9k+n8NCk/wUwylGrBMS8G2HVWxH8=,users/alumnes,mbaba,Mariam Baba Akazim,6338,marbi
+10.0.1.78,/20,qB2DBQ3nG2cXAoxIpkGlm9McZ+oNTYTb55Te04oUj2M=,users/alumnes,marbi,Malak El Arbi Ouriach,8609,vlaus
+10.0.1.79,/20,WG7D4Fq6GfNk4/UnmOfXXhA3ns1CwYJfQutPb6JFL10=,users/alumnes,natra,Nour Atrach,2632,araho
+10.0.1.81,/20,iIVrElcazrJfk3U50NHfQvSoZ9BFHntpA3jHwuIR92o=,users/alumnes,acond,Albert Conde Martinez,7463,nrecio
+10.0.1.83,/20,EGplR7QoMLjdEE8Xf/2lvZ2KQu92u1AUfBfVaE3EUlg=,users/alumnes,lassa,Lorena Assad Perez,3386,walterm
+10.0.1.85,/20,aKrD7T5V1y/dn3Lnq/gP3BJp9HUMABCvjQLi9rvISkI=,users/alumnes,kzerr,Kholoud Zerri,2645,karla
