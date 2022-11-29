@@ -1,0 +1,19 @@
+# En Ubuntu 22.04 Desktop, NetworkManager ignora el servidor NTP indicando con DHCP
+#
+
+- name: timesyncd - Crea el directorio /etc/systemd/timesyncd.conf.d
+  file:
+    state: directory
+    path: /etc/systemd/timesyncd.conf.d
+    owner: root
+    group: root
+    mode: u=rwx,g=rx,o=rx
+
+- name: timesyncd - Lista de servidores NTP
+  copy:
+    src: files/ntp.conf
+    dest: /etc/systemd/timesyncd.conf.d/ntp.conf
+    owner: root
+    group: root
+    mode: u=rw,g=r,o=r
+
