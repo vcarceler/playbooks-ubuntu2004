@@ -17,6 +17,8 @@
     - role: cambia-hostname
       vars:
         base_hostname: "saladeprofessors"
+    - timesyncd-ntp
+    - ubuntu-desktop-minimal
     - software
     - firefox-cambia-snap-por-flatpak
     - gnome-dconf-2204
