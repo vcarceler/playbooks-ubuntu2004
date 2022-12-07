@@ -336,8 +336,6 @@
 
 [ada]
 192.168.12.[100:125]
-# Pruebas Lenovo vPro
-192.168.17.193
 
 [aif]
 192.168.14.[100:129]
@@ -366,7 +364,7 @@
 192.168.15.[100:121]
 
 [escher]
-192.168.244.[114:138]
+192.168.244.[114:139]
 
 [esobatx]
 192.168.16.[101:105]
@@ -575,12 +573,13 @@ Lenovo-V510
 [salondeactos]
 192.168.240.163
 
+[profeescher]
+192.168.244.139
 
 [profesinf:children]
 profes
 dpt-inf
-# Aula Escher
-dpt-dibuix
+profeescher
 
 # Test de ordenadores con u1804
 [profesinf-u1804]
