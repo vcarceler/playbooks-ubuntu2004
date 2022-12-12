@@ -393,6 +393,8 @@
 
 [turing]
 192.168.18.[100:119]
+# prueba
+192.168.17.195
 
 [darwin]
 192.168.19.[100:122]
@@ -518,6 +520,8 @@ Lenovo-V510
 192.168.17.28
 # junto a la impresora 3d
 192.168.17.29
+# Test: Lenovo 32GB
+192.168.17.195
 
 [dpt-ing]
 192.168.17.45
@@ -580,6 +584,10 @@ Lenovo-V510
 profes
 dpt-inf
 profeescher
+
+[profesdibuix:children]
+profeescher
+dpt-dibuix
 
 # Test de ordenadores con u1804
 [profesinf-u1804]

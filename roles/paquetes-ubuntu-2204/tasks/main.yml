@@ -86,6 +86,15 @@
       #- wcatalan
     - xorriso
 
+- name: Instala drivers de nvidia en Lenovo ThinkCentre M90t Gen 3
+  apt:
+    pkg:
+      - nvidia-driver-520-open
+  when:
+    # Utilizamos las dos propiedades para asegurarnos de que se trata de los equipos con nvidia
+    - ansible_product_name == "11TUS02Q00"
+    - ansible_product_version == "ThinkCentre M90t Gen 3" 
+
 - name: Elimina paquetes innecesarios con apt autoremove
   apt:
     autoremove: yes
