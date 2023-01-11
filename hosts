@@ -394,7 +394,7 @@
 [turing]
 192.168.18.[100:119]
 # prueba
-192.168.17.195
+192.168.17.197
 
 [darwin]
 192.168.19.[100:122]
@@ -431,7 +431,8 @@ Lenovo-V510
 # profe Tesla
 192.168.22.100
 # dept. informática A
-192.168.17.187
+# Pruebas
+192.168.17.197
 # profe Berners-Lee
 192.168.16.105
 
@@ -513,6 +514,7 @@ Lenovo-V510
 # Listados desde la puerta hacia la ventana
 [dpt-inf-2204]
 192.168.17.27
+192.168.17.197
 
 [dpt-inf]
 # junto a la puerta
@@ -688,6 +690,8 @@ dpt-dibuix
 # Carro de informática
 [carret18]
 192.168.244.[101:113]
+# HPs 250G8
+192.168.244.[150:154]
 
 # Aulas ESO/BAT con WiFi y cable
 [aulas-esobat]

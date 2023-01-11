@@ -17,6 +17,7 @@
     - role: cambia-hostname
       vars:
         base_hostname: "stallman"
+    - timesyncd-ntp
     - ubuntu-desktop-minimal
     - software
     - firefox-cambia-snap-por-flatpak

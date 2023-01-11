@@ -37,4 +37,6 @@
     - include: users/esobat/docent.yml
     - include: users/informatica/alumnos/asix2b.yml
     - include: users/informatica/alumnos/smx1c.yml
+    - include: users/informatica/alumnos/dam2a.yml
+    - include: users/informatica/alumnos/dam2b.yml
     #- include: users/informatica/smx2c.yml

@@ -89,7 +89,8 @@
 - name: Instala drivers de nvidia en Lenovo ThinkCentre M90t Gen 3
   apt:
     pkg:
-      - nvidia-driver-520-open
+      # Atención: Instalar nvidia-driver-525-open rompe el arranque.
+      - nvidia-driver-525
   when:
     # Utilizamos las dos propiedades para asegurarnos de que se trata de los equipos con nvidia
     - ansible_product_name == "11TUS02Q00"
