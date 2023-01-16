@@ -692,7 +692,8 @@ dpt-dibuix
 
 # Carro de informática
 [carret18]
-192.168.244.[101:113]
+# Lenovo ThinkBook
+192.168.244.[101:108]
 # HPs 250G8
 192.168.244.[150:154]
 
@@ -758,9 +759,11 @@ dpt-dibuix
 [secretaria]
 192.168.240.205
 
-[biblioteca]
-#192.168.17.[35:41]
-#192.168.17.174
+[biblioteca_wifi]
+# Lenovo Thinkbook
+192.168.244.[109:113]
+# HP Probook
+192.168.240.[119:122]
 
 [consergeria]
 192.168.17.50
