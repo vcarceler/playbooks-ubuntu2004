@@ -315,8 +315,8 @@
 192.168.248.85
 
 [init-docents]
-#192.168.17.195 vpn=10.0.0.166
-192.168.254.34 vpn=10.0.0.165
+#192.168.17.105 vpn=10.0.0.168
+#192.168.254.34 vpn=10.0.0.165
 
 [torvalds]
 192.168.10.[100:123]
@@ -386,6 +386,8 @@
 192.168.240.163
 # Portátil de la biblioteca
 192.168.240.205
+# Portátil de AMPA
+192.168.241.7
 
 
 [departaments]
@@ -655,7 +657,7 @@ dpt-dibuix
 # Portátiles HP 250 G6 plateados
 # carret10
 [carret10]
-192.168.240.[125:159]
+192.168.244.[155:170]
 # Cable
 #192.168.19.137
 #192.168.19.177
@@ -669,7 +671,7 @@ dpt-dibuix
 
 # Portátiles HP 250 G7 Gris oscuro. No FullHD
 [carret12]
-192.168.241.[1:30]
+#192.168.241.[1:30]
 
 [carret13]
 192.168.241.[31:37]
@@ -741,7 +743,7 @@ dpt-dibuix
 # Portátiles para los docentes
 #
 [portatils_docents]
-10.0.0.[141:166]
+10.0.0.[141:168]
 
 # Portátiles HP 250 G4 negro
 # Préstamo a los alumnos de DAM
@@ -757,7 +759,7 @@ dpt-dibuix
 #192.168.19.124
 
 [secretaria]
-192.168.240.205
+#192.168.240.205
 
 [biblioteca_wifi]
 # Lenovo Thinkbook
