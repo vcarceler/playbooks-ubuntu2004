@@ -654,15 +654,10 @@ dpt-dibuix
 192.168.244.65 vpn=10.0.3.110
 
 
-# Portátiles HP 250 G6 plateados
 # carret10
 [carret10]
-192.168.244.[155:170]
-# Cable
-#192.168.19.137
-#192.168.19.177
-#192.168.19.176
-#192.168.19.192
+# HP-250-G8-Notebook
+192.168.244.[150:154]
 
 # Portátiles HP 250 G6 Plateados 256 GB SSD y pantalla FullHD
 [carret11]
@@ -697,7 +692,9 @@ dpt-dibuix
 # Lenovo ThinkBook
 192.168.244.[101:108]
 # HPs 250G8
-192.168.244.[150:154]
+#192.168.244.[150:154]
+# Lenovo-V15-G2-ITL
+192.168.244.[155:170]
 
 # Aulas ESO/BAT con WiFi y cable
 [aulas-esobat]
