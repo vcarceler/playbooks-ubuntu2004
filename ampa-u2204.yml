@@ -1,10 +1,10 @@
 ---
-- hosts: carret18
+- hosts: ampa
   user: root
   strategy: free
 
   vars:
-    grupos: adm,cdrom,dialout,kvm,libvirt,lpadmin,lxd,netdev,plugdev,vboxusers
+    grupos: adm,cdrom,dialout,kvm,libvirt,lpadmin,lxd,plugdev,vboxusers
 
   roles:
     - delete-users
@@ -12,11 +12,11 @@
     - swappiness-0
     - role: vasilisa
       vars:
-        sirin: "http://192.168.240.18:8000/launcher/?label=carret18-u2204.yml"
+        sirin: "http://192.168.240.18:8000/launcher/?label=ampa-u2204.yml"
     - activate-unattended-upgrades
     - role: cambia-hostname
       vars:
-        base_hostname: "carret18"
+        base_hostname: "ampa"
     - timesyncd-ntp
     - ubuntu-desktop-minimal
     - software
@@ -30,13 +30,10 @@
     - glpi-agent
     - convidat
       #- apagado-1455
-      #- apagado-2130
+    - apagado-2130
 
   tasks:
     # Usuarios
-    - include: users/esobat/docent.yml
-    #- include: users/informatica/alumnos/asix2b.yml
-    #- include: users/informatica/alumnos/smx1c.yml
-    #- include: users/informatica/alumnos/dam2a.yml
-    #- include: users/informatica/alumnos/dam2b.yml
+    - include: users/ampa/ampa.yml
+    #- include: users/informatica/smx2b.yml
     #- include: users/informatica/smx2c.yml
