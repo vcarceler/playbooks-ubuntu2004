@@ -332,11 +332,7 @@
 192.168.10.100
 
 [stallman]
-192.168.11.[100:125]
-# Nuevos equipos
-192.168.19.193
-192.168.19.194
-192.168.19.197
+192.168.11.[100:123]
 
 #[stallman-u1804]
 #192.168.11.100
@@ -374,7 +370,7 @@
 192.168.244.[114:139]
 
 [esobatx]
-192.168.16.[101:105]
+192.168.16.[100:105]
 192.168.17.32
 192.168.17.52
 
@@ -549,7 +545,7 @@ Lenovo-V510
 
 [dpt-tecno]
 # Profesor taller de tecno
-192.168.16.100
+#192.168.16.100
 # Tres ordenadores dentro del departamento
 192.168.16.111
 192.168.16.112
@@ -695,15 +691,16 @@ dpt-dibuix
 [carret18]
 # Lenovo ThinkBook
 192.168.244.[101:108]
-# HPs 250G8
-#192.168.244.[150:154]
 # Lenovo-V15-G2-ITL
 192.168.244.[155:170]
+# Lenovo-V510-15IKB
+192.168.240.107
+192.168.240.115
 
 # Aulas ESO/BAT con WiFi y cable
 [aulas-esobat]
 192.168.240.[170:188]
-192.168.16.[101:104]
+192.168.16.[100:104]
 # Aula 15bis, antiguo departamento de filosofia
 192.168.17.32
 # Departamento de fisica y quimica
