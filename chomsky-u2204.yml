@@ -1,0 +1,50 @@
+---
+- hosts: chomsky
+  user: root
+  strategy: free
+
+  vars:
+    grupos: adm,cdrom,dialout,kvm,libvirt,lpadmin,lxd,plugdev,vboxusers
+
+  roles:
+    - delete-users
+    - lock-sshd
+    - swappiness-0
+    - role: vasilisa
+      vars:
+        sirin: "http://192.168.23.18:8000/launcher/?label=chomsky-u2204.yml"
+    - activate-unattended-upgrades
+    - role: cambia-hostname
+      vars:
+        base_hostname: "chomsky"
+    - timesyncd-ntp
+    - ubuntu-desktop-minimal
+    - software
+    - firefox-cambia-snap-por-flatpak
+    - gnome-dconf-2204
+    - apache-userdir
+    - wireshark
+      #- dotnet
+    - kvm
+    - lxd-dir
+    - glpi-agent
+    - convidat
+    - apagado-1455
+    - apagado-2130
+
+  tasks:
+    # Usuarios
+    #- include: users/esobat/docent.yml
+    - include: users/idiomes/idiomes.yml
+    - include: users/informatica/alumnos/asix2b.yml
+      #- include: users/informatica/alumnos/asixdam1b.yml
+    #- include: users/informatica/smx2c.yml
+  
+    - name: Borra usuarios
+      user:
+        name: "{{ item }}"
+        state: absent
+        remove: yes
+      loop:
+        - smx1b
+        - asixdam1b
