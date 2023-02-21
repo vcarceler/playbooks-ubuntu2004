@@ -1,0 +1,41 @@
+---
+- hosts: saladeguardies
+  user: root
+
+  vars:
+    grupos: adm,cdrom,dialout,kvm,libvirt,lpadmin,lxd,plugdev,sambashare,ubridge,vboxusers,wireshark
+
+  roles:
+    - delete-users
+    - lock-sshd
+      #- zsys-gc
+    - swappiness-0
+    - role: vasilisa
+      vars:
+        sirin: "http://192.168.17.18:8000/launcher/?label=saladeguardies-u2204.yml"
+    - activate-unattended-upgrades
+    - role: cambia-hostname
+      vars:
+        base_hostname: "saladeguardies"
+    - timesyncd-ntp
+    - ubuntu-desktop-minimal
+    - software
+    - firefox-cambia-snap-por-flatpak
+    - gnome-dconf-2204
+    - apache-userdir
+    - wireshark
+      #- gns3
+    - dotnet
+    - kvm
+    - lxd-dir
+    - glpi-agent
+    - convidat
+      #- apagado-1455
+    - apagado-2130
+
+  tasks:
+    # Usuarios
+    #- include: users/informatica/delete-users.yml
+    #- include: users/informatica/alumnos/smx2a.yml
+    #- include: users/informatica/alumnos/asix2.yml
+    
