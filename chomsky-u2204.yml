@@ -34,11 +34,9 @@
 
   tasks:
     # Usuarios
-    #- include: users/esobat/docent.yml
+    - include: users/esobat/docent.yml
     - include: users/idiomes/idiomes.yml
     - include: users/informatica/alumnos/asix2b.yml
-      #- include: users/informatica/alumnos/asixdam1b.yml
-    #- include: users/informatica/smx2c.yml
   
     - name: Borra usuarios
       user:
