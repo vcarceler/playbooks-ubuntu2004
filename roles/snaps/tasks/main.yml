@@ -79,9 +79,9 @@
 #  snap:
 #        name: kalgebra
 
-- name: Instala snap kmplot
-  snap:
-        name: kmplot
+#- name: Instala snap kmplot
+#  snap:
+#        name: kmplot
 
 - name: Instala snap kotlin
   snap:
