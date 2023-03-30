@@ -662,6 +662,7 @@ dpt-dibuix
 # Portátiles HP 250 G6 Plateados 256 GB SSD y pantalla FullHD
 [carret11]
 192.168.240.[210:242]
+192.168.240.153
 
 
 # Portátiles HP 250 G7 Gris oscuro. No FullHD

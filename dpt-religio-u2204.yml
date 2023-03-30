@@ -15,7 +15,7 @@
     - activate-unattended-upgrades
     - role: cambia-hostname
       vars:
-        base_hostname: "dpt-cast"
+        base_hostname: "dpt-religio"
     - timesyncd-ntp
     - ubuntu-desktop-minimal
     - software
