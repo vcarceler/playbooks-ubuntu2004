@@ -1,5 +1,5 @@
 ---
-- hosts: torvalds
+- hosts: carret12
   user: root
   strategy: free
 
@@ -12,11 +12,11 @@
     - swappiness-0
     - role: vasilisa
       vars:
-        sirin: "http://192.168.10.18:8000/launcher/?label=torvalds-u2204.yml"
+        sirin: "http://192.168.240.18:8000/launcher/?label=carret12-u2204.yml"
     - activate-unattended-upgrades
     - role: cambia-hostname
       vars:
-        base_hostname: "torvalds"
+        base_hostname: "carret12"
     - timesyncd-ntp
     - ubuntu-desktop-minimal
     - software
@@ -34,8 +34,6 @@
 
   tasks:
     # Usuarios
-    - include: users/informatica/alumnos/smx1a.yml
-    - include: users/informatica/alumnos/asixdam1a.yml
-    - include: users/informatica/alumnos/isardvdi.yml
+    #- include: users/esobat/docent.yml
     #- include: users/informatica/smx2b.yml
     #- include: users/informatica/smx2c.yml
