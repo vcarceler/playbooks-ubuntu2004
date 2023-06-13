@@ -1,5 +1,5 @@
 ---
-- hosts: ada
+- hosts: torvalds
   user: root
 
   tasks:
@@ -9,5 +9,6 @@
                     state: absent
                     remove: true
             loop:
-                    - smx2a
-                    - asix2a
+                    - smx1a
+                    - asixdam1a
+                    - isardvdi

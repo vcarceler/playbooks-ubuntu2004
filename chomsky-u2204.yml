@@ -34,15 +34,6 @@
 
   tasks:
     # Usuarios
-    - include: users/esobat/docent.yml
-    - include: users/idiomes/idiomes.yml
-    - include: users/informatica/alumnos/asix2b.yml
-  
-    - name: Borra usuarios
-      user:
-        name: "{{ item }}"
-        state: absent
-        remove: yes
-      loop:
-        - smx1b
-        - asixdam1b
+    #- include: users/esobat/docent.yml
+    #- include: users/idiomes/idiomes.yml
+    #- include: users/informatica/alumnos/asix2b.yml

@@ -36,7 +36,7 @@
   tasks:
     # Usuarios
     - include: users/dibuix/dibuix.yml
-    - include: users/informatica/alumnos/smx2c.yml
+      #- include: users/informatica/alumnos/smx2c.yml
 
     - name: Borrado de usuarios
       user:
@@ -44,5 +44,4 @@
         state: absent
         remove: yes
       loop:
-        - asix2a
-        - smx2a
+        - smx2c
