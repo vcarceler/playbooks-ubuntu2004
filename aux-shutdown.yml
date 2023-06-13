@@ -1,5 +1,5 @@
 ---
-- hosts: chomsky
+- hosts: tesla
   user: root
 
   roles:
