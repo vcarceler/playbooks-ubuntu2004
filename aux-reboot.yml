@@ -1,5 +1,5 @@
 ---
-- hosts: chomsky
+- hosts: snowden
   user: root
 
   roles:

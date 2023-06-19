@@ -1,5 +1,5 @@
 ---
-- hosts: ada
+- hosts: turing
   user: root
 
   tasks:
@@ -9,6 +9,5 @@
                     state: absent
                     remove: true
             loop:
-                    - smx2a
-                    - asix2a
-                    - smx2c
+                    - smx1d
+                    - smx2b
