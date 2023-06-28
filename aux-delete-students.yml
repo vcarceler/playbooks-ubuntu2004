@@ -1,5 +1,5 @@
 ---
-- hosts: turing
+- hosts: snowden
   user: root
 
   tasks:
@@ -9,5 +9,5 @@
                     state: absent
                     remove: true
             loop:
-                    - smx1d
-                    - smx2b
+                    - ga2
+                    - smx1c
