@@ -10,3 +10,9 @@
     - instala glpi-agent
     - configura glpi-agent
 
+# Equipos Fedora: Añade el dominio a /etc/hosts para utilizar la VPN
+- name: Añade 10.0.0.5 glpi.elpuig.xeill.net a /etc/hosts
+  lineinfile:
+    path: /etc/hosts
+    line: 10.0.0.5 glpi.elpuig.xeill.net
+  when: ansible_distribution == 'Fedora'
