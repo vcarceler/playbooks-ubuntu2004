@@ -1,0 +1,5 @@
+[Unit]
+Description=Reporta actividad del equipo utilizando IDALU.
+
+[Service]
+ExecStart=/opt/report-idalu

@@ -1,0 +1,66 @@
+#!/bin/bash
+#
+# Script para reportar actividad de uso de los portátiles de alumnos.
+#
+# Basado en linkdat-stat-edc.sh por Joan de Gracia.
+# URL: https://drive.google.com/file/d/1wecaDCcvco5mqEdIMTGgoI3oZAIKMnil/view?usp=drive_link
+#
+# Nom del script: linkat-stat-edc.sh
+# Versió 1.1
+# Autor: Joan de Gracia
+#        Projecte Linkat
+#        Àrea de Cultura Digital - Departament d'Educació
+# Data: 2021/11/19
+# Llicència GPL 3.0
+# Dependències: nmap, dmidecode, virt-what, base64
+#
+
+ID_MACHINE="$(/usr/sbin/dmidecode -s system-uuid | sha1sum | cut -d " " -f 1)"
+SN_MACHINE="$(/usr/sbin/dmidecode -s system-serial-number | cut -d " " -f 1)"
+VERSION="$(cat /etc/os-release | grep PRETTY_NAME | cut -f2 -d\")"
+VERSIOMQ="EMPTY"
+ARCH="x86-64"
+COMPUTER="workstation"
+VIRTUALIZATION="physical"
+URL="download-linkat.xtec.cat"
+CADENA="STAT-EDC-$1"
+LINKAT_DESKTOP="gnome"
+LK_USER="$(loginctl |grep seat | tr -s " "| cut -d " " -f 4 | sort | uniq | tr '\n' '|' | sed -e 's/|$//')"
+
+if [ "$LK_USER" == "" ] || [ "$LK_USER" == "0" ]; then
+   LK_USERB64="root"
+else
+   LK_USERB64=$(echo "$LK_USER"|base64)
+fi
+
+if [ "$SN_MACHINE" == "" ] || [ "$SN_MACHINE" == "0" ]; then
+   SN_MACHINEB64="0"
+else 
+   SN_MACHINEB64=$(echo "$SN_MACHINE"|base64)
+fi
+#
+# Checking Network Connectivity
+#
+FLAG=0
+TEST_IPS="educaciodigital.cat ubuntu.com wikipedia.org"
+TARGET=($(echo $TEST_IPS))
+N_TARGET=${#TARGET[@]}
+let 'N_TARGET -=1'
+TEST_PORT=443
+CURRENT_TEST_IP=0
+while [ $FLAG -eq 0 ];
+do
+   TESTIP=${TARGET[$CURRENT_TEST_IP]}
+   if [ -z "$(nmap  -p $TEST_PORT $TESTIP  2>/dev/null |grep open)" ]; then
+      if [ $CURRENT_TEST_IP -lt $N_TARGET ]; then   
+   	   let 'CURRENT_TEST_IP +=1'
+   	else
+   	   CURRENT_TEST_IP=0
+      fi
+   else
+      FLAG=1
+   fi
+done
+curl -s $URL/"${CADENA}"_"${ID_MACHINE}"_"${LK_USERB64}"_"${SN_MACHINEB64}"_"${VERSIOMQ}"_"${VERSION}"_"${LINKAT_DESKTOP}"_"${ARCH}"_"${COMPUTER}"_"${VIRTUALIZATION}" -o /dev/null
+echo $URL/"${CADENA}"_"${ID_MACHINE}"_"${LK_USERB64}"_"${SN_MACHINEB64}"_"${VERSIOMQ}"_"${VERSION}"_"${LINKAT_DESKTOP}"_"${ARCH}"_"${COMPUTER}"_"${VIRTUALIZATION}"
+exit 0

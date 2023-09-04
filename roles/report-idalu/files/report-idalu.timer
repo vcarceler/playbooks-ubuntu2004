@@ -1,0 +1,9 @@
+[Unit]
+Description=Reporta uso del portátil indicando IDALU.
+
+[Timer]
+OnBootSec=2min
+OnUnitActiveSec=1h
+
+[Install]
+WantedBy=timers.target
