@@ -828,10 +828,7 @@ dpt-dibuix
 #192.168.240.205
 
 [biblioteca_wifi]
-# Lenovo Thinkbook
-192.168.244.[109:113]
-# HP Probook
-192.168.240.[119:122]
+192.168.240.[180:189]
 
 [consergeria]
 192.168.17.50
