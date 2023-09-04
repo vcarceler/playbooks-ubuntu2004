@@ -14,25 +14,25 @@
     group: root
     mode: u=rwx,g=r,o=r
 
-- name: Copia /usr/lib/systemd/user/notifica-apagado-2130.timer
+- name: Copia /usr/lib/systemd/system/report-idalu.timer
   copy:
-    src: files/notifica-apagado-2130.timer
+    src: files/report-idalu.timer
     dest: /usr/lib/systemd/user
     owner: root
     group: root
     mode: u=rw,g=r,o=r
 
-- name: Copia /usr/lib/systemd/user/notifica-apagado-2130.service
+- name: Copia /usr/lib/systemd/system/report-idalu.service
   copy:
-    src: files/notifica-apagado-2130.service
+    src: files/report-idalu.service
     dest: /usr/lib/systemd/user
     owner: root
     group: root
     mode: u=rw,g=r,o=r
 
-- name: Activa la notificación del apagado a las 21:30
+- name: Activa report-idalu.timer
   systemd:
     enabled: yes
     state: started
     scope: global
-    name: notifica-apagado-2130.timer
+    name: report-idalu.timer
