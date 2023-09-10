@@ -1,0 +1,14 @@
+---
+- hosts: carret12
+  user: root
+
+  tasks:
+          - name: Borrado de alumnos
+            user:
+                    name: "{{ item }}"
+                    state: absent
+                    remove: true
+            loop:
+                    - ga2
+                    - smx1c
+            when: ansible_default_ipv4.address == "192.168.240.136"
