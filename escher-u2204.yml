@@ -36,12 +36,12 @@
   tasks:
     # Usuarios
     - include: users/dibuix/dibuix.yml
-      #- include: users/informatica/alumnos/smx2c.yml
+    - include: users/informatica/alumnos/smx1c.yml
 
-    - name: Borrado de usuarios
-      user:
-        name: "{{ item }}"
-        state: absent
-        remove: yes
-      loop:
-        - smx2c
+#    - name: Borrado de usuarios
+#      user:
+#        name: "{{ item }}"
+#        state: absent
+#        remove: yes
+#      loop:
+#        - smx2c

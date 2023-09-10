@@ -36,4 +36,4 @@
     # Usuarios
     #- include: users/esobat/docent.yml
     #- include: users/idiomes/idiomes.yml
-    #- include: users/informatica/alumnos/asix2b.yml
+    - include: users/informatica/alumnos/daw1.yml
