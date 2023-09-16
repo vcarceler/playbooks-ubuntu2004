@@ -35,5 +35,7 @@
   tasks:
     # Usuarios
     - include: users/esobat/docent.yml
+    - include: users/informatica/luis.yml
+      when: ansible_default_ipv4.address == "192.168.240.176"
     #- include: users/informatica/smx2b.yml
     #- include: users/informatica/smx2c.yml

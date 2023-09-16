@@ -37,3 +37,5 @@
     #- include: users/esobat/docent.yml
     #- include: users/idiomes/idiomes.yml
     - include: users/informatica/alumnos/daw1.yml
+    - include: users/informatica/adriamt.yml
+      when: ansible_default_ipv4.address == "192.168.23.100"

@@ -1,5 +1,5 @@
 ---
-- hosts: carret18
+- hosts: turing
   user: root
 
   tasks:
