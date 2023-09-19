@@ -36,3 +36,31 @@
     state: absent
   notify:
   - reboot
+
+# Reducimos el timeout de /etc/systemd/system/systemd-networkd-wait-online.service
+# Por defecto son 2 minutos
+- name: Comprobamos si existe /etc/systemd/system/systemd-networkd-wait-online.service
+  stat:
+    path: /etc/systemd/system/systemd-networkd-wait-online.service
+  register: fichero
+
+- name: Cambiamos el timeout de /etc/systemd/system/systemd-networkd-wait-online.service
+  replace:
+    dest: /etc/systemd/system/systemd-networkd-wait-online.service
+    regexp: '^ExecStart=/lib/systemd/systemd-networkd-wait-online$'
+    replace: 'ExecStart=/lib/systemd/systemd-networkd-wait-online --timeout=2'
+  when: fichero.stat.exists
+
+# Reducimos el timeout de /lib/systemd/system/systemd-networkd-wait-online.service
+# Por defecto son 2 minutos
+- name: Comprobamos si existe /lib/systemd/system/systemd-networkd-wait-online.service
+  stat:
+    path: /lib/systemd/system/systemd-networkd-wait-online.service
+  register: fichero
+
+- name: Cambiamos el timeout de /lib/systemd/system/systemd-networkd-wait-online.service
+  replace:
+    dest: /lib/systemd/system/systemd-networkd-wait-online.service
+    regexp: '^ExecStart=/lib/systemd/systemd-networkd-wait-online$'
+    replace: 'ExecStart=/lib/systemd/systemd-networkd-wait-online --timeout=2'
+  when: fichero.stat.exists
