@@ -27,11 +27,19 @@ CADENA="STAT-EDC-$1"
 LINKAT_DESKTOP="gnome"
 #LK_USER="$(loginctl |grep seat | tr -s " "| cut -d " " -f 4 | sort | uniq | tr '\n' '|' | sed -e 's/|$//')"
 
-if [ -f /opt/idalu ]
+#if [ -f /opt/idalu ]
+#then
+#        LK_USER="a-$(cat /opt/idalu)"
+#else
+#        LK_USER=""
+#fi
+if [ -f /opt/report-idalu.csv ]
 then
-        LK_USER="a-$(cat /opt/idalu)"
+	VPN=$(networkctl status wg0 2>/dev/null | grep Address: | sed 's/  */ /g' | cut -f3 -d' ')
+	echo VPN=$VPN
+	LK_USER="a-$(cat /opt/report-idalu.csv | grep $VPN | cut -f2 -d ',')"
 else
-        LK_USER=""
+	LK_USER=""
 fi
 echo $LK_USER
 
