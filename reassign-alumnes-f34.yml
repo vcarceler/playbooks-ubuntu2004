@@ -1,5 +1,5 @@
 ---
-- hosts: reasign-alumnes-f34
+- hosts: reassign-alumnes-f34
   user: root
   gather_facts: no
   strategy: free
