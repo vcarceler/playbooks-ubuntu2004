@@ -1,0 +1,7 @@
+---
+- hosts: saladeprofessors
+  user: root
+
+  tasks:
+          - name: Usuario tecnics
+            action: user name=tecnics groups="gdm,sudo" comment="Manteniment" append=yes shell=/bin/bash password=$6$PNzmQ7RAgwsrL3AN$463ZA8.EqIl26CDLpeBhe0ep.M.BceMrfZDuAYD6GpRWQm/.CCDR/Ad70EIW8a0O0yoQ7MpM2nm/nm49reuK..
