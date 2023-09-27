@@ -1,5 +1,7 @@
 address,mask,privatekey,userpath,username,usercomment,password,olduser
-10.0.3.117,/20,yHt6a86k+FB7eyJcP2OEic2ddaHco5b/FT38XL7YsH4=,users/alumnes,delgadoromeroana,Ana Delgado Romero,4069,olduser
-10.0.3.118,/20,SG1rWcyw4tVDrF0nnsws0kfmDkpquzDwC3I8K7M47nA=,users/alumnes,sizaguamanangie,Angie Micaela Siza Guaman,1950,olduser
-10.0.3.119,/20,mGyu45OTxOLeMw/PxeqT1dZihRr83U8/bJnIzu0LxlE=,users/alumnes,romerocerezalescandela,Candela Romero Cerezales,2150,olduser
-10.0.3.116,/20,sH7dYAgvCNS4eYd7JPMuG+zUcku8EEacQJxeDo3HWm8=,users/alumnes,perezmunozsilvia,Silvia Pérez Muñoz,3167,velascoruizivan
+10.0.3.31,/20,WOBnZKgrRj6EaeIjB+1PD7g4hemCJ3qIlemKgXCnEVA=,users/alumnes,prodriguez,Cristian Cano Andrade,5896,prodriguez
+10.0.3.17,/20,gDO6TjA1clujbrIVF8rREI7JpF17viwjjq2euaiW+VE=,users/alumnes,albertrodriguez,Albert Rodriguez Alvarez,1499,jsanchezarias
+10.0.1.29,/20,MFj0aIxaI0RdRiF+CAO0a0jjpZ/fxTXDD2lu4C8VT0M=,users/alumnes,wventura,Wencis Alain Ventura Quispe,1438,mgarcia
+10.0.3.29,/20,2FjvfSXiYsOBR8fcXoNHIPrFAgGyCs8kOQRxLEnqU3E=,users/alumnes,jserrano,José Serrano Flores,6914,alex.lopez.martinez
+10.0.0.240,/20,IHeVcHijfdzhsCK8EkePBWl9J2G0iegAfEwF7Cuz6HU=,users/alumnes,makanni,Mouhamed Akanni Ebn Rahmoun,2010,fatauchi
+10.0.2.250,/20,OKj9y+HACk2J/g9GIJWcqYbGdyCVHbmulizAiY3y/m8=,users/alumnes,jlazo,Japhet Esau Lazo García,9553,inbisat.naveed

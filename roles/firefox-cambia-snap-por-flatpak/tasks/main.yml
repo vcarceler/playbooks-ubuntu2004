@@ -1,3 +1,7 @@
+- name: Instala flatpak
+  apt:
+          name: flatpak
+
 - name: Elimina el snap de firefox
   snap:
           state: absent
