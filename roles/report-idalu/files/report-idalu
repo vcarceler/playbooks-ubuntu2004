@@ -38,6 +38,12 @@ then
 	VPN=$(networkctl status wg0 2>/dev/null | grep Address: | sed 's/  */ /g' | cut -f3 -d' ')
 	echo VPN=$VPN
 	LK_USER="a-$(cat /opt/report-idalu.csv | grep $VPN | cut -f2 -d ',')"
+
+	if [ "a-" == $LK_USER ]
+	then
+		echo "ERROR: Ordenador no encontrado"
+		exit 1
+	fi
 else
 	LK_USER=""
 fi

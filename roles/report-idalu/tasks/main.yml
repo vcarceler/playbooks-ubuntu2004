@@ -40,7 +40,7 @@
 
 - name: Activa report-idalu.timer
   systemd:
+    daemon_reload: true
     enabled: yes
     state: started
-    scope: global
     name: report-idalu.timer
