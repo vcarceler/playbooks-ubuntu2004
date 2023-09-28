@@ -671,8 +671,13 @@ dpt-dibuix
 [carret15]
 #10.0.3.[76:110]
 
+# ThinkPad P1 Gen 5 i7 32GB
 [carret16]
 192.168.244.[201:230]
+
+# ThinkBook 14 G2 ITL (como los de profe)
+[carret17]
+192.168.244.[101:113]
 
 
 # Aulas ESO/BAT con WiFi y cable
