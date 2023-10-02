@@ -28,12 +28,15 @@
     - kvm
     - lxd-dir
     - glpi-agent
-    - convidat
+      #- convidat
       #- apagado-1455
       #- apagado-2130
 
   tasks:
     # Usuarios
-    #- include: users/informatica/alumnos/smx1b.yml
+    - include: users/informatica/alumnos/daw1.yml
     #- include: users/informatica/alumnos/asixdam1b.yml
     #- include: users/informatica/smx2c.yml
+
+    - name: Borrado del usuario convidat
+      action: user name=convidat state=absent remove=no

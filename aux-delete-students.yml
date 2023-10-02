@@ -1,5 +1,5 @@
 ---
-- hosts: escher
+- hosts: saladeprofessors
   user: root
 
   tasks:
@@ -9,5 +9,4 @@
                     state: absent
                     remove: true
             loop:
-                    - smx2b
-                    - smx2c
+                    - tecnics

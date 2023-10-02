@@ -19,6 +19,7 @@
       #- dotnet
     - lxd-fedora
     - glpi-agent
+    - report-idalu
     #- convidat
     #- apagado-1455
     #- apagado-2130

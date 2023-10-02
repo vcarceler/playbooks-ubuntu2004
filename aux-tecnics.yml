@@ -1,5 +1,5 @@
 ---
-- hosts: saladeprofessors
+- hosts: dpt-aif
   user: root
 
   tasks:
