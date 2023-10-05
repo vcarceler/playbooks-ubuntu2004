@@ -1,9 +1,2 @@
 address,mask,privatekey,userpath,username,usercomment,password,olduser
-10.0.1.82,/20,YEvbhKwlvLe+HuyE8flfX3J5eA1lLWdpfvri4hjVaks=,users/alumnes,mali,Muhammad Ashar Ali,1652,olduser
-10.0.1.16,/20,SNF82VCzK3UEeSOuh71DDY5Ig8mS2JzakPGmR6GvMlk=,users/alumnes,pcuesta,Pol Cuesta Romero,5275,jriveros
-10.0.0.249,/20,2JrgCuCVBTkUW5Xw4orxBCMprrTqCKgbQG55cF0oT3k=,users/alumnes,aoliveros,Alex Oliveros Vera,2987,evelasco
-10.0.3.16,/20,aP+fsMTlQTL5Hfl5IiT54OiBnVL5SuKDD0NAcyA592I=,users/alumnes,icallejas,Iván Callejas Martínez,6669,liyac.martinez.ruiz
-10.0.3.33,/20,OKswZegiApAtv4Dz3wWAxscWvHRGwsqnQZ5I3m4/SFI=,users/alumnes,amonterom,Angel Yariel Montero Mendez,1928,adrian.morato.fernandez
-10.0.1.123,/20,aMdrJy/s+4QNI+wdgagn0M20NT8qtKLnpHwgyBp2ZVk=,users/alumnes,tsingh,Tajinder Singh Kaur ,5595,mdanish
-10.0.2.62,/20,KB4ocFyr0ZLFfw+3ZBdt5V8LpzkCXNulfynQ2YSNxkg=,users/alumnes,acastro,Ariel Jaime Castro Alberico,3738,beriguetebaezgilberti
-10.0.1.80,/20,EIUpsfUvQOq6xTSdOn2DeKJY0t8mp1gmQKAVHQ244ms=,users/alumnes,abarca,Antonio Abarca Cueto,4515,verenise
+10.0.1.123,/20,aMdrJy/s+4QNI+wdgagn0M20NT8qtKLnpHwgyBp2ZVk=,users/alumnes,tavarezperezrandolph,Randolph Tavarez Pérez,5595,tsingh

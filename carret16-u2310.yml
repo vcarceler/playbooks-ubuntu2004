@@ -1,0 +1,42 @@
+---
+- hosts: 192.168.244.230
+  user: root
+  strategy: free
+
+  vars:
+    grupos: adm,cdrom,dialout,kvm,libvirt,lpadmin,lxd,plugdev,vboxusers
+
+  roles:
+    - delete-users
+    - lock-sshd
+    - swappiness-0
+    - role: vasilisa
+      vars:
+        sirin: "http://192.168.240.18:8000/launcher/?label=carret16-u2310.yml"
+    - activate-unattended-upgrades
+    - role: cambia-hostname
+      vars:
+        base_hostname: "carret16"
+    - timesyncd-ntp
+    - ubuntu-desktop-minimal
+    - software
+    - firefox-cambia-snap-por-flatpak
+    - gnome-dconf-2204
+    - apache-userdir
+    - wireshark
+      #- dotnet
+    - kvm
+    - lxd-dir
+    - glpi-agent
+      #- convidat
+      #- apagado-1455
+      #- apagado-2130
+
+  tasks:
+    # Usuarios
+    - include: users/informatica/alumnos/daw1.yml
+    #- include: users/informatica/alumnos/asixdam1b.yml
+    #- include: users/informatica/smx2c.yml
+
+    - name: Borrado del usuario convidat
+      action: user name=convidat state=absent remove=no

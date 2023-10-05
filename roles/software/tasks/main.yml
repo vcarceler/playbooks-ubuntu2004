@@ -26,6 +26,11 @@
     name: paquetes-ubuntu-2204
   when: ansible_distribution_version == "22.04"
 
+- name: Gestiona paquetes en Ubuntu 23.10
+  include_role:
+    name: paquetes-ubuntu-2310
+  when: ansible_distribution_version == "23.10"
+
 - name: Gestiona paquetes en Fedora
   include_role:
     name: paquetes-fedora
