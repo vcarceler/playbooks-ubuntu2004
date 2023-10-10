@@ -1,2 +1,5 @@
 address,mask,privatekey,userpath,username,usercomment,password,olduser
-10.0.1.123,/20,aMdrJy/s+4QNI+wdgagn0M20NT8qtKLnpHwgyBp2ZVk=,users/alumnes,tavarezperezrandolph,Randolph Tavarez Pérez,5595,tsingh
+10.0.1.74,/20,EE0uTCm4gIjDs3NjnWNoCW9yBGQL+8zqiQxL5U0RhEI=,users/alumnes,baenamartinezjoel,Joel Baena Martínez,2262,olduser
+10.0.1.44,/20,uBl9aGYBYWDyA85kaCgqHmLij9/oyNLzBB919+n+d2o=,users/alumnes,huangijale,Jiale Huang,7944,vparada
+10.0.1.41,/20,oEgiLRv4AEpK9ZyKzjcZqkucA+ZyQ4lgFplEYlFSNUk=,users/alumnes,gurda,Gabriel Urda Rayo,8004,omoron
+10.0.1.77,/20,wCbk2fDyzG0KwiNkmYCI44fpC3NYHk4cWywVlrTscmc=,users/alumnes,oel,Oussama El Mislam Roudani,4340,mouarzazi

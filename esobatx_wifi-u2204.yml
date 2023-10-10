@@ -41,5 +41,7 @@
       when: ansible_default_ipv4.address == "192.168.240.180"
     - include: users/informatica/daniel.martinez.yml
       when: ansible_default_ipv4.address == "192.168.240.180"
+    - include: users/informatica/jcamunez.yml
+      when: ansible_default_ipv4.address == "192.168.240.180"
     #- include: users/informatica/smx2b.yml
     #- include: users/informatica/smx2c.yml
