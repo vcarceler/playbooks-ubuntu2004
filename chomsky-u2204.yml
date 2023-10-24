@@ -36,10 +36,19 @@
     # Usuarios
     #- include: users/esobat/docent.yml
     #- include: users/idiomes/idiomes.yml
-    - include: users/informatica/alumnos/daw1.yml
+    #- include: users/informatica/alumnos/daw1.yml
+    - include: users/informatica/alumnos/smx2d.yml
     - include: users/informatica/adriamt.yml
       when: ansible_default_ipv4.address == "192.168.23.100"
     - include: users/informatica/fedejerez.yml
       when: ansible_default_ipv4.address == "192.168.23.100"
     - include: users/informatica/luis.yml
       when: ansible_default_ipv4.address == "192.168.23.100"
+
+    - name: Borrado de usuarios antiguos
+      user:
+              name: "{{ item }}"
+              state: absent
+              remove: yes
+      with_items:
+              - daw1
