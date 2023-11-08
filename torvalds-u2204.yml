@@ -25,6 +25,7 @@
     - apache-userdir
     - wireshark
       #- dotnet
+    - modelio
     - kvm
     - lxd-dir
     - glpi-agent
