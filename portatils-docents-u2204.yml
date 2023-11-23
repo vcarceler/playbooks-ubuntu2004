@@ -4,7 +4,7 @@
   strategy: free
 
   vars:
-    grupos: adm,cdrom,dialout,kvm,libvirt,lpadmin,lxd,netdev,plugdev,vboxusers
+    grupos: adm,bluetooth,cdrom,dialout,kvm,libvirt,lpadmin,lxd,netdev,plugdev,vboxusers
 
   roles:
     - delete-users
