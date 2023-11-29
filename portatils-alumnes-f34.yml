@@ -16,7 +16,6 @@
       vars:
         base_hostname: "alumne"
     - software-2004
-      #- dotnet
     - lxd-fedora
     - glpi-agent
     - report-idalu
