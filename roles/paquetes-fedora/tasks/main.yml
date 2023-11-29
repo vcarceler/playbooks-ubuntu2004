@@ -55,3 +55,12 @@
     enabled: yes
     state: started
     name: prometheus-node-exporter
+
+- name: Desinstala el paquete de firefox
+  dnf:
+    state: absent
+    name: firefox
+
+- name: Instala el flatpak de firefox
+  flatpak:
+    name: https://dl.flathub.org/repo/appstream/org.mozilla.firefox.flatpakref
