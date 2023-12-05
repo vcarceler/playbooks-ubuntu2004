@@ -1,5 +1,5 @@
 ---
-- hosts: biblioteca_wifi
+- hosts: biblioteca
   user: root
   strategy: free
 
@@ -12,7 +12,7 @@
     - swappiness-0
     - role: vasilisa
       vars:
-        sirin: "http://192.168.240.18:8000/launcher/?label=biblioteca_wifi-u2204.yml"
+        sirin: "http://192.168.240.18:8000/launcher/?label=biblioteca-u2204.yml"
     - activate-unattended-upgrades
     - role: cambia-hostname
       vars:
