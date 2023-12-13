@@ -100,9 +100,9 @@
 #        name: node
 #        classic: yes
 
-- name: Instala snap node-red
-  snap:
-        name: node-red
+#- name: Instala snap node-red
+#  snap:
+#        name: node-red
 
 #- name: Instala snap pdftk
 #  snap:
