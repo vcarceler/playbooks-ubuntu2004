@@ -6,3 +6,9 @@
     - copy lxd-preseed
     - config lxd
     - config firewall
+
+- name: Crea el grupo lxd
+  group:
+    name: lxd
+    system: true
+    state: present
