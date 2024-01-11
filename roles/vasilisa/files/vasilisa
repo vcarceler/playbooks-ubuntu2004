@@ -111,6 +111,22 @@ do
 done
 
 #
+# Si el núcleo es 6.5.0-14-generic quito virtualbox
+#
+kernel=`uname -a | cut -f3 -d ' '`
+kernel_chunga=""
+if [ "$kernel" = "6.5.0-14-generic" ]
+then
+	apt remove --yes virtualbox virtualbox-dkms virtualbox-qt
+	if [ ! -f /opt/virtualbox-7.0_7.0.12-159484~Ubuntu~jammy_amd64.deb ]
+	then
+		cd /opt
+		wget https://download.virtualbox.org/virtualbox/7.0.12/virtualbox-7.0_7.0.12-159484~Ubuntu~jammy_amd64.deb
+	fi
+	apt search virtualbox-7.0 2>/dev/null | grep virtualbox-7.0 >/dev/null || apt install --yes /opt/virtualbox-7.0_7.0.12-159484~Ubuntu~jammy_amd64.deb
+fi
+
+#
 # Actualizaciones del sistema
 #
 if [ -f /usr/bin/unattended-upgrade ]

@@ -1,6 +1,25 @@
 #
-# Instalación general de software para Ubuntu 20.04 LTS y Fedora 34
+# Instalación general de software para Ubuntu y Fedora 34
 #
+
+### HACK DE VIRTUALBOX
+
+# 10/1/2024 el núcleo 6.5.0.14.14~22.04.7 no funciona con el VirtualBox de los repos
+# https://bugs.launchpad.net/ubuntu/+source/linux-signed-hwe-6.5/+bug/2049022
+#- name: Quita virtualbox de los repos
+#  apt:
+#    state: absent
+#    autoremove: true
+#    name: virtualbox
+#  when: ansible_kernel == "6.5.0-14-generic"
+
+#- name: Instala Virtualbox libre de Oracle
+#  apt:
+#    deb: https://download.virtualbox.org/virtualbox/7.0.12/virtualbox-7.0_7.0.12-159484~Ubuntu~jammy_amd64.deb
+#  when: ansible_kernel == "6.5.0-14-generic"
+####
+
+
 
 - name: Gestiona aplicaciones en flatpak
   include_role:
@@ -74,4 +93,3 @@
 #- name: Instala Virtualbox libre de Oracle
 #  apt:
 #    deb: /opt/virtualbox-6.1_6.1.16-140961~Ubuntu~eoan_amd64.deb 
-
