@@ -117,14 +117,21 @@ kernel=`uname -a | cut -f3 -d ' '`
 kernel_chunga=""
 if [ "$kernel" = "6.5.0-14-generic" ]
 then
-	apt remove --yes virtualbox virtualbox-dkms virtualbox-qt
-	if [ ! -f /opt/virtualbox-7.0_7.0.12-159484~Ubuntu~jammy_amd64.deb ]
+	#apt remove --yes virtualbox virtualbox-dkms virtualbox-qt
+	#if [ -f /opt/virtualbox-7.0_7.0.12-159484~Ubuntu~jammy_amd64.deb ]
+	#then
+	#	apt remove --yes virtualbox-7.0
+	#	rm /opt/virtualbox-7.0_7.0.12-159484~Ubuntu~jammy_amd64.deb
+	#fi
+	apt search virtualbox-7.0 2>/dev/null | grep virtualbox-7.0 >/dev/null 
+	if [ $? == 0 ] 
 	then
-		cd /opt
-		wget https://download.virtualbox.org/virtualbox/7.0.12/virtualbox-7.0_7.0.12-159484~Ubuntu~jammy_amd64.deb
+		apt remove --yes virtualbox-7.0
+		apt update
+		apt install --yes virtualbox
 	fi
-	apt search virtualbox-7.0 2>/dev/null | grep virtualbox-7.0 >/dev/null || apt install --yes /opt/virtualbox-7.0_7.0.12-159484~Ubuntu~jammy_amd64.deb
 fi
+
 
 #
 # Actualizaciones del sistema
