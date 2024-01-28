@@ -113,25 +113,38 @@ done
 #
 # Si el núcleo es 6.5.0-14-generic quito virtualbox
 #
-kernel=`uname -a | cut -f3 -d ' '`
-kernel_chunga=""
-if [ "$kernel" = "6.5.0-14-generic" ]
-then
+#kernel=`uname -a | cut -f3 -d ' '`
+#kernel_chunga=""
+#if [ "$kernel" = "6.5.0-14-generic" ]
+#then
 	#apt remove --yes virtualbox virtualbox-dkms virtualbox-qt
 	#if [ -f /opt/virtualbox-7.0_7.0.12-159484~Ubuntu~jammy_amd64.deb ]
 	#then
 	#	apt remove --yes virtualbox-7.0
 	#	rm /opt/virtualbox-7.0_7.0.12-159484~Ubuntu~jammy_amd64.deb
 	#fi
-	apt search virtualbox-7.0 2>/dev/null | grep virtualbox-7.0 >/dev/null 
-	if [ $? == 0 ] 
+	#apt search virtualbox-7.0 2>/dev/null | grep virtualbox-7.0 >/dev/null 
+	#if [ $? == 0 ] 
+	#then
+		#apt remove --yes virtualbox-7.0
+		#apt update
+		#apt install --yes virtualbox
+	#fi
+#fi
+
+#
+# Retiramos virtualbox-7.0 en Ubuntu 22.04
+#
+if [ -f /usr/bin/apt ]
+then
+	apt list | grep virtualbox-7.0
+	if [ $? == 0 ]
 	then
 		apt remove --yes virtualbox-7.0
 		apt update
 		apt install --yes virtualbox
 	fi
 fi
-
 
 #
 # Actualizaciones del sistema
