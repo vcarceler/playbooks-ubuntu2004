@@ -13,7 +13,7 @@
     - swappiness-0
     - role: vasilisa
       vars:
-        sirin: "http://192.168.240.18:8000/launcher/?label=escher-u2204.yml"
+        sirin: "http://192.168.28.18:8000/launcher/?label=escher-u2204.yml"
     - activate-unattended-upgrades
     - role: cambia-hostname
       vars:

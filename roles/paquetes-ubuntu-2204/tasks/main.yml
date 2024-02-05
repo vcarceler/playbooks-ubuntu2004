@@ -49,6 +49,7 @@
     - librecad
       #- libreoffice-base
       #- libreoffice-report-builder
+    - lldpd
     - lyx
     - net-tools
     - ncdu
@@ -80,7 +81,7 @@
     - vagrant
     - vim
     - virt-top
-      #- virtualbox
+    - virtualbox
     - virtualenv
     - vpcs
       #- wcatalan
