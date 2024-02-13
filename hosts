@@ -783,7 +783,7 @@ dpt-dibuix
 192.168.17.[70:79]
 
 [consergeria]
-192.168.17.50
+192.168.17.49
 
 # Ordenadores de AIF con J1900
 # necesitan un parámetro en el núcleo
