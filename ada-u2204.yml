@@ -18,6 +18,9 @@
     - role: cambia-hostname
       vars:
         base_hostname: "ada"
+    - role: apt-proxy
+      vars:
+        proxy: "192.168.12.10:8080"
     - timesyncd-ntp
     - ubuntu-desktop-minimal
     - software

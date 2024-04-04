@@ -1,0 +1,7 @@
+- name: Configura el proxy para apt
+  blockinfile:
+    path: /etc/apt/apt.conf.d/proxy.conf
+    create: true
+    block: |
+      Acquire::http::Proxy "http://{{ proxy }}/";
+      Acquire::https::Proxy "http://{{ proxy }}/";

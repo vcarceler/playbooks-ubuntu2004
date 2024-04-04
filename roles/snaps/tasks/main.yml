@@ -71,9 +71,9 @@
   snap:
         name: cura-slicer
 
-- name: Instala snap jupyter
-  snap:
-        name: jupyter
+#- name: Instala snap jupyter
+#  snap:
+#        name: jupyter
 
 #- name: Instala snap kalgebra
 #  snap:
